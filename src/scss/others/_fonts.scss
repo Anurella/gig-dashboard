@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+        url('../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'),
+        url('../fonts/OpenSans.woff2') format('woff2'),
+        url('../fonts/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'),
+        url('../fonts/OpenSans-Extrabold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
+        url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html {
+    --fluid-type-min: 12px;
+    --fluid-type-target: .25vw;
+    --fluid-type-max: 20px;
+    font-size: clamp(var(--fluid-type-min), calc(.8rem + var(--fluid-type-target)),
+            var(--fluid-type-max));
+    font-family: 'Open Sans',system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    line-height: 1.5;
+}

@@ -1,0 +1,23 @@
+.splitter {
+    > :last-child {
+        margin-top: 20px;
+    }
+
+    @include respond-above('lg') {
+        display: flex;
+
+        >* {
+            flex-grow: 1;
+        }
+
+        > :last-child {
+            margin-top: 0;
+            margin-left: var(--spacing);
+            min-width: 25rem;
+        }
+    }
+
+    &[hidden] {
+        display: none;
+    }
+}

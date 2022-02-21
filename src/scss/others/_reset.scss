@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+:where(ol[role='list'], ul[role='list']) {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    line-height: 1.5;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html {
+    /*
+    Create a stacking context, without a z-index.
+    This ensures that all portal content (modals and tooltips) will
+    float above the app.
+  */
+    isolation: isolate;
+    height: 100%;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    &:focus-within {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    height: 100%;
+}
+
+input,
+input[type="number"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+noscript {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em
+}
+
+button {
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce),
+(update:slow) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

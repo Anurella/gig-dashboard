@@ -1,0 +1,8 @@
+
+:root {
+    --flow-space:2rem;
+}
+
+.flow>*+* {
+    margin-top: var(--flow-space, 1.5rem);
+}

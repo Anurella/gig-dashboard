@@ -1,0 +1,82 @@
+@import 'reset';
+@import 'colors';
+@import 'mixins';
+@import 'functions';
+@import 'splitter';
+@import 'flow';
+@import 'scrollsnap';
+@import 'visually-hidden';
+@import 'wrapper';
+@import 'fonts';
+@import 'header';
+@import 'aside';
+@import 'notification';
+@import 'highlight';
+@import 'tablegroup';
+
+
+
+:root {
+    --spacing: 20px;
+}
+
+html {
+    overflow-x:hidden;
+}
+
+.spacer {
+    height: var(--spacing);
+    display: block;
+}
+
+.explanation {
+    border:1px solid var(--white-400);
+    padding: calc(var(--spacing) / 2) var(--spacing); 
+
+    @include respond-above('md')
+ {
+
+ }    font-size: 1rem;
+    line-height: 1.3;
+}
+
+
+.main {
+    padding-inline: var(--spacing);
+    @include respond-above('md') {
+        padding-inline: calc(var(--spacing) * 1.5);
+    }
+}
+
+.app-layout {
+   
+    &__wrapper {
+
+    }
+
+    &__title {
+        font-size:1.84rem;
+        font-weight:600;
+        line-height: 1.3;
+        letter-spacing: -0.0385em;
+
+        @include respond-above('md') {
+           display: none;
+        }
+    }
+}
+
+
+footer {
+    padding:calc(var(--spacing) / 1.5);
+    text-align: center;
+
+    @include respond-above('lg') {
+        padding-inline:calc(var(--spacing) * 1.5);
+        padding-block-start: 0;
+      text-align: left;
+    }
+    font-size: 1rem;
+    color:var(--gray-300);
+    letter-spacing: -0.0125em;
+}
