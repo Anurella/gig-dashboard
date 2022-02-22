@@ -140,24 +140,8 @@
                    <div class="spacer"></div>
                     <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1" >
                         <p class="notice"> Available tasks are all the tasks that all users are able to select and engage in order to make earnings based on the rate attached to each task. </p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error asperiores veritatis numquam tempora assumenda voluptas repellendus ipsum molestiae possimus, repellat quasi similique iure doloribus fuga reiciendis dolore. Iste, tenetur alias? </p>
-                    </section>
-                    </section>
-                    <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab2">
-                        <p class="notice"> Completed tasks are all the tasks that you have attempted to engage which 
-                            either has been approved or has failed to be approved (hence, rejected).
-                         </p>
                         <div class="tablegroup">
                             <table class="tablegroup__table">
-                                <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th>Category</th>
-                                        <th>Amount</th>
-                                        <th>Rate</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
                                 <tbody>
                                     <tr>
                                         <td>
@@ -262,7 +246,7 @@
                                         </td>
                                         <td>
                                             <div class="actions">
-                                                <a role="button" href="" class="actions__view">View<span>Task</span></a>
+                                                <a role="button" href="" class="actions__view">View <span>Task</span></a>
                                                 <button>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M11.9997 10.5862L16.9497 5.63623L18.3637 7.05023L13.4137 12.0002L18.3637 16.9502L16.9497 18.3642L11.9997 13.4142L7.04974 18.3642L5.63574 16.9502L10.5857 12.0002L5.63574 7.05023L7.04974 5.63623L11.9997 10.5862Z" fill="#949494" />
@@ -273,6 +257,118 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </section>
+                    </section>
+                    <section data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab2">
+                        <p class="notice"> Completed tasks are all the tasks that you have attempted to engage which 
+                            either has been approved or has failed to be approved (hence, rejected).
+                         </p>
+                        <div class="tablegroup" hidden>
+                            <table class="tablegroup__table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="icon-title" data-task-type="instagram">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 1.37143C24 0.614009 23.3604 0 22.5714 0H1.42857C0.639593 0 0 0.614009 0 1.37143V15.0857C0 15.8431 0.639593 16.4571 1.42857 16.4571H7.05128L11.3814 23.6571C11.6563 24.1143 12.3437 24.1143 12.6186 23.6571L16.9487 16.4571H22.5714C23.3604 16.4571 24 15.8431 24 15.0857V1.37143Z" fill="" class="type" />
+                                                    <path d="M15.018 4.11426C16.7679 4.11426 18.186 5.55426 18.186 7.57026C18.186 11.1963 14.6921 13.4248 12.9412 14.4652C12.6237 14.6539 12.2283 14.6539 11.9109 14.4652C10.1599 13.4248 6.66602 11.1963 6.66602 7.57026C6.66602 5.55426 8.10602 4.11426 9.83402 4.11426C10.9054 4.11426 11.85 4.69026 12.426 5.26626C13.002 4.69026 13.9467 4.11426 15.018 4.11426Z" fill="white" />
+                                                </svg>
+                                                <span> Instagram </span>
+                                            </div>
+                                        </td>
+                                        <td>hello hello</td>
+                                        <td>
+                                            <span class="amount">2.0</span>
+                                        </td>
+                                        <td>
+                                            <span class="[ pill ]" data-status="rejected"> rejected </span>
+                                        </td>
+                                        <td>
+                                            <time> 2 weeks ago </time>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="icon-title" data-task-type="instagram">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 1.37143C24 0.614009 23.3604 0 22.5714 0H1.42857C0.639593 0 0 0.614009 0 1.37143V15.0857C0 15.8431 0.639593 16.4571 1.42857 16.4571H7.05128L11.3814 23.6571C11.6563 24.1143 12.3437 24.1143 12.6186 23.6571L16.9487 16.4571H22.5714C23.3604 16.4571 24 15.8431 24 15.0857V1.37143Z" fill="" class="type" />
+                                                    <path d="M15.018 4.11426C16.7679 4.11426 18.186 5.55426 18.186 7.57026C18.186 11.1963 14.6921 13.4248 12.9412 14.4652C12.6237 14.6539 12.2283 14.6539 11.9109 14.4652C10.1599 13.4248 6.66602 11.1963 6.66602 7.57026C6.66602 5.55426 8.10602 4.11426 9.83402 4.11426C10.9054 4.11426 11.85 4.69026 12.426 5.26626C13.002 4.69026 13.9467 4.11426 15.018 4.11426Z" fill="white" />
+                                                </svg>
+                                                <span> Instagram </span>
+                                            </div>
+                                        </td>
+                                        <td>hello hello</td>
+                                        <td>
+                                            <span class="amount">2.0</span>
+                                        </td>
+                                        <td>
+                                            <span class="[ pill ]" data-status="approved"> Approved </span>
+                                        </td>
+                                        <td>
+                                             <time>5hrs ago</time>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="icon-title" data-task-type="instagram">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 1.37143C24 0.614009 23.3604 0 22.5714 0H1.42857C0.639593 0 0 0.614009 0 1.37143V15.0857C0 15.8431 0.639593 16.4571 1.42857 16.4571H7.05128L11.3814 23.6571C11.6563 24.1143 12.3437 24.1143 12.6186 23.6571L16.9487 16.4571H22.5714C23.3604 16.4571 24 15.8431 24 15.0857V1.37143Z" fill="" class="type" />
+                                                    <path d="M15.018 4.11426C16.7679 4.11426 18.186 5.55426 18.186 7.57026C18.186 11.1963 14.6921 13.4248 12.9412 14.4652C12.6237 14.6539 12.2283 14.6539 11.9109 14.4652C10.1599 13.4248 6.66602 11.1963 6.66602 7.57026C6.66602 5.55426 8.10602 4.11426 9.83402 4.11426C10.9054 4.11426 11.85 4.69026 12.426 5.26626C13.002 4.69026 13.9467 4.11426 15.018 4.11426Z" fill="white" />
+                                                </svg>
+                                                <span> Instagram </span>
+                                            </div>
+                                        </td>
+                                        <td>hello hello</td>
+                                        <td>
+                                            <span class="amount">2.0</span>
+                                        </td>
+                                        <td>
+                                            <span class="[ pill ]" data-status="rejected"> rejected </span>
+                                        </td>
+                                        <td>
+                                            <time> 5hrs ago </time>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="icon-title" data-task-type="instagram">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 1.37143C24 0.614009 23.3604 0 22.5714 0H1.42857C0.639593 0 0 0.614009 0 1.37143V15.0857C0 15.8431 0.639593 16.4571 1.42857 16.4571H7.05128L11.3814 23.6571C11.6563 24.1143 12.3437 24.1143 12.6186 23.6571L16.9487 16.4571H22.5714C23.3604 16.4571 24 15.8431 24 15.0857V1.37143Z" fill="" class="type" />
+                                                    <path d="M15.018 4.11426C16.7679 4.11426 18.186 5.55426 18.186 7.57026C18.186 11.1963 14.6921 13.4248 12.9412 14.4652C12.6237 14.6539 12.2283 14.6539 11.9109 14.4652C10.1599 13.4248 6.66602 11.1963 6.66602 7.57026C6.66602 5.55426 8.10602 4.11426 9.83402 4.11426C10.9054 4.11426 11.85 4.69026 12.426 5.26626C13.002 4.69026 13.9467 4.11426 15.018 4.11426Z" fill="white" />
+                                                </svg>
+                                                <span> Instagram </span>
+                                            </div>
+                                        </td>
+                                        <td>hello hello</td>
+                                        <td>
+                                            <span class="amount">2.0</span>
+                                        </td>
+                                        <td>
+                                            <span class="[ pill ]" data-status="rejected"> rejected </span>
+                                        </td>
+                                        <td>
+                                            <time>5hrs ago</time>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="no-task">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.333 18.3333C53.333 17.3443 53.6263 16.3776 54.1757 15.5554C54.7251 14.7332 55.506 14.0923 56.4196 13.7139C57.3332 13.3354 58.3386 13.2364 59.3085 13.4293C60.2784 13.6223 61.1693 14.0985 61.8685 14.7977C62.5678 15.497 63.044 16.3879 63.2369 17.3578C63.4299 18.3277 63.3308 19.333 62.9524 20.2467C62.574 21.1603 61.9331 21.9412 61.1109 22.4906C60.2886 23.04 59.3219 23.3333 58.333 23.3333" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M58.3333 28.3333C58.4982 28.3333 58.6593 28.3821 58.7963 28.4737C58.9334 28.5653 59.0402 28.6954 59.1032 28.8477C59.1663 29 59.1828 29.1675 59.1507 29.3292C59.1185 29.4908 59.0391 29.6393 58.9226 29.7558C58.806 29.8724 58.6576 29.9518 58.4959 29.9839C58.3343 30.0161 58.1667 29.9996 58.0144 29.9365C57.8622 29.8734 57.732 29.7666 57.6404 29.6296C57.5489 29.4925 57.5 29.3314 57.5 29.1666C57.5 28.9456 57.5878 28.7336 57.7441 28.5773C57.9004 28.421 58.1123 28.3333 58.3333 28.3333Z" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M58.11 1.66675C55.4776 1.67556 52.8732 2.20797 50.4486 3.23297C48.0239 4.25798 45.8274 5.7551 43.9869 7.63717C42.1464 9.51924 40.6987 11.7486 39.7281 14.1956C38.7575 16.6425 38.2834 19.2581 38.3333 21.8901C38.1834 25.612 39.0856 29.3009 40.9367 32.5334L35 45.0001L47.47 39.0601C50.1283 40.708 53.1327 41.7166 56.2469 42.0064C59.3611 42.2963 62.5001 41.8595 65.4169 40.7305C68.3336 39.6014 70.9486 37.811 73.056 35.4999C75.1634 33.1889 76.7058 30.4203 77.5618 27.4121C78.4178 24.4038 78.564 21.238 77.9889 18.1636C77.4139 15.0893 76.1332 12.1904 74.2478 9.6949C72.3624 7.19944 69.9236 5.17555 67.1233 3.78248C64.323 2.38942 61.2376 1.66518 58.11 1.66675V1.66675Z" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M55 48.3367V78.3367" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.66699 78.3334V18.3334C1.66699 16.5653 2.36937 14.8696 3.61961 13.6194C4.86986 12.3691 6.56555 11.6667 8.33366 11.6667H33.3337" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M31.667 25.0034H1.66699" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.667 63.3367C30.8091 63.3367 34.167 59.9788 34.167 55.8367C34.167 51.6945 30.8091 48.3367 26.667 48.3367C22.5249 48.3367 19.167 51.6945 19.167 55.8367C19.167 59.9788 22.5249 63.3367 26.667 63.3367Z" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M41.667 78.3333C40.817 75.0001 38.8811 72.045 36.1649 69.9345C33.4486 67.8239 30.1068 66.6782 26.667 66.6782C23.2272 66.6782 19.8853 67.8239 17.1691 69.9345C14.4529 72.045 12.5169 75.0001 11.667 78.3333" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.333 18.3367H31.6663" stroke="#F58256" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                               
+                            <h2> No Task has been completed </h2>
+                            <p> Click “available tasks” to select a task and follow instructions to start earning  </p>
                         </div>
                     </section>
                 </div>

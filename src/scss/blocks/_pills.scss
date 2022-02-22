@@ -1,0 +1,44 @@
+.pill {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size:calc(12 /16 * 1rem);
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.0125em;
+
+    &[data-status="approved"],
+    &[data-status="opened"],
+    &[data-status="active"] {
+        background-color: hsl(105, 100%, 98%);
+        color: hsla(150,100%,18%,1);
+    }
+
+    &[data-status="reviewing"],
+    &[data-status="inactive"] {
+        background-color: hsl(0, 20%, 92%);
+        color: hsl(0, 15%, 38%);
+    }
+
+    &[data-status="pending"] {
+        background-color: hsl(0, 15%, 88%);
+        color: hsl(0, 19%, 25%);
+    }
+
+    &[data-status="rejected"], &[data-status="failed"] {
+        background-color: hsl(10, 50%, 98%);
+        color: hsl(17, 89%, 65%);
+    }
+
+    
+
+    &[data-status="completed"],
+    &[data-status="success"],
+    &[data-status="closed"] {
+        background-color: hsl(90, 35%, 73%);
+        color: hsl(90, 51%, 23%);
+    }
+
+
+}

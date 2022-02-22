@@ -487,6 +487,7 @@ html {
 	cursor: pointer;
 	flex: 1;
 	font-size: 0.9rem;
+	font-weight: 600;
 	letter-spacing: -0.0125em;
 	transition: background 0.2s;
 	text-align: center;
@@ -522,11 +523,13 @@ html {
 	padding: var(--spacing);
 	border: var(--tab-border-width) solid var(--tab-border-color);
 	opacity: 1;
+	box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08), 0px 8px 8px -4px rgba(152, 152, 152, 0.08);
 }
 .tabs .tablegroup {
 	border: 0;
 	box-shadow: none;
 	padding: 0;
+	margin-top: 1rem;
 }
 @media (min-width: 60em) {
 	.tabs .notice {
@@ -611,6 +614,37 @@ html {
 	border-radius: 4px;
 	line-height: 1.2;
 	font-size: 0.875rem;
+}
+
+.pill {
+	display: inline-block;
+	padding: 8px 16px;
+	font-size: 0.75rem;
+	white-space: nowrap;
+	text-align: center;
+	border-radius: 24px;
+	text-transform: uppercase;
+	letter-spacing: -0.0125em;
+}
+.pill[data-status=approved], .pill[data-status=opened], .pill[data-status=active] {
+	background-color: #f7fff5;
+	color: #005c2e;
+}
+.pill[data-status=reviewing], .pill[data-status=inactive] {
+	background-color: #efe7e7;
+	color: #6f5252;
+}
+.pill[data-status=pending] {
+	background-color: #e5dcdc;
+	color: #4c3434;
+}
+.pill[data-status=rejected], .pill[data-status=failed] {
+	background-color: #fcf8f7;
+	color: #f58356;
+}
+.pill[data-status=completed], .pill[data-status=success], .pill[data-status=closed] {
+	background-color: #bad2a2;
+	color: #3b591d;
 }
 
 .notification__trigger {
@@ -725,6 +759,11 @@ html {
 	width: 100%;
 	max-width: 100%;
 }
+@media (min-width: 60em) {
+	.tablegroup__table {
+		table-layout: fixed;
+	}
+}
 .tablegroup :nth-child(2n):where(th, td) {
 	display: none;
 }
@@ -744,7 +783,7 @@ html {
 	padding-inline-end: 10px;
 	font-size: 1rem;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: -0.015em;
 }
 @media (min-width: 48em) {
@@ -767,6 +806,11 @@ html {
 .tablegroup .amount {
 	font-size: 1.5rem;
 	color: var(--gray-300);
+}
+.tablegroup time {
+	color: var(--gray-100);
+	font-size: 0.75rem;
+	text-transform: initial;
 }
 
 .icon-title {
@@ -800,7 +844,7 @@ html {
 }
 @media (min-width: 48em) {
 	.actions__view {
-		padding-inline: 16px;
+		padding: 8px 16px;
 	}
 }
 .actions__view span {
@@ -864,4 +908,34 @@ footer {
 		padding-inline: var(--spacing);
 		text-align: left;
 	}
+}
+
+.no-task {
+	text-align: center;
+	padding: 1.5rem;
+	max-width: 500px;
+	margin: 0 auto;
+}
+@media (min-width: 60em) {
+	.no-task {
+		padding: 3rem;
+	}
+}
+.no-task svg {
+	width: 40px;
+	height: auto;
+}
+@media (min-width: 60em) {
+	.no-task svg {
+		width: 80px;
+	}
+}
+.no-task h2 {
+	font-weight: 600;
+	font-size: min(5vmin, 1.5rem);
+	letter-spacing: -0.0385em;
+	margin-top: 1rem;
+}
+.no-task p {
+	font-size: min(1rem, 14px);
 }

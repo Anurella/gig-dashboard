@@ -12,6 +12,7 @@
 @import 'nav';
 @import 'tab';
 @import 'aside';
+@import 'pills';
 @import 'notification';
 @import 'highlight';
 @import 'tablegroup';
@@ -23,7 +24,7 @@
 }
 
 html {
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .spacer {
@@ -32,52 +33,84 @@ html {
 }
 
 .explanation {
-    border:1px solid var(--white-400);
-    padding: calc(var(--spacing) / 2) var(--spacing); 
+    border: 1px solid var(--white-400);
+    padding: calc(var(--spacing) / 2) var(--spacing);
 
-    @include respond-above('md')
- {
+    @include respond-above('md') {}
 
- }    font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.3;
 }
 
 
 .main {
     padding-inline: var(--spacing);
+
     @include respond-above('md') {
         padding-inline: calc(var(--spacing) * 1.5);
     }
 }
 
 .app-layout {
-   
-    &__wrapper {
 
-    }
+    &__wrapper {}
 
     &__title {
-        font-size:1.84rem;
-        font-weight:600;
+        font-size: 1.84rem;
+        font-weight: 600;
         line-height: 1.3;
         letter-spacing: -0.0385em;
 
         @include respond-above('md') {
-           display: none;
+            display: none;
         }
     }
 }
 
 
 footer {
-    padding:calc(var(--spacing) / 1.5);
+    padding: calc(var(--spacing) / 1.5);
     text-align: center;
 
     @include respond-above('lg') {
-      padding-inline:var(--spacing);
-      text-align: left;
+        padding-inline: var(--spacing);
+        text-align: left;
     }
+
     font-size: 1rem;
     color:var(--gray-300);
     letter-spacing: -0.0125em;
+}
+
+.no-task {
+
+    text-align: center;
+    padding: 1.5rem;
+
+    @include respond-above('lg') {
+        padding: 3rem;
+    }
+
+    max-width: 500px;
+    margin:0 auto;
+
+    svg {
+        width: 40px;
+        height: auto;
+
+        @include respond-above('lg') {
+            width: 80px;
+        }
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: min(5vmin,1.5rem);
+        letter-spacing: -0.0385em;
+        margin-top:1rem;
+    }
+
+    p {
+        font-size: min(1rem, 14px);
+    }
 }

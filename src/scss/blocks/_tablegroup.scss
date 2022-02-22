@@ -21,6 +21,7 @@
             @include respond-above('md') {
                 letter-spacing: -0.0235em;
             }
+
             line-height: 1.3;
         }
 
@@ -41,7 +42,10 @@
         width: 100%;
         // min-width: 35rem;
         max-width: 100%;
-        // table-layout: fixed;
+        @include respond-above('lg') {
+            table-layout: fixed;
+        }
+        
     }
 
     :nth-child(2n):where(th, td) {
@@ -68,11 +72,11 @@
         padding-inline-end: 10px;
         font-size: 1rem;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: -0.015em;
 
         @include respond-above('md') {
-            letter-spacing:-0.024em;
+            letter-spacing: -0.024em;
         }
     }
 
@@ -85,13 +89,21 @@
         height: auto;
         vertical-align: middle;
     }
+
     .rate {
-        color:hsl(17, 89%, 65%);
+        color: hsl(17, 89%, 65%);
         font-size: calc(12 / 16 * 1rem);
     }
+
     .amount {
-        font-size: calc(24 / 16 * 1rem);
-        color:var(--gray-300);
+        font-size: 1.5rem;
+        color: var(--gray-300);
+    }
+
+    time {
+        color: var(--gray-100);
+        font-size: calc(12 / 16 * 1rem);
+        text-transform: initial;
     }
 }
 
@@ -103,41 +115,42 @@
 
 [data-task-type="instagram"] {
     .type {
-       fill:#C11977;
+        fill: #C11977;
     }
 }
 
 
-.actions{
+.actions {
     display: flex;
     align-items: baseline;
-   justify-content: space-between;
+    justify-content: space-between;
 
-   @include respond-above('md') {
-       justify-content: flex-start;
-       gap:2rem;
-}
+    @include respond-above('md') {
+        justify-content: flex-start;
+        gap: 2rem;
+    }
 
     &__view {
-        padding:4px 10px;
+        padding: 4px 10px;
         background-color: var(--primary-100);
         color: var(--white-100);
-        font-weight:inherit;
+        font-weight: inherit;
         text-transform: inherit;
         border-radius: 24px;
 
         @include respond-above('md') {
-            padding-inline:16px;
+            padding: 8px 16px;
         }
 
         span {
-            
+
             display: none;
+
             @include respond-above('md') {
-               display:inline-block;
+                display: inline-block;
             }
         }
     }
 
-   
+
 }
