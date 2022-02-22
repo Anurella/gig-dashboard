@@ -3,6 +3,8 @@
 
     @include respond-above('lg') {
         display: block;
+        flex-shrink:0;
+        flex-basis: 300px;
         max-width: 310px;
         padding-block-start: var(--flow-space);
     }

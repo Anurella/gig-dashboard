@@ -6,7 +6,7 @@ import pkg from "./package.json";
 var configs = {
   name: "SidegigDashboard",
   files: ["main.js"],
-  formats: ["iife", "es", "cjs"],
+  formats: ["iife"],
   default: "iife",
   pathIn: "src/js",
   pathOut: "dist/js",

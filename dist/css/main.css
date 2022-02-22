@@ -288,6 +288,7 @@ html {
 	width: 24px;
 	height: auto;
 	vertical-align: middle;
+	pointer-events: none;
 }
 @media (min-width: 60em) {
 	.menu-hamburger {
@@ -318,14 +319,17 @@ html {
 }
 .menu-list__link {
 	color: var(--gray-300);
+	letter-spacing: -0.024em;
 	transition: color 0.2s;
 }
-.menu-list__link:hover {
-	color: var(--primary-100);
-}
-.menu-list__link:hover::after {
-	background-color: var(--primary-100);
-	opacity: 1;
+@media (hover: hover) {
+	.menu-list__link:hover {
+		color: var(--primary-100);
+	}
+	.menu-list__link:hover::after {
+		background-color: var(--primary-100);
+		opacity: 1;
+	}
 }
 .menu-list__link::after {
 	content: " ";
@@ -351,6 +355,7 @@ html {
 	padding: calc(var(--spacing) / 2.5) calc(var(--spacing) * 0.75);
 	text-transform: uppercase;
 	font-weight: inherit;
+	letter-spacing: -0.024em;
 }
 
 .nav {
@@ -374,6 +379,54 @@ html {
 	transform: translate3d(-100%, 0, 0);
 	will-change: transform;
 	transition: transform 0.5s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 1.5);
+}
+.nav__menu li {
+	padding-block: 1.2rem;
+	font-size: 1.2rem;
+}
+.nav__menu a {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--gray-300);
+	letter-spacing: -0.024em;
+}
+.nav__menu button {
+	border: 1px solid #d4d4d4;
+	color: var(--gray-400);
+	border-radius: 56px;
+	padding: calc(var(--spacing) / 2.5) calc(var(--spacing) * 0.75);
+	text-transform: uppercase;
+	font-weight: inherit;
+	letter-spacing: -0.024em;
+}
+.nav__log-out {
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--gray-300);
+	letter-spacing: -0.024em;
+	min-height: 50px;
+}
+.nav__profile {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+.nav__profile img {
+	border: 2px solid var(--primary-300);
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+.nav__profile p {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--gray-100);
+	letter-spacing: -0.024em;
 }
 .nav.isOpen {
 	visibility: visible;
@@ -382,6 +435,110 @@ html {
 .nav.isOpen .nav__wrapper {
 	transform: translate3d(0, 0, 0);
 }
+@media (min-width: 60em) {
+	.nav {
+		display: none;
+	}
+}
+
+.tabs {
+	--tab-background-color: var(--white-100);
+	--tab-panel-background:var(--white-300);
+	--tab-radius: 4px;
+	--tab-border-color: #EAEAEA;
+	--tab-border-width: 1px;
+	--tab-spacing: 0.7rem 1.2rem;
+	--tab-active-shadow: 0px 2px 4px -2px rgba(255, 255, 255, 0.08), 0px 4px 4px -2px rgba(24, 39, 75, 0.04);
+	/* Tab Label Active State */
+	/* Tab Label Focus State */
+	/* Hide focus ring if focus comes from a pointer device. */
+	/* Tab Panel Active State */
+}
+.tabs nav {
+	display: flex;
+	border-radius: 8px;
+	background-color: var(--tab-panel-background);
+	padding: 8px;
+	gap: 1rem;
+}
+@media (min-width: 60em) {
+	.tabs nav {
+		width: 400px;
+	}
+}
+.tabs [data-tab] {
+	/* Hide the input element from UI, but still available for focus. */
+	opacity: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.tabs [data-tab-panel] {
+	position: relative;
+	z-index: 1;
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	background-color: var(--tab-background-color);
+	transition: opacity 0.3s ease-in-out;
+}
+.tabs [data-tab-label] {
+	position: relative;
+	padding: var(--tab-spacing, 0);
+	cursor: pointer;
+	flex: 1;
+	font-size: 0.9rem;
+	letter-spacing: -0.0125em;
+	transition: background 0.2s;
+	text-align: center;
+	color: var(--gray-300);
+}
+.tabs [data-tab=tab1]:checked ~ nav [data-tab-label=tab1],
+.tabs [data-tab=tab2]:checked ~ nav [data-tab-label=tab2] {
+	z-index: 10;
+	background-color: var(--tab-background-color, none);
+	box-shadow: var(--tab-active-shadow, 0);
+	border-radius: var(--tab-radius);
+	color: var(--primary-200);
+}
+.tabs [data-tab=tab1]:checked ~ nav [data-tab-label=tab1] .green,
+.tabs [data-tab=tab2]:checked ~ nav [data-tab-label=tab2] .green {
+	color: var(--primary-100);
+}
+.tabs [data-tab=tab1]:focus ~ nav [data-tab-label=tab1],
+.tabs [data-tab=tab2]:focus ~ nav [data-tab-label=tab2] {
+	outline: 2px auto #101010;
+	outline: 2px auto Highlight;
+	outline: 2px auto -webkit-focus-ring-color;
+}
+.tabs [data-tab=tab1]:focus:not(:focus-visible) ~ nav [data-tab-label=tab1],
+.tabs [data-tab=tab2]:focus:not(:focus-visible) ~ nav [data-tab-label=tab2] {
+	outline: none;
+}
+.tabs [data-tab=tab1]:checked ~ nav ~ [data-tab-panel=tab1],
+.tabs [data-tab=tab2]:checked ~ nav ~ [data-tab-panel=tab2] {
+	visibility: visible;
+	width: 100%;
+	height: auto;
+	padding: var(--spacing);
+	border: var(--tab-border-width) solid var(--tab-border-color);
+	opacity: 1;
+}
+.tabs .tablegroup {
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+}
+@media (min-width: 60em) {
+	.tabs .notice {
+		position: absolute;
+		right: 0;
+		font-size: 14px;
+		width: calc(100% - 450px);
+		top: -100px;
+		transform: translateY(50%);
+		line-height: 1.2;
+	}
+}
 
 .sidebar {
 	display: none;
@@ -389,6 +546,8 @@ html {
 @media (min-width: 60em) {
 	.sidebar {
 		display: block;
+		flex-shrink: 0;
+		flex-basis: 300px;
 		max-width: 310px;
 		padding-block-start: var(--flow-space);
 	}
@@ -601,11 +760,19 @@ html {
 	height: auto;
 	vertical-align: middle;
 }
+.tablegroup .rate {
+	color: #f58356;
+	font-size: 0.75rem;
+}
+.tablegroup .amount {
+	font-size: 1.5rem;
+	color: var(--gray-300);
+}
 
 .icon-title {
 	display: flex;
 	align-items: baseline;
-	gap: 1ch;
+	gap: 1.5rem;
 }
 
 [data-task-type=instagram] .type {
@@ -620,7 +787,7 @@ html {
 @media (min-width: 48em) {
 	.actions {
 		justify-content: flex-start;
-		gap: 2ch;
+		gap: 2rem;
 	}
 }
 .actions__view {
@@ -630,6 +797,19 @@ html {
 	font-weight: inherit;
 	text-transform: inherit;
 	border-radius: 24px;
+}
+@media (min-width: 48em) {
+	.actions__view {
+		padding-inline: 16px;
+	}
+}
+.actions__view span {
+	display: none;
+}
+@media (min-width: 48em) {
+	.actions__view span {
+		display: inline-block;
+	}
 }
 
 :root {
@@ -681,8 +861,7 @@ footer {
 }
 @media (min-width: 60em) {
 	footer {
-		padding-inline: calc(var(--spacing) * 1.5);
-		padding-block-start: 0;
+		padding-inline: var(--spacing);
 		text-align: left;
 	}
 }

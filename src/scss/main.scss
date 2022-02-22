@@ -9,6 +9,8 @@
 @import 'wrapper';
 @import 'fonts';
 @import 'header';
+@import 'nav';
+@import 'tab';
 @import 'aside';
 @import 'notification';
 @import 'highlight';
@@ -72,8 +74,7 @@ footer {
     text-align: center;
 
     @include respond-above('lg') {
-        padding-inline:calc(var(--spacing) * 1.5);
-        padding-block-start: 0;
+      padding-inline:var(--spacing);
       text-align: left;
     }
     font-size: 1rem;

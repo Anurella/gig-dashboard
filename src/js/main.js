@@ -1,0 +1,17 @@
+"use strict";
+
+console.log("Does it work");
+
+let selectAll = (e) => document.querySelectorAll(e);
+let select = (e) => document.querySelector(e);
+
+select(".menu-hamburger").addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  select(".nav").classList.add("isOpen");
+});
+
+select(".nav").addEventListener("click", (e) => {
+  e.stopPropagation();
+  select(".nav").classList.remove("isOpen");
+});

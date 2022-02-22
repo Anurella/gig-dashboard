@@ -24,6 +24,7 @@
 
   <body>
     <div class="wrapper">
+      <a href="#main-content" class="visually-hidden">Skip to Content</a>
       <header class="header">
         <div class="header__container">
           <div class="header__menu">
@@ -100,7 +101,7 @@
                 <a href="/" class="menu-list__link active"> Dashboard</a>
               </li>
               <li class="menu-list__item">
-                <a href="/" class="menu-list__link"> Tasks </a>
+                <a href="task.html" class="menu-list__link"> Tasks </a>
               </li>
               <li class="menu-list__item">
                 <a href="/" class="menu-list__link"> Payments </a>
@@ -137,39 +138,42 @@
         </div>
         <nav class="nav">
           <div class="nav__wrapper">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                alt="Woman holding her collar"
-                width="80"
-                height="80"
-              />
-              <p>#babygirl</p>
+            <div class="flow">
+              <div class="nav__profile">
+                <img
+                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  alt="Woman holding her collar"
+                  width="50"
+                  height="50"
+                />
+                <p>#babygirl</p>
+              </div>
+              <ul role="list" class="nav__menu">
+                <li class="nav__menu-item">
+                  <a href="/" class=""> Dashboard</a>
+                </li>
+                <li class="nav__menu-item">
+                  <a href="task.html" class=""> Tasks </a>
+                </li>
+                <li class="nav__menu-item">
+                  <a href="/" class=""> Payments </a>
+                </li>
+                <li class="nav__menu-item">
+                  <a href="/" class=""> Tickets </a>
+                </li>
+                <li class="nav__menu-item">
+                  <a href="/" class=""> Invite Friends </a>
+                </li>
+                <li class="nav__menu-item">
+                  <button class="">Upgrade to Premium</button>
+                </li>
+              </ul>
             </div>
-            <ul role="navigation" class="menu-list">
-              <li class="menu-list__item">
-                <a href="/" class="menu-list__link active"> Dashboard</a>
-              </li>
-              <li class="menu-list__item">
-                <a href="/" class="menu-list__link"> Tasks </a>
-              </li>
-              <li class="menu-list__item">
-                <a href="/" class="menu-list__link"> Payments </a>
-              </li>
-              <li class="menu-list__item">
-                <a href="/" class="menu-list__link"> Tickets </a>
-              </li>
-              <li class="menu-list__item">
-                <a href="/" class="menu-list__link"> Invite Friends </a>
-              </li>
-              <li class="menu-list__item">
-                <button class="menu-list__but">Upgrade to Premium</button>
-              </li>
-            </ul>
+            <button class="nav__log-out">Log out</button>
           </div>
         </nav>
       </header>
-      <main class="main splitter main--app-layout">
+      <main id="main-content" class="main splitter main--app-layout">
         <aside class="sidebar">
           <div class="sidebar__wrapper">
             <div class="sidebar__profile">
@@ -275,7 +279,9 @@
                   </td>
                   <td>
                     <div class="actions">
-                      <a role="button" href="" class="actions__view">View</a>
+                      <a role="button" href="" class="actions__view"
+                        >View <span>Task</span></a
+                      >
                       <button>
                         <svg
                           width="24"
@@ -325,7 +331,9 @@
                   </td>
                   <td>
                     <div class="actions">
-                      <a role="button" href="" class="actions__view">View</a>
+                      <a role="button" href="" class="actions__view"
+                        >View <span>Task</span></a
+                      >
                       <button>
                         <svg
                           width="24"
@@ -375,7 +383,9 @@
                   </td>
                   <td>
                     <div class="actions">
-                      <a role="button" href="" class="actions__view">View</a>
+                      <a role="button" href="" class="actions__view"
+                        >View <span>Task</span></a
+                      >
                       <button>
                         <svg
                           width="24"
@@ -425,7 +435,9 @@
                   </td>
                   <td>
                     <div class="actions">
-                      <a role="button" href="" class="actions__view">View</a>
+                      <a role="button" href="" class="actions__view"
+                        >View <span>Task</span></a
+                      >
                       <button>
                         <svg
                           width="24"
@@ -450,6 +462,6 @@
       </main>
       <footer><p>Copyright ©2022. Sidegig. All rights reserved</p></footer>
     </div>
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
