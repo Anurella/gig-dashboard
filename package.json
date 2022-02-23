@@ -9,7 +9,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "http://github.com/cferdinandi/build-tools-boilerplate"
+        "url": "https://github.com/Anurella/gig-dashboard.git"
     },
     "scripts": {
         "clean": "recursive-delete 'dist'",
