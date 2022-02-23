@@ -13,8 +13,9 @@
 @import 'tab';
 @import 'aside';
 @import 'pills';
-@import 'notification';
 @import 'highlight';
+@import 'button';
+@import 'notification';
 @import 'tablegroup';
 
 
@@ -25,6 +26,15 @@
 
 html {
     overflow-x: hidden;
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .button,
+    input,
+    select {
+        min-height: 44px;
+    }
 }
 
 .spacer {
@@ -105,12 +115,67 @@ footer {
 
     h2 {
         font-weight: 600;
-        font-size: min(5vmin,1.5rem);
+        font-size: min(5vmin, 1.5rem);
         letter-spacing: -0.0385em;
-        margin-top:1rem;
+        margin-top: 1rem;
     }
 
     p {
         font-size: min(1rem, 14px);
+    }
+}
+
+.payments {
+    border: 1px solid var(--white-400);
+    padding: var(--spacing) calc(var(--spacing) / 1.5);
+
+    &__highlight {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        figure {
+            flex: 1;
+        }
+
+        figcaption {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--gray-100);
+            letter-spacing: -0.015em;
+
+            @include respond-above('lg') {
+                letter-spacing: -0.024em;
+            }
+        }
+
+        h4 {
+            font-size: min(7.5vw, 40px);
+            font-weight: 600;
+
+            @include respond-above('lg') {
+                font-weight: 700;
+            }
+
+            span {
+                font-size: min(6vw, 32px);
+                color: var(--gray-300);
+                letter-spacing: -0.0385em;
+
+                @include respond-above('md') {
+                    letter-spacing: -0.03em;
+                }
+            }
+        }
+    }
+
+    &__table {
+       
+        margin-top: 3rem;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }

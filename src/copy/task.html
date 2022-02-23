@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Dashboard - Sidegig</title>
-    <meta name="description" content="Brief description" />
-    <meta name="author" content="Your name" />
-    <meta name="supported-color-schemes" content="light dark" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta property="og:title" content="My Dashboard" />
-    <meta property="og:description" content="Brief description" />
-    <meta property="og:image" content="/some-image.png" />
-    <meta property="og:url" content="/this-page.html" />
-    <meta property="og:site_name" content="Your Site Name" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:alt" content="image description" />
-    <style></style>
-    <link href="css/main.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sidegig</title>
+        <meta
+          name="description"
+          content="Earn more income by completing simple gigs on social platforms."
+        />
+        <meta name="author" content="Your name" />
+        <meta name="supported-color-schemes" content="light dark" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta property="og:title" content="SideGig" />
+        <meta
+          property="og:description"
+          content="Earn more income by completing simple gigs on social platforms."
+        />
+        <meta property="og:image" content="/some-image.png" />
+        <meta property="og:url" content="/this-page.html" />
+        <meta property="og:site_name" content="Your Site Name" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:alt" content="image description" />
+        <style></style>
+        <link href="css/main.css" rel="stylesheet" />
+      </head>
 
 <body>
     <div class="wrapper">
@@ -57,7 +63,7 @@
                             <a href="task.html" class="menu-list__link active"> Tasks </a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="/" class="menu-list__link"> Payments </a>
+                            <a href="payments.html" class="menu-list__link"> Payments </a>
                         </li>
                         <li class="menu-list__item">
                             <a href="/" class="menu-list__link"> Tickets </a>
@@ -140,7 +146,7 @@
                    <div class="spacer"></div>
                     <section data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1" >
                         <p class="notice"> Available tasks are all the tasks that all users are able to select and engage in order to make earnings based on the rate attached to each task. </p>
-                        <div class="tablegroup">
+                        <div class="">
                             <table class="tablegroup__table">
                                 <tbody>
                                     <tr>
@@ -264,7 +270,7 @@
                         <p class="notice"> Completed tasks are all the tasks that you have attempted to engage which 
                             either has been approved or has failed to be approved (hence, rejected).
                          </p>
-                        <div class="tablegroup" hidden>
+                        <div class="" hidden>
                             <table class="tablegroup__table">
                                 <tbody>
                                     <tr>
@@ -285,7 +291,7 @@
                                             <span class="[ pill ]" data-status="rejected"> rejected </span>
                                         </td>
                                         <td>
-                                            <time> 2 weeks ago </time>
+                                            <time class="time"> 2 weeks ago </time>
                                         </td>
                                     </tr>
                                     <tr>
@@ -306,7 +312,7 @@
                                             <span class="[ pill ]" data-status="approved"> Approved </span>
                                         </td>
                                         <td>
-                                             <time>5hrs ago</time>
+                                             <time class="time">5hrs ago</time>
                                         </td>
                                     </tr>
                                     <tr>
@@ -327,7 +333,7 @@
                                             <span class="[ pill ]" data-status="rejected"> rejected </span>
                                         </td>
                                         <td>
-                                            <time> 5hrs ago </time>
+                                            <time class="time"> 5hrs ago </time>
                                         </td>
                                     </tr>
                                     <tr>
@@ -348,7 +354,7 @@
                                             <span class="[ pill ]" data-status="rejected"> rejected </span>
                                         </td>
                                         <td>
-                                            <time>5hrs ago</time>
+                                            <time class="time">5hrs ago</time>
                                         </td>
                                     </tr>
                                 </tbody>

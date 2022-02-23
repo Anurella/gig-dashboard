@@ -1,17 +1,34 @@
 // Plugins
-import { terser } from "rollup-plugin-terser";
-import pkg from "./package.json";
+import { terser } from 'rollup-plugin-terser';
+import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import pkg from './package.json';
+
+// babel support
+import { babel } from '@rollup/plugin-babel';
+import eslint from '@rollup/plugin-eslint';
 
 // Configs
 var configs = {
-  name: "SidegigDashboard",
-  files: ["main.js"],
-  formats: ["iife"],
-  default: "iife",
-  pathIn: "src/js",
-  pathOut: "dist/js",
+  name: 'SidegigDashboard',
+  files: ['main.js'],
+  formats: ['iife'],
+  default: 'iife',
+  pathIn: 'src/js',
+  pathOut: 'dist/js',
   minify: true,
   sourceMap: true,
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    babel({
+      exclude: 'node_modules/**',
+      babelHelpers: 'bundled',
+    }),
+    eslint({
+      exclude: ['src/scss/**'],
+    }),
+  ],
 };
 
 // Banner
@@ -25,12 +42,12 @@ var createOutput = function (filename, minify) {
   return configs.formats.map(function (format) {
     var output = {
       file: `${configs.pathOut}/${filename}${
-        format === configs.default ? "" : `.${format}`
-      }${minify ? ".min" : ""}.js`,
+        format === configs.default ? '' : `.${format}`
+      }${minify ? '.min' : ''}.js`,
       format: format,
       banner: banner,
     };
-    if (format === "iife") {
+    if (format === 'iife') {
       output.name = configs.name ? configs.name : pkg.name;
     }
     if (minify) {
@@ -68,10 +85,11 @@ var createOutputs = function (filename) {
  */
 var createExport = function (file) {
   return configs.files.map(function (file) {
-    var filename = file.replace(".js", "");
+    var filename = file.replace('.js', '');
     return {
       input: `${configs.pathIn}/${file}`,
       output: createOutputs(filename),
+      plugins: configs.plugins,
     };
   });
 };

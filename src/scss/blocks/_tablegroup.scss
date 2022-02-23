@@ -2,9 +2,9 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border: 1px solid var(--white-400);
+    padding: var(--spacing) calc(var(--spacing) / 1.5);
     box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08),
         0px 8px 8px -4px rgba(152, 152, 152, 0.08);
-    padding: var(--spacing) calc(var(--spacing) / 1.5);
 
     &__header {
         display: flex;
@@ -13,13 +13,14 @@
 
         h2 {
 
-            font-size: 1.75rem;
-            color: var(--primary-200);
+            font-size: 1.25rem;
+            color: var(--dark);
             font-weight: 600;
             letter-spacing: -0.0385em;
 
-            @include respond-above('md') {
+            @include respond-above('lg') {
                 letter-spacing: -0.0235em;
+                font-size: 1.75rem;
             }
 
             line-height: 1.3;
@@ -31,7 +32,7 @@
             color: var(--gray-300);
             letter-spacing: -0.0125em;
 
-            @include respond-above('md') {
+            @include respond-above('lg') {
                 letter-spacing: -0.0225em;
             }
 
@@ -42,70 +43,87 @@
         width: 100%;
         // min-width: 35rem;
         max-width: 100%;
+
         @include respond-above('lg') {
-            table-layout: fixed;
+            // table-layout: fixed;
         }
-        
-    }
 
-    :nth-child(2n):where(th, td) {
-        display: none;
-    }
-
-
-    @include respond-above('md') {
-        :nth-child(2n):where(th, td) {
-            display: block;
+        th {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-block: 10px;
+            padding-inline-end: 10px;
+            color: var(--dark);
+            font-weight: 1rem;
         }
+
+        tr {
+            border-bottom: 1px solid rgb(250, 250, 250);
+        }
+
+        tr:last-child {
+            border: 0;
+        }
+
+        td {
+            padding-block: 10px;
+            padding-inline-end: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            // font-weight: 600;
+            letter-spacing: -0.015em;
+            color: var(--gray-200);
+
+            @include respond-above('md') {
+                letter-spacing: -0.024em;
+            }
+        }
+
+        :last-child:where(th, td) {
+            padding-inline-end: 0;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .rate {
+            color: hsl(17, 89%, 65%);
+            font-size: calc(12 / 16 * 1rem);
+        }
+
+        .amount {
+            font-size: 1.5rem;
+            color: var(--gray-300);
+        }
+
+        .time {
+            color: var(--gray-100);
+            font-size: calc(12 / 16 * 1rem);
+            text-transform: initial;
+        }
+
     }
 
+    &-collapse {
 
-    th {
-        text-align: left;
-        font-weight: 600;
-        padding-block: 10px;
-        padding-inline-end: 10px;
-    }
-
-    td {
-        padding-block: 10px;
-        padding-inline-end: 10px;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: -0.015em;
-
+        :nth-child(2n):where(td) {
+            display: none;
+        }
+    
         @include respond-above('md') {
-            letter-spacing: -0.024em;
+            :nth-child(2n):where(td) {
+                display: block;
+            }
         }
     }
 
-    :last-child:where(th, td) {
-        padding-inline-end: 0;
-    }
-
-    svg {
-        width: 1.5rem;
-        height: auto;
-        vertical-align: middle;
-    }
-
-    .rate {
-        color: hsl(17, 89%, 65%);
-        font-size: calc(12 / 16 * 1rem);
-    }
-
-    .amount {
-        font-size: 1.5rem;
-        color: var(--gray-300);
-    }
-
-    time {
-        color: var(--gray-100);
-        font-size: calc(12 / 16 * 1rem);
-        text-transform: initial;
-    }
 }
+
+
 
 .icon-title {
     display: flex;

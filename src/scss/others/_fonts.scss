@@ -53,7 +53,7 @@ html {
     --fluid-type-min: 12px;
     --fluid-type-target: .25vw;
     --fluid-type-max: 20px;
-    font-size: clamp(var(--fluid-type-min), calc(.8rem + var(--fluid-type-target)),
+    font-size: clamp(var(--fluid-type-min), calc(.75rem + var(--fluid-type-target)),
             var(--fluid-type-max));
     font-family: 'Open Sans',system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
     line-height: 1.5;
