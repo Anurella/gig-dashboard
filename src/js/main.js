@@ -21,7 +21,6 @@ select('.nav').addEventListener('click', (e) => {
 const container = select('#withdrawals');
 const dialog = new A11yDialog(container);
 
-dialog.on('show', function (dialogEl, triggerEl) {
-  console.log(dialogEl);
-  console.log(triggerEl);
+dialog.on('show', function () {
+  console.log('Hello modal is open');
 });

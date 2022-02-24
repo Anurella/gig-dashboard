@@ -1,0 +1,65 @@
+input {
+    width: 100%;
+    border-radius: 4px;
+    padding: 16px;
+    border: 1px solid var(--white-500);
+
+    &.invalid {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        // border-color: #ec2626;
+        animation: shaking .5s cubic-bezier(.36, .07, .19, .97) both;
+        border-color: hsl(17, 89%, 65%);
+    }
+}
+
+.account {
+    &__item {
+
+        padding: 1.5rem;
+        background-color: var(--white-200);
+        border:1px solid var(--white-500);
+        margin-bottom:1rem;
+        border-radius: 4px;
+
+        [data-input="radio"] {
+            cursor: pointer;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        > div {
+            display: grid;
+        }
+
+    }
+}
+
+
+@keyframes shaking {
+
+    10%,
+    90% {
+        transform: translate3d(-2px, 0, 0)
+    }
+
+    20%,
+    80% {
+        transform: translate3d(3px, 0, 0)
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-6px, 0, 0)
+    }
+
+    40%,
+    60% {
+        transform: translate3d(6px, 0, 0)
+    }
+}

@@ -5,6 +5,7 @@ function MultiForm(form) {
   let currentField = 0,
     isFilled,
     filledOut;
+
   const completeForm = form.querySelector('form');
   const fieldSets = Array.from(form.querySelectorAll('fieldset'));
   const fieldCount = fieldSets.length;
@@ -57,11 +58,6 @@ function MultiForm(form) {
     console.log('Validating');
     let valid = true;
     let inputs = fieldSets[currentField].querySelectorAll('input');
-    if (currentField == 0) {
-      let tempp = fieldSets[currentField].querySelector(
-        'input[name="firstName"]'
-      );
-    }
     for (let i = 0; i < inputs.length; i++) {
       if (checkFields()) {
         inputs[i].classList.remove('invalid');
@@ -80,8 +76,8 @@ function MultiForm(form) {
   }
   function stage(n) {
     if (n) {
-      progress[currentField].className += 'finished';
       fieldSets[currentField].classList.remove('current');
+      progress[currentField].classList.add('finished');
       ++currentField;
     } else {
       console.log('Hello I have not moved');
@@ -99,32 +95,24 @@ function MultiForm(form) {
       mailFormat =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let inputs = fieldSets[currentField].querySelectorAll('input');
-    let selects = fieldSets[currentField].querySelectorAll('select');
-    if (currentField === 4) {
-      for (let i = 0; i < selects.length; i++) {
-        if (selects[i].value === '') {
+    // let selects = fieldSets[currentField].querySelectorAll('select');
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].type === 'radio') {
+        if (inputs[i].checked) {
+          temp = true;
+          break;
+        } else {
           temp = false;
         }
-      }
-    } else {
-      for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].type === 'radio') {
-          if (inputs[i].checked) {
-            temp = true;
-            break;
-          } else {
-            temp = false;
-          }
-        } else if (inputs[i].type === 'email') {
-          if (inputs[i].value.match(mailFormat)) {
-            temp = true;
-          } else {
-            temp = false;
-          }
+      } else if (inputs[i].type === 'email') {
+        if (inputs[i].value.match(mailFormat)) {
+          temp = true;
         } else {
-          if (inputs[i].value === '') {
-            temp = false;
-          }
+          temp = false;
+        }
+      } else {
+        if (inputs[i].value === '') {
+          temp = false;
         }
       }
     }
@@ -159,7 +147,7 @@ function MultiForm(form) {
     event.preventDefault();
     console.log('Submitting');
     completeForm.parentElement.classList.add('done');
-    document.querySelector('.successMessage').classList.add('visible');
+    document.querySelector('.success').classList.add('visible');
   }
   init();
 }

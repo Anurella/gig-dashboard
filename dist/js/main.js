@@ -409,9 +409,8 @@
   });
   var container = select('#withdrawals');
   var dialog = new A11yDialog(container);
-  dialog.on('show', function (dialogEl, triggerEl) {
-    console.log(dialogEl);
-    console.log(triggerEl);
+  dialog.on('show', function () {
+    console.log('Hello modal is open');
   });
 
 })();
