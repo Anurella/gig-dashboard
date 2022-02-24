@@ -392,7 +392,7 @@
     }
   }
 
-  console.log('Does it work');
+  console.log('Does it work'); // let selectAll = (e) => document.querySelectorAll(e);
 
   var select = function select(e) {
     return document.querySelector(e);
@@ -407,8 +407,12 @@
     e.stopPropagation();
     select('.nav').classList.remove('isOpen');
   });
-  var container = select('#my-dialog-container');
-  new A11yDialog(container);
+  var container = select('#withdrawals');
+  var dialog = new A11yDialog(container);
+  dialog.on('show', function (dialogEl, triggerEl) {
+    console.log(dialogEl);
+    console.log(triggerEl);
+  });
 
 })();
 //# sourceMappingURL=main.js.map

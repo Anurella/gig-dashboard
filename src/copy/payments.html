@@ -225,7 +225,14 @@
             <div class="payments__table flow">
               <div class="tablegroup__header">
                 <h2>Withdrawal History</h2>
-                <button class="button">Withdraw</button>
+                <button
+                  type="button"
+                  class="button"
+                  data-a11y-dialog-show="withdrawals"
+                  aria-label="Open withdrawals dialog"
+                >
+                  Withdraw
+                </button>
               </div>
               <div class="table-wrapper">
                 <table class="tablegroup__table">
@@ -260,9 +267,86 @@
         </article>
       </main>
       <footer><p>Copyright ©2022. Sidegig. All rights reserved</p></footer>
+      <!-- 1. The dialog container -->
+      <div
+        id="withdrawals"
+        aria-labelledby="withdrawal-form"
+        aria-hidden="true"
+        aria-describedby="my-dialog-description"
+        class="dialog__container"
+      >
+        <!-- 2. The dialog overlay -->
+        <div data-a11y-dialog-hide class="dialog__overlay"></div>
+        <!-- 3. The actual dialog -->
+        <div role="document" class="dialog__content">
+          <!-- 4. The close button -->
+          <!-- <button
+          type="button"
+          data-a11y-dialog-hide
+          aria-label="Close dialog"
+        >
+          &times;
+        </button> -->
+          <!-- 5. The dialog title -->
+          <h1 id="withdrawal-form" aria-hidden="true">Withdrawal Form</h1>
+          <!-- 6. Dialog content -->
+          <div class="form__wrapper">
+            <div class="controls">
+              <button class="prev__arrow">
+                <svg
+                  width="10"
+                  height="16"
+                  viewBox="0 0 10 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.535 8L9.7225 14.1875L7.955 15.955L0 8L7.955 0.0449982L9.7225 1.8125L3.535 8Z"
+                    fill="#D2D7DB"
+                  />
+                </svg>
+              </button>
+              <ul class="progress">
+                <li class="progress__item active"></li>
+                <!---->
+                <li class="progress__item"></li>
+                <!---->
+                <li class="progress__item"></li>
+              </ul>
+            </div>
+            <form form action="" name="" method="POST">
+              <fieldset>
+                <h3>Enter Amount</h3>
+                <input
+                  type="number"
+                  placeholder="00.0"
+                  data-input="input"
+                  name="number"
+                  required
+                />
+                <label for="" data-field="firstName" class="mb">
+                  <span>N 00.0 </span></label
+                >
+                <span></span>
+                <button
+                  type="button"
+                  class="continue button"
+                  aria-disabled="true"
+                >
+                  Continue
+                </button>
+              </fieldset>
+              <fieldset></fieldset>
+              <fieldset></fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/multiform.js"></script>
+    <script>
+      const multiForm = new MultiForm(document.querySelector('.form__wrapper'));
+    </script>
   </body>
 </html>
-
-

@@ -18,5 +18,10 @@ select('.nav').addEventListener('click', (e) => {
   select('.nav').classList.remove('isOpen');
 });
 
-const container = select('#my-dialog-container');
+const container = select('#withdrawals');
 const dialog = new A11yDialog(container);
+
+dialog.on('show', function (dialogEl, triggerEl) {
+  console.log(dialogEl);
+  console.log(triggerEl);
+});

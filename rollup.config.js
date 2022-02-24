@@ -11,7 +11,7 @@ import eslint from '@rollup/plugin-eslint';
 // Configs
 var configs = {
   name: 'SidegigDashboard',
-  files: ['main.js'],
+  files: ['main.js', 'multiform.js'],
   formats: ['iife'],
   default: 'iife',
   pathIn: 'src/js',

@@ -1,0 +1,38 @@
+.dialog {
+
+    &__container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+
+        &[aria-hidden='true'],
+        [aria-hidden='true'] {
+            display: none;
+        }
+    }
+
+    &__overlay {
+        background-color: rgba(27, 26, 26, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__content {
+        background-color: var(--white-100);
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+        border-radius: 4px;
+        margin: auto;
+        max-width: 90%;
+        width: 600px;
+        position: relative;
+        padding:var(--spacing);
+    }
+
+}

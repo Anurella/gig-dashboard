@@ -688,16 +688,6 @@ html {
 	padding: calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
 }
 
-.button {
-	font-size: 16px;
-	letter-spacing: -0.024em;
-	background-color: var(--primary-100);
-	color: var(--white-100);
-	border-radius: 4px;
-	padding-block: 12px;
-	padding-inline: 16px;
-}
-
 .notification__trigger {
 	display: flex;
 	align-items: center;
@@ -724,6 +714,16 @@ html {
 }
 .notification__trigger:where([data-message-value="0"]) .text {
 	color: var(--gray-100);
+}
+
+.button {
+	font-size: 16px;
+	letter-spacing: -0.024em;
+	background-color: var(--primary-100);
+	color: var(--white-100);
+	border-radius: 4px;
+	padding-block: 12px;
+	padding-inline: 16px;
 }
 
 .tablegroup {
@@ -867,6 +867,38 @@ html {
 	}
 }
 
+.dialog__container {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.dialog__container[aria-hidden=true],
+.dialog__container [aria-hidden=true] {
+	display: none;
+}
+.dialog__overlay {
+	background-color: rgba(27, 26, 26, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.dialog__content {
+	background-color: var(--white-100);
+	box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+	border-radius: 4px;
+	margin: auto;
+	max-width: 90%;
+	width: 600px;
+	position: relative;
+	padding: var(--spacing);
+}
+
 :root {
 	--spacing: 20px;
 }
@@ -1006,4 +1038,19 @@ footer {
 .payments .table-wrapper {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
+}
+
+.progress__item {
+	display: inline-block;
+	list-style: none;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+}
+.progress__item::after {
+	content: " ";
+	height: 3px;
+	background-color: var(--white-300);
+	display: inline-block;
+	position: absolute;
 }

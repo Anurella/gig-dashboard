@@ -14,9 +14,10 @@
 @import 'aside';
 @import 'pills';
 @import 'highlight';
-@import 'button';
 @import 'notification';
+@import 'button';
 @import 'tablegroup';
+@import 'modal';
 
 
 
@@ -177,5 +178,25 @@ footer {
     .table-wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+    }
+}
+
+.progress {
+    
+    &__item {
+        display: inline-block;
+        list-style: none;
+        width:22px;
+height:22px;
+border-radius: 50%;
+
+        &::after {
+            content:" ";
+            height:3px;
+            background-color: var(--white-300);
+            display: inline-block;
+            position: absolute;
+            
+        }
     }
 }
