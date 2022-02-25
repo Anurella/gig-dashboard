@@ -945,6 +945,9 @@ html {
 	background-color: var(--primary-100);
 }
 
+.form__wrapper.done {
+	display: none;
+}
 .form__wrapper fieldset {
 	display: none;
 }
@@ -991,6 +994,9 @@ html {
 	text-align: center;
 	transition: all 0.3s ease;
 }
+.success.visible {
+	display: block;
+}
 
 .balance__details {
 	background-color: #f0f3fa;
@@ -1002,6 +1008,21 @@ html {
 }
 .balance__details span {
 	color: #2458db;
+}
+
+.summary__details li {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0.5rem;
+	border-bottom: 1px solid var(--white-300);
+}
+.summary__details li span:nth-of-type(1) {
+	font-size: 14px;
+	color: var(--gray-200);
+}
+.summary__details li span:nth-of-type(2) {
+	letter-spacing: -0.024em;
+	font-size: 16px;
 }
 
 .dialog__container {
@@ -1033,7 +1054,7 @@ html {
 	width: min(600px, 95%);
 	position: relative;
 	padding: var(--spacing);
-	min-height: 350px;
+	min-height: 400px;
 }
 
 input {
@@ -1050,28 +1071,60 @@ input.invalid {
 }
 
 .account__item {
-	padding: 1rem;
+	margin-bottom: 1rem;
+	display: block;
+	cursor: pointer;
+}
+.account__item > div {
 	background-color: var(--white-200);
 	border: 1px solid var(--white-500);
-	margin-bottom: 1rem;
 	border-radius: 4px;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	row-gap: 5px;
+	align-items: center;
+	padding: 1rem;
 }
 .account__item [data-input=radio] {
 	cursor: pointer;
-	padding: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	clip-path: inset(50%);
+}
+.account__item [data-input=radio]:checked ~ div {
+	border-color: #949494;
+}
+.account__item [data-input=radio]:checked ~ div .tick {
+	border-color: var(--primary-100);
+}
+.account__item [data-input=radio]:checked ~ div .tick::after {
+	opacity: 1;
+	transform: scale(1);
+}
+.account__item .tick {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
 	border: 2px solid var(--gray-300);
+	margin-right: 5px;
 }
-.account__item [data-input=radio]:checked {
-	border: 10px double var(--primary-100);
+.account__item .tick::after {
+	border-radius: 50%;
+	content: "";
+	height: 12px;
+	left: 2px;
+	opacity: 0;
+	position: absolute;
+	top: 2px;
+	transform: scale(0);
+	transition: transform, opacity 0.2s ease;
+	width: 12px;
+	background-color: var(--primary-100);
 }
 .account__name {
 	grid-column: 1/span 9;
@@ -1085,6 +1138,7 @@ input.invalid {
 }
 .account__number {
 	font-size: 16px;
+	color: var(--gray-200);
 }
 
 @keyframes shaking {

@@ -1,63 +1,71 @@
 @mixin flex-column {
-    display: flex;
-    flex-direction: column;
-  }
+	display: flex;
+	flex-direction: column;
+}
 
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-   
-  @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-   
-  @mixin flex-center-column {
-    @include flex-center;
-    flex-direction: column;
-  }
-   
-  @mixin flex-center-vert {
-    display: flex;
-    align-items: center;
-  }
-   
-  @mixin flex-center-horiz {
-    display: flex;
-    justify-content: center;
-  }
+@mixin flex-center-column {
+	@include flex-center;
+	flex-direction: column;
+}
 
-  @mixin position($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: initial) {
-    position: $position;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-    z-index: $z-index;
-  }
+@mixin flex-center-vert {
+	display: flex;
+	align-items: center;
+}
 
+@mixin flex-center-horiz {
+	display: flex;
+	justify-content: center;
+}
 
-  $breakpoints:  (
-  "xs": 25em, // 400px
-  "sm": 34em, // 544px
-  "md": 48em, // 768px
-  "lg": 60em, // 960px
-  "xl": 80em, // 1280px
-  "xxl": 90em // 1440px
+@mixin position(
+	$position: absolute,
+	$top: null,
+	$right: null,
+	$bottom: null,
+	$left: null,
+	$z-index: initial
+) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $z-index;
+}
+
+$breakpoints: (
+	'xs': 25em,
+	// 400px
+	'sm': 34em,
+	// 544px
+	'md': 48em,
+	// 768px
+	'lg': 60em,
+	// 960px
+	'xl': 80em,
+	// 1280px
+	'xxl': 90em // 1440px,
 );
- 
+
 @mixin respond-above($breakpoint) {
-  // If the breakpoint exists in the map.
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Get the breakpoint value.
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
-    // Write the media query.
-    @media (min-width: $breakpoint-value) {
-      @content;
-    }
-    // If the breakpoint doesn't exist in the map.
-  }
-  @else {
-    // Log a warning.
-    @warn 'Invalid breakpoint: #{$breakpoint}.';
-  }
+	// If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+		// Get the breakpoint value.
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+		// Write the media query.
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+		// If the breakpoint doesn't exist in the map.
+	} @else {
+		// Log a warning.
+		@warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
 }
