@@ -981,7 +981,7 @@ html {
 	font-size: 20px;
 	line-height: 20px;
 }
-.form__wrapper label {
+.form__wrapper [data-field=amount] {
 	display: block;
 }
 
@@ -1050,24 +1050,41 @@ input.invalid {
 }
 
 .account__item {
-	padding: 1.5rem;
+	padding: 1rem;
 	background-color: var(--white-200);
 	border: 1px solid var(--white-500);
 	margin-bottom: 1rem;
 	border-radius: 4px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	row-gap: 5px;
 }
 .account__item [data-input=radio] {
 	cursor: pointer;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 1;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--gray-300);
 }
-.account__item > div {
-	display: grid;
+.account__item [data-input=radio]:checked {
+	border: 10px double var(--primary-100);
+}
+.account__name {
+	grid-column: 1/span 9;
+}
+.account__bank {
+	grid-column: 10;
+}
+.account__name, .account__bank {
+	color: var(--gray-300);
+	font-size: 14px;
+}
+.account__number {
+	font-size: 16px;
 }
 
 @keyframes shaking {
