@@ -51,7 +51,7 @@ $breakpoints: (
 	// 960px
 	'xl': 80em,
 	// 1280px
-	'xxl': 90em // 1440px,
+	'xxl': 90em // 1440px,,
 );
 
 @mixin respond-above($breakpoint) {

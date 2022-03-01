@@ -1,16 +1,15 @@
 .wrapper {
-    --spacing: 20px;
-    block-size: 100%;
-    isolation: isolate;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-   
-    @include respond-above('md') {
-        --spacing: 30px;
-    }
+	--spacing: 20px;
+	block-size: 100%;
+	isolation: isolate;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 
-    > * {
-        min-width: 0;
-    }
+	@include respond-above('lg') {
+		--spacing: 30px;
+	}
 
+	> * {
+		min-width: 0;
+	}
 }

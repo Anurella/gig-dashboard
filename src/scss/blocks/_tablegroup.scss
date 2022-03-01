@@ -1,174 +1,163 @@
 .tablegroup {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border: 1px solid var(--white-400);
-    padding: var(--spacing) calc(var(--spacing) / 1.5);
-    box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08),
-        0px 8px 8px -4px rgba(152, 152, 152, 0.08);
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	border: 1px solid var(--white-400);
+	padding: var(--spacing) calc(var(--spacing) / 1.5);
+	box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08),
+		0px 8px 8px -4px rgba(152, 152, 152, 0.08);
 
-    &__header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
+	&__header {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
 
-        h2 {
+		h2 {
+			font-size: 1.25rem;
+			color: var(--dark);
+			font-weight: 600;
+			letter-spacing: -0.0385em;
 
-            font-size: 1.25rem;
-            color: var(--dark);
-            font-weight: 600;
-            letter-spacing: -0.0385em;
+			@include respond-above('lg') {
+				letter-spacing: -0.0235em;
+				font-size: 1.75rem;
+			}
 
-            @include respond-above('lg') {
-                letter-spacing: -0.0235em;
-                font-size: 1.75rem;
-            }
+			line-height: 1.3;
+		}
 
-            line-height: 1.3;
-        }
+		a {
+			font-size: 1rem;
+			line-height: 1.5;
+			color: var(--gray-300);
+			letter-spacing: -0.0125em;
 
-        a {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: var(--gray-300);
-            letter-spacing: -0.0125em;
+			@include respond-above('lg') {
+				letter-spacing: -0.0225em;
+			}
+		}
+	}
 
-            @include respond-above('lg') {
-                letter-spacing: -0.0225em;
-            }
+	&__table {
+		width: 100%;
+		// min-width: 35rem;
+		max-width: 100%;
 
-        }
-    }
+		@include respond-above('lg') {
+			// table-layout: fixed;
+		}
 
-    &__table {
-        width: 100%;
-        // min-width: 35rem;
-        max-width: 100%;
+		th {
+			text-align: left;
+			text-transform: uppercase;
+			font-weight: 600;
+			padding-block: 10px;
+			padding-inline-end: 10px;
+			color: var(--dark);
+			font-weight: 1rem;
+		}
 
-        @include respond-above('lg') {
-            // table-layout: fixed;
-        }
+		tr {
+			border-bottom: 1px solid rgb(250, 250, 250);
+		}
 
-        th {
-            text-align: left;
-            text-transform: uppercase;
-            font-weight: 600;
-            padding-block: 10px;
-            padding-inline-end: 10px;
-            color: var(--dark);
-            font-weight: 1rem;
-        }
+		tr:last-child {
+			border: 0;
+		}
 
-        tr {
-            border-bottom: 1px solid rgb(250, 250, 250);
-        }
+		td {
+			padding-block: 10px;
+			padding-inline-end: 10px;
+			font-size: 1rem;
+			text-transform: uppercase;
+			// font-weight: 600;
+			letter-spacing: -0.015em;
+			color: var(--gray-200);
 
-        tr:last-child {
-            border: 0;
-        }
+			@include respond-above('md') {
+				letter-spacing: -0.024em;
+			}
+		}
 
-        td {
-            padding-block: 10px;
-            padding-inline-end: 10px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            // font-weight: 600;
-            letter-spacing: -0.015em;
-            color: var(--gray-200);
+		:last-child:where(th, td) {
+			padding-inline-end: 0;
+		}
 
-            @include respond-above('md') {
-                letter-spacing: -0.024em;
-            }
-        }
+		svg {
+			width: 1.5rem;
+			height: auto;
+			vertical-align: middle;
+		}
 
-        :last-child:where(th, td) {
-            padding-inline-end: 0;
-        }
+		.rate {
+			color: hsl(17, 89%, 65%);
+			font-size: calc(12 / 16 * 1rem);
+		}
 
-        svg {
-            width: 1.5rem;
-            height: auto;
-            vertical-align: middle;
-        }
+		.amount {
+			font-size: 1.5rem;
+			color: var(--gray-300);
+		}
 
-        .rate {
-            color: hsl(17, 89%, 65%);
-            font-size: calc(12 / 16 * 1rem);
-        }
+		.time {
+			color: var(--gray-100);
+			font-size: calc(12 / 16 * 1rem);
+			text-transform: initial;
+		}
+	}
 
-        .amount {
-            font-size: 1.5rem;
-            color: var(--gray-300);
-        }
+	&-collapse {
+		:nth-child(2n):where(td) {
+			display: none;
+		}
 
-        .time {
-            color: var(--gray-100);
-            font-size: calc(12 / 16 * 1rem);
-            text-transform: initial;
-        }
-
-    }
-
-    &-collapse {
-
-        :nth-child(2n):where(td) {
-            display: none;
-        }
-    
-        @include respond-above('md') {
-            :nth-child(2n):where(td) {
-                display: block;
-            }
-        }
-    }
-
+		@include respond-above('md') {
+			:nth-child(2n):where(td) {
+				display: block;
+			}
+		}
+	}
 }
-
-
 
 .icon-title {
-    display: flex;
-    align-items: baseline;
-    gap: 1.5rem;
+	display: flex;
+	align-items: baseline;
+	gap: 1.5rem;
 }
 
-[data-task-type="instagram"] {
-    .type {
-        fill: #C11977;
-    }
+[data-task-type='instagram'] {
+	.type {
+		fill: #c11977;
+	}
 }
-
 
 .actions {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
 
-    @include respond-above('md') {
-        justify-content: flex-start;
-        gap: 2rem;
-    }
+	@include respond-above('md') {
+		justify-content: flex-start;
+		gap: 2rem;
+	}
 
-    &__view {
-        padding: 4px 10px;
-        background-color: var(--primary-100);
-        color: var(--white-100);
-        font-weight: inherit;
-        text-transform: inherit;
-        border-radius: 24px;
+	&__view {
+		padding: 4px 10px;
+		background-color: var(--primary-100);
+		color: var(--white-100);
+		font-weight: inherit;
+		text-transform: inherit;
+		border-radius: calc(var(--radius) * 6);
 
-        @include respond-above('md') {
-            padding: 8px 16px;
-        }
+		@include respond-above('md') {
+			padding: 8px 16px;
+		}
 
-        span {
+		span {
+			display: none;
 
-            display: none;
-
-            @include respond-above('md') {
-                display: inline-block;
-            }
-        }
-    }
-
-
+			@include respond-above('md') {
+				display: inline-block;
+			}
+		}
+	}
 }

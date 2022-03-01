@@ -1,9 +1,23 @@
-input {
+input,
+select,
+textarea {
 	width: 100%;
-	border-radius: 4px;
-	padding: 16px;
+	padding: 10px;
 	border: 1px solid var(--white-500);
+	border-radius: var(--radius);
+	font-size: 16px;
+	background-color: var(--white-200);
+	&:focus {
+		border-color: var(--primary-300);
+		background-color: var(--primary-400);
+	}
+	&:focus-visible {
+		outline: 2px solid var(--primary-300);
+		outline-offset: -2px;
+	}
+}
 
+input {
 	&.invalid {
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
@@ -13,6 +27,54 @@ input {
 	}
 }
 
+textarea {
+	min-height: 100px;
+}
+
+form {
+	label {
+		display: block;
+		margin-block-end: calc(var(--spacing) / 2);
+	}
+}
+
+[data-label] {
+	color: var(--dark);
+	font-size: calc(0.85rem + 0.5px);
+	display: block;
+	margin-block-end: 5px;
+	text-transform: uppercase;
+}
+
+[data-field='file'] {
+	text-align: center;
+	// input {
+	// 	opacity: 0;
+	// 	clip-path: inset(100%);
+	// }
+	// [data-label] {
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	left: 50%;
+	// 	top: 12px;
+	// 	transform: translateX(-50%);
+	// }
+}
+
+.select {
+	&::after {
+		background-color: var(--primary-100);
+		-webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+		clip-path: polygon(100% 0, 0 0, 50% 100%);
+		content: ' ';
+		height: 6px;
+		position: absolute;
+		right: 15px;
+		top: calc(50% + 7px);
+		// transform: translateY(-6px);
+		width: 12px;
+	}
+}
 .account {
 	&__item {
 		margin-bottom: 1rem;
@@ -22,7 +84,7 @@ input {
 			background-color: var(--white-200);
 			border: 1px solid var(--white-500);
 
-			border-radius: 4px;
+			border-radius: var(--radius);
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			row-gap: 5px;
@@ -54,7 +116,7 @@ input {
 				}
 			}
 
-			&:focus {
+			&:focus-visible {
 				~ div {
 					border-color: var(--primary-100);
 				}

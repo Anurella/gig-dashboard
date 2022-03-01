@@ -18,9 +18,17 @@ select('.nav').addEventListener('click', (e) => {
 	select('.nav').classList.remove('isOpen');
 });
 
+/**
+ * [add description]
+ * @param   {[type]}  num1  [num1 description]
+ * @param   {[type]}  num2  [num2 description]
+ * @return  {[type]}        [return description]
+ */
+
 const container = select('.dialog__container');
 const dialog = new A11yDialog(container);
 
 dialog.on('show', function () {
+	// eslint-disable-next-line indent
 	console.log('Hello modal is open');
 });

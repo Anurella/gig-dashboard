@@ -23,6 +23,7 @@
 
 :root {
 	--spacing: 20px;
+	--radius: 4px;
 }
 
 html {
@@ -82,7 +83,7 @@ footer {
 	text-align: center;
 
 	@include respond-above('lg') {
-		padding-inline: var(--spacing);
+		padding-inline: calc(var(--spacing) * 1.5);
 		text-align: left;
 	}
 
@@ -91,7 +92,7 @@ footer {
 	letter-spacing: -0.0125em;
 }
 
-.no-task {
+.empty {
 	text-align: center;
 	padding: 1.5rem;
 
@@ -181,5 +182,65 @@ add border and padding to a section
 	.table-wrapper {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.tasks {
+	[data-tab='tab1']:checked ~ nav ~ [data-tab-panel='tab1'],
+	[data-tab='tab2']:checked ~ nav ~ [data-tab-panel='tab2'] {
+		border: var(--tab-border-width) solid var(--tab-border-color);
+		box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08),
+			0px 8px 8px -4px rgba(152, 152, 152, 0.08);
+		padding: var(--spacing);
+	}
+}
+
+.mt-10 {
+	margin-block-start: 10px;
+}
+
+.view-task {
+	&__info {
+		display: flex;
+		gap: var(--spacing);
+
+		&-item {
+			flex: 1;
+			background-color: var(--white-300);
+			padding: calc(var(--spacing) / 1.5);
+			border-radius: var(--radius);
+			display: flex;
+			gap: calc(var(--spacing) / 2);
+
+			&:nth-child(2) {
+				> div {
+					background-color: var(--white-200);
+					padding: calc(var(--spacing) / 2);
+					flex: 1;
+					border-radius: var(--radius);
+					@include flex-center-vert;
+					gap: 15px;
+				}
+				h4 {
+					font-weight: 600;
+					font-size: clamp(16px, 2vw, 1.5rem);
+					letter-spacing: -0.0385em;
+					color: var(--gray-100);
+					span {
+						text-transform: uppercase;
+						font-size: 10px;
+						letter-spacing: -0.015em;
+						color: var(--gray-400);
+						display: block;
+						margin-block-end: 0.5rem;
+					}
+				}
+			}
+
+			.svg-mini {
+				width: min(2.5rem, 4vw);
+				height: auto;
+			}
+		}
 	}
 }

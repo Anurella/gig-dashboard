@@ -407,9 +407,17 @@
     e.stopPropagation();
     select('.nav').classList.remove('isOpen');
   });
+  /**
+   * [add description]
+   * @param   {[type]}  num1  [num1 description]
+   * @param   {[type]}  num2  [num2 description]
+   * @return  {[type]}        [return description]
+   */
+
   var container = select('.dialog__container');
   var dialog = new A11yDialog(container);
   dialog.on('show', function () {
+    // eslint-disable-next-line indent
     console.log('Hello modal is open');
   });
 
