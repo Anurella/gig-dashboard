@@ -203,6 +203,7 @@ add border and padding to a section
 	&__info {
 		display: flex;
 		gap: var(--spacing);
+		flex-wrap: wrap;
 
 		&-item {
 			flex: 1;
@@ -211,6 +212,13 @@ add border and padding to a section
 			border-radius: var(--radius);
 			display: flex;
 			gap: calc(var(--spacing) / 2);
+			align-items: center;
+
+			&:first-child {
+				svg {
+					width: min(10vw, 60px);
+				}
+			}
 
 			&:nth-child(2) {
 				> div {
@@ -237,8 +245,29 @@ add border and padding to a section
 				}
 			}
 
+			h3 {
+				font-weight: 600;
+				font-size: clamp(1.5rem, 3vw, 28px);
+				letter-spacing: -0.0385em;
+				color: var(--gray-100);
+				line-height: 1.4;
+				letter-spacing: -0.0235em;
+				margin-bottom: 5px;
+			}
+
+			p {
+				color: var(--gray-300);
+				font-weight: 600;
+				letter-spacing: -0.024em;
+				text-transform: capitalize;
+
+				.pill {
+					margin-inline-start: 20px;
+				}
+			}
+
 			.svg-mini {
-				width: min(2.5rem, 4vw);
+				width: min(2.5rem, 8vw);
 				height: auto;
 			}
 		}

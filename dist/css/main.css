@@ -1405,6 +1405,7 @@ add border and padding to a section
 .view-task__info {
 	display: flex;
 	gap: var(--spacing);
+	flex-wrap: wrap;
 }
 .view-task__info-item {
 	flex: 1;
@@ -1413,6 +1414,10 @@ add border and padding to a section
 	border-radius: var(--radius);
 	display: flex;
 	gap: calc(var(--spacing) / 2);
+	align-items: center;
+}
+.view-task__info-item:first-child svg {
+	width: min(10vw, 60px);
 }
 .view-task__info-item:nth-child(2) > div {
 	background-color: var(--white-200);
@@ -1437,7 +1442,25 @@ add border and padding to a section
 	display: block;
 	margin-block-end: 0.5rem;
 }
+.view-task__info-item h3 {
+	font-weight: 600;
+	font-size: clamp(1.5rem, 3vw, 28px);
+	letter-spacing: -0.0385em;
+	color: var(--gray-100);
+	line-height: 1.4;
+	letter-spacing: -0.0235em;
+	margin-bottom: 5px;
+}
+.view-task__info-item p {
+	color: var(--gray-300);
+	font-weight: 600;
+	letter-spacing: -0.024em;
+	text-transform: capitalize;
+}
+.view-task__info-item p .pill {
+	margin-inline-start: 20px;
+}
 .view-task__info-item .svg-mini {
-	width: min(2.5rem, 4vw);
+	width: min(2.5rem, 8vw);
 	height: auto;
 }
