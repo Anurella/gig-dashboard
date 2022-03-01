@@ -374,7 +374,7 @@ html {
 	transition: opacity 0.5s, visibility 0.5s;
 }
 .nav__wrapper {
-	width: 80%;
+	width: min(80%, 45vmax);
 	background-color: var(--white-100);
 	height: 100%;
 	transform: translate3d(-100%, 0, 0);
@@ -873,13 +873,8 @@ html {
 	justify-content: center;
 }
 .controls .prev__arrow {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50px;
 	opacity: 0;
 	visibility: hidden;
-	width: 50px;
 	z-index: 1;
 	position: absolute;
 	left: 0;
@@ -997,6 +992,21 @@ html {
 .success.visible {
 	display: block;
 }
+.success h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: min(3vmax, 24px);
+	letter-spacing: -0.0385em;
+	font-weight: 600;
+	line-height: 1.1;
+	row-gap: calc(var(--spacing) / 2);
+}
+.success svg {
+	width: 60px;
+	height: auto;
+}
 
 .balance__details {
 	background-color: #f0f3fa;
@@ -1106,6 +1116,9 @@ input.invalid {
 	opacity: 1;
 	transform: scale(1);
 }
+.account__item [data-input=radio]:focus ~ div {
+	border-color: var(--primary-100);
+}
 .account__item .tick {
 	width: 20px;
 	height: 20px;
@@ -1139,6 +1152,14 @@ input.invalid {
 .account__number {
 	font-size: 16px;
 	color: var(--gray-200);
+}
+
+.prev__arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
 }
 
 @keyframes shaking {
@@ -1246,10 +1267,15 @@ footer {
 	font-size: min(1rem, 14px);
 }
 
-.payments {
+/* 
+defs
+add border and padding to a section 
+*/
+.sbp {
 	border: 1px solid var(--white-400);
 	padding: var(--spacing) calc(var(--spacing) / 1.5);
 }
+
 .payments__highlight {
 	display: flex;
 	flex-wrap: wrap;

@@ -2,15 +2,11 @@
 	@include flex-center;
 
 	.prev__arrow {
-		@include flex-center;
-		height: 50px;
 		opacity: 0;
 		visibility: hidden;
-		width: 50px;
 		z-index: 1;
 		position: absolute;
 		left: 0;
-
 		&.visible {
 			opacity: 1;
 			visibility: visible;
@@ -143,6 +139,19 @@
 
 	&.visible {
 		display: block;
+	}
+
+	h3 {
+		@include flex-center-column;
+		font-size: min(3vmax, 24px);
+		letter-spacing: -0.0385em;
+		font-weight: 600;
+		line-height: 1.1;
+		row-gap: calc(var(--spacing) / 2);
+	}
+	svg {
+		width: 60px;
+		height: auto;
 	}
 }
 

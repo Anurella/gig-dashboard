@@ -21,165 +21,165 @@
 @import 'modal';
 @import 'form';
 
-
-
 :root {
-    --spacing: 20px;
+	--spacing: 20px;
 }
 
 html {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 @media (hover: none) and (pointer: coarse) {
-
-    .button,
-    input,
-    select {
-        min-height: 44px;
-    }
+	.button,
+	input,
+	select {
+		min-height: 44px;
+	}
 }
 
 .spacer {
-    height: var(--spacing);
-    display: block;
+	height: var(--spacing);
+	display: block;
 }
 
 .explanation {
-    border: 1px solid var(--white-400);
-    padding: calc(var(--spacing) / 2) var(--spacing);
+	border: 1px solid var(--white-400);
+	padding: calc(var(--spacing) / 2) var(--spacing);
 
-    @include respond-above('md') {}
+	@include respond-above('md') {
+	}
 
-    font-size: 1rem;
-    line-height: 1.3;
+	font-size: 1rem;
+	line-height: 1.3;
 }
 
-
 .main {
-    padding-inline: var(--spacing);
+	padding-inline: var(--spacing);
 
-    @include respond-above('md') {
-        padding-inline: calc(var(--spacing) * 1.5);
-    }
+	@include respond-above('md') {
+		padding-inline: calc(var(--spacing) * 1.5);
+	}
 }
 
 .app-layout {
+	&__wrapper {
+	}
 
-    &__wrapper {}
+	&__title {
+		font-size: 1.84rem;
+		font-weight: 600;
+		line-height: 1.3;
+		letter-spacing: -0.0385em;
 
-    &__title {
-        font-size: 1.84rem;
-        font-weight: 600;
-        line-height: 1.3;
-        letter-spacing: -0.0385em;
-
-        @include respond-above('md') {
-            display: none;
-        }
-    }
+		@include respond-above('md') {
+			display: none;
+		}
+	}
 }
 
-
 footer {
-    padding: calc(var(--spacing) / 1.5);
-    text-align: center;
+	padding: calc(var(--spacing) / 1.5);
+	text-align: center;
 
-    @include respond-above('lg') {
-        padding-inline: var(--spacing);
-        text-align: left;
-    }
+	@include respond-above('lg') {
+		padding-inline: var(--spacing);
+		text-align: left;
+	}
 
-    font-size: 1rem;
-    color:var(--gray-300);
-    letter-spacing: -0.0125em;
+	font-size: 1rem;
+	color: var(--gray-300);
+	letter-spacing: -0.0125em;
 }
 
 .no-task {
+	text-align: center;
+	padding: 1.5rem;
 
-    text-align: center;
-    padding: 1.5rem;
+	@include respond-above('lg') {
+		padding: 3rem;
+	}
 
-    @include respond-above('lg') {
-        padding: 3rem;
-    }
+	max-width: 500px;
+	margin: 0 auto;
 
-    max-width: 500px;
-    margin:0 auto;
+	svg {
+		width: 40px;
+		height: auto;
 
-    svg {
-        width: 40px;
-        height: auto;
+		@include respond-above('lg') {
+			width: 80px;
+		}
+	}
 
-        @include respond-above('lg') {
-            width: 80px;
-        }
-    }
+	h2 {
+		font-weight: 600;
+		font-size: min(5vmin, 1.5rem);
+		letter-spacing: -0.0385em;
+		margin-top: 1rem;
+	}
 
-    h2 {
-        font-weight: 600;
-        font-size: min(5vmin, 1.5rem);
-        letter-spacing: -0.0385em;
-        margin-top: 1rem;
-    }
+	p {
+		font-size: min(1rem, 14px);
+	}
+}
 
-    p {
-        font-size: min(1rem, 14px);
-    }
+/* 
+defs
+add border and padding to a section 
+*/
+
+.sbp {
+	border: 1px solid var(--white-400);
+	padding: var(--spacing) calc(var(--spacing) / 1.5);
 }
 
 .payments {
-    border: 1px solid var(--white-400);
-    padding: var(--spacing) calc(var(--spacing) / 1.5);
+	&__highlight {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
 
-    &__highlight {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+		figure {
+			flex: 1;
+		}
 
-        figure {
-            flex: 1;
-        }
+		figcaption {
+			font-size: 1rem;
+			text-transform: uppercase;
+			color: var(--gray-100);
+			letter-spacing: -0.015em;
 
-        figcaption {
-            font-size: 1rem;
-            text-transform: uppercase;
-            color: var(--gray-100);
-            letter-spacing: -0.015em;
+			@include respond-above('lg') {
+				letter-spacing: -0.024em;
+			}
+		}
 
-            @include respond-above('lg') {
-                letter-spacing: -0.024em;
-            }
-        }
+		h4 {
+			font-size: min(7.5vw, 40px);
+			font-weight: 600;
 
-        h4 {
-            font-size: min(7.5vw, 40px);
-            font-weight: 600;
+			@include respond-above('lg') {
+				font-weight: 700;
+			}
 
-            @include respond-above('lg') {
-                font-weight: 700;
-            }
+			span {
+				font-size: min(6vw, 32px);
+				color: var(--gray-300);
+				letter-spacing: -0.0385em;
 
-            span {
-                font-size: min(6vw, 32px);
-                color: var(--gray-300);
-                letter-spacing: -0.0385em;
+				@include respond-above('md') {
+					letter-spacing: -0.03em;
+				}
+			}
+		}
+	}
 
-                @include respond-above('md') {
-                    letter-spacing: -0.03em;
-                }
-            }
-        }
-    }
+	&__table {
+		margin-top: 3rem;
+	}
 
-    &__table {
-       
-        margin-top: 3rem;
-    }
-
-    .table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+	.table-wrapper {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
-

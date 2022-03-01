@@ -115,7 +115,9 @@
 								</a>
 							</li>
 							<li class="menu-list__item">
-								<a href="/" class="menu-list__link"> Tickets </a>
+								<a href="tickets.html" class="menu-list__link active">
+									Tickets
+								</a>
 							</li>
 							<li class="menu-list__item">
 								<a href="/" class="menu-list__link"> Invite Friends </a>
@@ -167,7 +169,7 @@
 									<a href="payments.html" class=""> Payments </a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="/" class=""> Tickets </a>
+									<a href="tickets.html" class=""> Tickets </a>
 								</li>
 								<li class="nav__menu-item">
 									<a href="/" class=""> Invite Friends </a>
@@ -207,32 +209,18 @@
 					</div>
 				</aside>
 				<article class="app-layout__wrapper flow">
-					<h1 class="app-layout__title">Payments</h1>
-					<section class="payments sbp">
-						<div class="payments__highlight">
-							<figure>
-								<figcaption>Wallet Balance</figcaption>
-								<h4>234,030<span>.04</span></h4>
-							</figure>
-							<figure>
-								<figcaption>Completed Tasks</figcaption>
-								<h4>234</h4>
-							</figure>
-							<figure>
-								<figcaption>Minimal Withdrawal</figcaption>
-								<h4>234,03030<span>.04</span></h4>
-							</figure>
-						</div>
-						<div class="payments__table flow">
+					<h1 class="app-layout__title">Tickets</h1>
+					<section class="tickets sbp">
+						<div class="tickets__table flow">
 							<div class="tablegroup__header">
-								<h2>Withdrawal History</h2>
+								<h2>Tickets</h2>
 								<button
 									type="button"
 									class="button"
-									data-a11y-dialog-show="withdrawals"
-									aria-label="Open withdrawals dialog"
+									data-a11y-dialog-show="createTickets"
+									aria-label="Open ticket dialog"
 								>
-									Withdraw
+									Create Ticket
 								</button>
 							</div>
 							<div class="table-wrapper">
@@ -272,8 +260,8 @@
 			</footer>
 			<!-- 1. The dialog container -->
 			<div
-				id="withdrawals"
-				aria-labelledby="withdrawal-form"
+				id="createTickets"
+				aria-labelledby="ticket-form"
 				aria-hidden="true"
 				aria-describedby="modal-description"
 				class="dialog__container"
@@ -282,47 +270,35 @@
 				<div data-a11y-dialog-hide class="dialog__overlay"></div>
 				<!-- 3. The actual dialog -->
 				<div role="document" class="dialog__content">
-					<!-- 4. The close button -->
-					<!-- <button
-          type="button"
-          data-a11y-dialog-hide
-          aria-label="Close dialog"
-        >
-          &times;
-        </button> -->
+					<button
+						class="prev__arrow visible"
+						type="button"
+						data-a11y-dialog-hide
+						aria-label="Close dialog"
+					>
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
+								fill="#1B1A1A"
+							/>
+						</svg>
+					</button>
 					<!-- 5. The dialog title -->
-					<h1 id="withdrawal-form" aria-hidden="true">Withdrawal Form</h1>
-					<span id="modal-description" class="visually-hidden">
-						Form to help create a withdrawal request</span
+					<h1 id="ticket-form" aria-hidden="true">Withdrawal Form</h1>
+					<span id="modal-description" class="visually-hidden"
+						>Create a ticket that support can help with</span
 					>
 					<!-- 6. Dialog content -->
-					<div class="form__wrapper flow">
-						<div class="controls">
-							<button class="prev__arrow">
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
-										fill="#1B1A1A"
-									/>
-								</svg>
-							</button>
-							<ul class="progress">
-								<li class="progress__item active"></li>
-								<!---->
-								<li class="progress__item"></li>
-								<!---->
-								<li class="progress__item"></li>
-							</ul>
-						</div>
+					<div class="form__wrapper">
 						<form action="" name="" method="POST">
 							<fieldset class="current" name="amount">
-								<h3>Enter Amount</h3>
+								<h3>New Ticket</h3>
 								<label for="amount" data-field="amount">
 									<input
 										type="number"
@@ -345,86 +321,6 @@
 									aria-disabled="true"
 								>
 									Continue
-								</button>
-							</fieldset>
-							<fieldset name="account">
-								<h3>Bank Account</h3>
-								<label
-									for="account-1"
-									data-field="account"
-									class="account__item"
-								>
-									<input
-										type="radio"
-										name="account"
-										value=""
-										id="account-1"
-										data-input="radio"
-									/>
-
-									<div>
-										<span class="tick"></span>
-										<h5 class="account__number">000000000</h5>
-										<p class="account__bank">Access</p>
-										<p class="account__name">George Gabriel</p>
-									</div>
-								</label>
-								<label for="account-2" class="account__item">
-									<input
-										type="radio"
-										name="account"
-										value=""
-										id="account-2"
-										data-input="radio"
-									/>
-
-									<div>
-										<span class="tick"></span>
-										<h5 class="account__number">000000000</h5>
-										<p class="account__bank">Access</p>
-										<p class="account__name">George Gabriel</p>
-									</div>
-								</label>
-								<label for="account-3" class="account__item">
-									<input
-										type="radio"
-										name="account"
-										value=""
-										id="account-3"
-										data-input="radio"
-									/>
-									<div>
-										<span class="tick"></span>
-										<h5 class="account__number">000000000</h5>
-										<p class="account__bank">Access</p>
-										<p class="account__name">George Gabriel</p>
-									</div>
-								</label>
-								<span class="spacer"></span>
-								<button type="button" class="next button" aria-disabled="true">
-									Select
-								</button>
-							</fieldset>
-							<fieldset name="summary">
-								<h3>Summary</h3>
-								<ul class="summary__details">
-									<li>
-										<span> Amount to withdraw </span><span> N 00.0 </span>
-									</li>
-									<li>
-										<span>Receiving bank</span><span><b> Access Bank </b></span>
-									</li>
-									<li>
-										<span>Account Number</span><span><b>0000000000</b></span>
-									</li>
-									<li>
-										<span> George Okoro </span>
-										<span> <b>Bademo</b> </span>
-									</li>
-								</ul>
-								<span class="spacer"></span>
-								<button type="submit" class="button">
-									Complete Withdrawal
 								</button>
 							</fieldset>
 						</form>
@@ -469,9 +365,6 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
-		<script src="js/multiform.js"></script>
-		<script>
-			const multiForm = new MultiForm(document.querySelector('.form__wrapper'));
-		</script>
+		<script></script>
 	</body>
 </html>

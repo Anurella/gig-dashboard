@@ -8,19 +8,19 @@ console.log('Does it work');
 let select = (e) => document.querySelector(e);
 
 select('.menu-hamburger').addEventListener('click', (e) => {
-  e.stopPropagation();
-  e.preventDefault();
-  select('.nav').classList.add('isOpen');
+	e.stopPropagation();
+	e.preventDefault();
+	select('.nav').classList.add('isOpen');
 });
 
 select('.nav').addEventListener('click', (e) => {
-  e.stopPropagation();
-  select('.nav').classList.remove('isOpen');
+	e.stopPropagation();
+	select('.nav').classList.remove('isOpen');
 });
 
-const container = select('#withdrawals');
+const container = select('.dialog__container');
 const dialog = new A11yDialog(container);
 
 dialog.on('show', function () {
-  console.log('Hello modal is open');
+	console.log('Hello modal is open');
 });

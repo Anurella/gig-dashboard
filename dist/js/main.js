@@ -407,7 +407,7 @@
     e.stopPropagation();
     select('.nav').classList.remove('isOpen');
   });
-  var container = select('#withdrawals');
+  var container = select('.dialog__container');
   var dialog = new A11yDialog(container);
   dialog.on('show', function () {
     console.log('Hello modal is open');

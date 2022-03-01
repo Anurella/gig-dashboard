@@ -53,6 +53,12 @@ input {
 					}
 				}
 			}
+
+			&:focus {
+				~ div {
+					border-color: var(--primary-100);
+				}
+			}
 		}
 
 		.tick {
@@ -95,6 +101,12 @@ input {
 		font-size: 16px;
 		color: var(--gray-200);
 	}
+}
+
+.prev__arrow {
+	@include flex-center;
+	height: 50px;
+	width: 50px;
 }
 
 @keyframes shaking {
