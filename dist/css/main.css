@@ -1497,7 +1497,7 @@ add border and padding to a section
 }
 @media (min-width: 60em) {
 	.tasks nav {
-		width: 400px;
+		width: 430px;
 	}
 }
 
