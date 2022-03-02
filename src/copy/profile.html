@@ -181,7 +181,7 @@
 			</header>
 			<main id="main-content" class="main main--app-layout">
 				<article class="app-layout__wrapper profile flow">
-					<h1 class="app-layout__title"></h1>
+					<p></p>
 					<section class="sbp flow">
 						<header>
 							<h1>
@@ -210,16 +210,28 @@
 							<div class="spacer"></div>
 							<div data-tab-panel="tab1" role="tabpanel" aria-labelledby="tab1">
 								<form action="">
-									<table>
-										<tbody>
-											<th>
-												<label for=""></label>
-											</th>
-											<td>
-												<input type="text" disabled />
-											</td>
-										</tbody>
-									</table>
+									<fieldset>
+										<label for="username" data-field="">
+											<span data-label=""> Username </span>
+											<input
+												type="text"
+												disabled
+												value="#girls"
+												id="username"
+											/>
+										</label>
+									</fieldset>
+									<fieldset>
+										<label for="fullname" data-field="">
+											<span data-label=""> First Name, Last Name </span>
+											<input
+												type="text"
+												disabled
+												value="Abba Joe"
+												id="fullname"
+											/>
+										</label>
+									</fieldset>
 								</form>
 							</div>
 							<div data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab2">

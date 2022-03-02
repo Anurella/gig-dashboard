@@ -392,7 +392,11 @@
     }
   }
 
-  console.log('Does it work'); // let selectAll = (e) => document.querySelectorAll(e);
+  console.log('Does it work');
+
+  var selectAll = function selectAll(e) {
+    return document.querySelectorAll(e);
+  };
 
   var select = function select(e) {
     return document.querySelector(e);
@@ -419,6 +423,12 @@
   dialog.on('show', function () {
     // eslint-disable-next-line indent
     console.log('Hello modal is open');
+  });
+  selectAll('[aria-disabled="true"]').forEach(function (e) {
+    e.addEventListener('change', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
   });
 
 })();

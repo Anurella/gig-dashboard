@@ -4,7 +4,7 @@ import A11yDialog from 'a11y-dialog';
 
 console.log('Does it work');
 
-// let selectAll = (e) => document.querySelectorAll(e);
+let selectAll = (e) => document.querySelectorAll(e);
 let select = (e) => document.querySelector(e);
 
 select('.menu-hamburger').addEventListener('click', (e) => {
@@ -31,4 +31,11 @@ const dialog = new A11yDialog(container);
 dialog.on('show', function () {
 	// eslint-disable-next-line indent
 	console.log('Hello modal is open');
+});
+
+selectAll('[aria-disabled="true"]').forEach((e) => {
+	e.addEventListener('change', (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+	});
 });

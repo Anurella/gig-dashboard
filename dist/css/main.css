@@ -1116,7 +1116,6 @@ textarea:focus-visible {
 	outline: 2px solid var(--primary-300);
 	outline-offset: -2px;
 }
-
 input.invalid {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -1605,4 +1604,22 @@ add border and padding to a section
 	--tab-spacing: 0.5rem;
 	flex-basis: 350px;
 	flex-grow: 0;
+}
+.profile fieldset {
+	border-top: 1px solid var(--white-500);
+	padding-block-start: calc(var(--spacing) / 2);
+}
+.profile fieldset label {
+	display: grid;
+	align-items: center;
+}
+@media (min-width: 60em) {
+	.profile fieldset label {
+		max-width: 900px;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 3rem;
+	}
+}
+.profile fieldset [data-label] {
+	color: var(--gray-100);
 }
