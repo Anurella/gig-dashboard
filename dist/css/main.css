@@ -746,6 +746,15 @@ h6 {
 	color: var(--primary-100);
 	border: 1px solid var(--primary-100);
 }
+.button__input {
+	padding: 10px;
+	border: 1px solid var(--white-500);
+	border-radius: var(--radius);
+	font-size: 16px;
+	background-color: var(--white-200);
+	text-align: left;
+	color: var(--gray-300);
+}
 
 .tablegroup {
 	overflow-x: auto;

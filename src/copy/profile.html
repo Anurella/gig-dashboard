@@ -232,6 +232,41 @@
 											/>
 										</label>
 									</fieldset>
+									<fieldset>
+										<label for="email" data-field="">
+											<span data-label=""> Email </span>
+											<input
+												type="email"
+												disabled
+												value="abba@gmail.com"
+												id="email"
+											/>
+										</label>
+									</fieldset>
+									<fieldset>
+										<label for="phone-number" data-field="">
+											<span data-label=""> Phone Number </span>
+											<input
+												type="tel"
+												placeholder="Enter your phone number"
+												id="phone-number"
+											/>
+										</label>
+									</fieldset>
+									<fieldset>
+										<label for="password" data-field="">
+											<span data-label=""> Password </span>
+
+											<button
+												type="button"
+												class="button__input"
+												data-a11y-dialog-show="changePassword"
+												aria-label="Open password change dialog"
+											>
+												Change Password
+											</button>
+										</label>
+									</fieldset>
 								</form>
 							</div>
 							<div data-tab-panel="tab2" role="tabpanel" aria-labelledby="tab2">
@@ -474,8 +509,8 @@
 			</footer>
 			<!-- 1. The dialog container -->
 			<div
-				id="createTickets"
-				aria-labelledby="ticket-form"
+				id="changePassword"
+				aria-labelledby="change-password"
 				aria-hidden="true"
 				aria-describedby="modal-description"
 				class="dialog__container"
@@ -504,64 +539,49 @@
 						</svg>
 					</button>
 					<!-- 5. The dialog title -->
-					<h1 id="ticket-form" aria-hidden="true">Withdrawal Form</h1>
+					<h1 id="change-password" aria-hidden="true">Change Password</h1>
 					<span id="modal-description" class="visually-hidden"
-						>Create a ticket that support can help with</span
-					>
+						>Change existing password
+					</span>
 					<!-- 6. Dialog content -->
 					<div class="form__wrapper">
 						<form action="" name="" method="POST">
 							<fieldset class="current" name="amount">
-								<h3>New Ticket</h3>
-								<label for="subject" data-field="subject">
-									<span data-label=""> Subject </span>
+								<h3>Change Password</h3>
+
+								<label for="current-password" data-field="password">
+									<span data-label=""> Current Password </span>
 									<input
 										type="text"
-										placeholder=""
+										placeholder="Enter current password"
 										data-input="input"
-										id="subject"
+										id="current-password"
 										required=""
 									/>
 								</label>
-								<label for="category" data-field="category" class="select">
-									<span data-label=""> Category </span>
-									<select name="" id="category">
-										<option value="">Select category</option>
-										<option value="">Category</option>
-										<option value="">Category</option>
-									</select>
+
+								<label for="new-password" data-field="password">
+									<span data-label=""> New Password </span>
+									<input
+										type="text"
+										placeholder="Enter new password"
+										data-input="input"
+										id="new-password"
+										required=""
+									/>
 								</label>
-								<label for="message">
-									<span data-label=""> Message </span>
-									<textarea name="message" id="message"></textarea>
-								</label>
-								<label for="file_upload" data-field="file">
-									<span data-label="">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M4 19H20V12H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"
-												fill="#4D4D4D"
-											/>
-										</svg>
-										Click to browse and attach file
-									</span>
-									<input type="file" name="" id="file_upload" />
-									<span class="note">File should be less than 1MB</span>
+								<label for="confirm-password" data-field="password">
+									<span data-label=""> Confirm New Password </span>
+									<input
+										type="text"
+										placeholder="Confirm new password"
+										data-input="input"
+										id="confirm-password"
+										required=""
+									/>
 								</label>
 								<span class="spacer"></span>
-								<button
-									type="button"
-									class="continue button"
-									aria-disabled="true"
-								>
-									Submit Ticket
-								</button>
+								<button type="button" class="button">Change Password</button>
 							</fieldset>
 						</form>
 					</div>
