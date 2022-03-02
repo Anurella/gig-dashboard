@@ -33,5 +33,11 @@
 		position: relative;
 		padding: var(--spacing);
 		min-height: 400px;
+
+		h1 {
+			font-size: 1.75rem;
+			color: var(--primary-100);
+			text-align: center;
+		}
 	}
 }

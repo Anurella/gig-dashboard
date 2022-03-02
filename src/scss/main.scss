@@ -75,7 +75,7 @@ html {
 
 		h1 {
 			font-size: 1.75rem;
-			font-weight: 600;
+
 			text-align: center;
 			color: var(--gray-100);
 		}
@@ -106,6 +106,67 @@ html {
 			background-color: rgba(0, 94, 47, 0.32);
 			cursor: not-allowed;
 		}
+	}
+}
+
+.post {
+	&__registration {
+		box-shadow: 0px 2px 4px -2px rgba(255, 255, 255, 0.08),
+			0px 4px 4px -2px rgba(24, 39, 75, 0.04);
+
+		summary {
+			cursor: pointer;
+			padding: calc(var(--spacing) / 2);
+			border: 1px solid var(--white-400);
+			border-radius: var(--radius);
+			display: flex;
+			background: url('/img/chevron-right.svg') 99% center no-repeat;
+			column-gap: 1rem;
+
+			> span {
+				flex-shrink: 0;
+			}
+			svg {
+				width: 16px;
+				height: auto;
+				vertical-align: middle;
+			}
+			.text {
+				color: #2558db;
+			}
+		}
+
+		> div {
+			background-color: var(--white-300);
+
+			padding: calc(var(--spacing) / 2) var(--spacing) var(--spacing)
+				calc(var(--spacing) * 2);
+			align-items: baseline;
+			margin-block-end: 5px;
+		}
+
+		.social {
+			column-gap: 4rem;
+			display: flex;
+		}
+
+		button {
+			span {
+				color: var(--primary-300);
+			}
+		}
+
+		&[open] {
+			summary {
+				background-image: url('/img/chevron-down.svg');
+			}
+		}
+	}
+}
+
+.activate {
+	> * {
+		margin-block-end: 10px;
 	}
 }
 
@@ -142,7 +203,7 @@ footer {
 		text-align: left;
 	}
 
-	font-size: 1rem;
+	font-size: 14px;
 	color: var(--gray-300);
 	letter-spacing: -0.0125em;
 }
@@ -168,7 +229,6 @@ footer {
 	}
 
 	h2 {
-		font-weight: 600;
 		font-size: min(5vmin, 1.5rem);
 		letter-spacing: -0.0385em;
 		margin-top: 1rem;
@@ -249,6 +309,12 @@ add border and padding to a section
 			0px 8px 8px -4px rgba(152, 152, 152, 0.08);
 		padding: var(--spacing);
 	}
+
+	nav {
+		@include respond-above('lg') {
+			width: 400px;
+		}
+	}
 }
 
 .mt-10 {
@@ -290,7 +356,6 @@ add border and padding to a section
 					gap: 15px;
 				}
 				h4 {
-					font-weight: 600;
 					font-size: clamp(16px, 2vw, 1.5rem);
 					letter-spacing: -0.0385em;
 					color: var(--gray-100);
@@ -331,5 +396,40 @@ add border and padding to a section
 				height: auto;
 			}
 		}
+	}
+}
+
+.profile {
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		button {
+			padding: 8px 16px;
+
+			@include respond-above('lg') {
+				padding-block: 16px;
+				padding-inline: 32px;
+			}
+		}
+	}
+	h1 {
+		font-size: clamp(2rem, 5vw, 32px);
+		letter-spacing: -0.03em;
+		color: var(--dark);
+	}
+	span {
+		font-size: 14px;
+		display: block;
+		color: var(--gray-100);
+		font-weight: 400;
+	}
+
+	[data-tab-label] {
+		--tab-spacing: 0.5rem;
+
+		flex-basis: 350px;
+		flex-grow: 0;
 	}
 }

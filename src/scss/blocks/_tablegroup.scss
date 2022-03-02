@@ -14,7 +14,7 @@
 		h2 {
 			font-size: 1.25rem;
 			color: var(--dark);
-			font-weight: 600;
+
 			letter-spacing: -0.0385em;
 
 			@include respond-above('lg') {

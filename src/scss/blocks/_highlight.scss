@@ -1,51 +1,45 @@
 .highlight {
-    @include flex-center-vert;
-    gap: 1ch;
-    // inline-size: calc(100% + 20px);
-    padding-inline-end: var(--spacing);
+	@include flex-center-vert;
+	gap: 1ch;
+	// inline-size: calc(100% + 20px);
+	padding-inline-end: var(--spacing);
 
-    @include respond-above('md') {
-        padding-inline-end: 0;
-    }
+	@include respond-above('md') {
+		padding-inline-end: 0;
+	}
 
+	&__item {
+		flex: 1 0 200px;
+		inline-size: 100%;
+		box-shadow: 0px 2px 4px -2px rgba(255, 255, 255, 0.08),
+			0px 4px 4px -2px rgba(24, 39, 75, 0.04);
+		border: 1px solid rgba(241, 241, 241, 1);
 
-    &__item {
-        flex: 1 0 200px;
-        inline-size: 100%;
-        box-shadow:
-            0px 2px 4px -2px rgba(255, 255, 255, 0.08),
-            0px 4px 4px -2px rgba(24, 39, 75, 0.04);
-        border: 1px solid rgba(241, 241, 241, 1);
+		&-title {
+			background-color: var(--white-100);
+			padding: calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
 
-        &-title {
-            background-color: var(--white-100);
-            padding:calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
+			h4 {
+				font-size: min(7.5vw, 40px);
 
-            h4 {
-                font-size: min(7.5vw, 40px);
-                font-weight: 600;
+				@include respond-above('lg') {
+					font-weight: 700;
+				}
 
-                @include respond-above('lg') {
-                    font-weight: 700;
-                }
+				span {
+					font-size: min(6vw, 32px);
+					color: var(--gray-300);
+					letter-spacing: -0.0385em;
+					@include respond-above('lg') {
+						letter-spacing: -0.03em;
+					}
+				}
+			}
+		}
 
-                span {
-                    font-size: min(6vw, 32px);
-                    color: var(--gray-300);
-                    letter-spacing: -0.0385em;
-                    @include respond-above('lg')
-                    {
-                        letter-spacing: -0.03em;
-                    }
-                }
-            }
-        }
-
-        figcaption {
-            background-color: var(--white-200);
-            padding: calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
-        }
-    }
-
-
+		figcaption {
+			background-color: var(--white-200);
+			padding: calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
+		}
+	}
 }

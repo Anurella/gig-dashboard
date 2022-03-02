@@ -248,6 +248,15 @@ html {
 	line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
 .header {
 	padding: calc(var(--spacing) / 2);
 	padding-inline-end: var(--spacing);
@@ -469,11 +478,6 @@ html {
 	gap: 1rem;
 	isolation: isolate;
 }
-@media (min-width: 60em) {
-	.tabs nav {
-		width: 400px;
-	}
-}
 .tabs [data-tab] {
 	/* Hide the input element from UI, but still available for focus. */
 	opacity: 0;
@@ -570,7 +574,6 @@ html {
 	--flow-space: 8px;
 }
 .sidebar__refer h3 {
-	font-weight: 600;
 	font-size: 1.5rem;
 	line-height: 1.3;
 	color: var(--primary-100);
@@ -674,7 +677,6 @@ html {
 }
 .highlight__item-title h4 {
 	font-size: min(7.5vw, 40px);
-	font-weight: 600;
 }
 @media (min-width: 60em) {
 	.highlight__item-title h4 {
@@ -724,7 +726,7 @@ html {
 	color: var(--gray-100);
 }
 
-.button, .button__light {
+.button, .button__border, .button__light {
 	font-size: 16px;
 	letter-spacing: -0.024em;
 	background-color: var(--primary-100);
@@ -738,6 +740,11 @@ html {
 	color: var(--dark);
 	border: 1px solid var(--primary-300);
 	width: var(--width);
+}
+.button__border {
+	background-color: var(--white-100);
+	color: var(--primary-100);
+	border: 1px solid var(--primary-100);
 }
 
 .tablegroup {
@@ -755,7 +762,6 @@ html {
 .tablegroup__header h2 {
 	font-size: 1.25rem;
 	color: var(--dark);
-	font-weight: 600;
 	letter-spacing: -0.0385em;
 	line-height: 1.3;
 }
@@ -953,7 +959,6 @@ html {
 	letter-spacing: -0.0385em;
 	color: var(--primary-100);
 	font-size: min(3vmax, 24px);
-	font-weight: 600;
 	margin-bottom: 1rem;
 }
 .form__wrapper form {
@@ -999,7 +1004,6 @@ html {
 	flex-direction: column;
 	font-size: min(3vmax, 24px);
 	letter-spacing: -0.0385em;
-	font-weight: 600;
 	line-height: 1.1;
 	row-gap: calc(var(--spacing) / 2);
 }
@@ -1083,6 +1087,11 @@ html {
 	position: relative;
 	padding: var(--spacing);
 	min-height: 400px;
+}
+.dialog__content h1 {
+	font-size: 1.75rem;
+	color: var(--primary-100);
+	text-align: center;
 }
 
 input,
@@ -1254,7 +1263,7 @@ html {
 }
 
 @media (hover: none) and (pointer: coarse) {
-	.button, .button__light,
+	.button, .button__light, .button__border,
 input,
 select {
 		min-height: 44px;
@@ -1291,7 +1300,6 @@ select {
 }
 .auth-form h1 {
 	font-size: 1.75rem;
-	font-weight: 600;
 	text-align: center;
 	color: var(--gray-100);
 }
@@ -1318,6 +1326,50 @@ select {
 	cursor: not-allowed;
 }
 
+.post__registration {
+	box-shadow: 0px 2px 4px -2px rgba(255, 255, 255, 0.08), 0px 4px 4px -2px rgba(24, 39, 75, 0.04);
+}
+.post__registration summary {
+	cursor: pointer;
+	padding: calc(var(--spacing) / 2);
+	border: 1px solid var(--white-400);
+	border-radius: var(--radius);
+	display: flex;
+	background: url("/img/chevron-right.svg") 99% center no-repeat;
+	column-gap: 1rem;
+}
+.post__registration summary > span {
+	flex-shrink: 0;
+}
+.post__registration summary svg {
+	width: 16px;
+	height: auto;
+	vertical-align: middle;
+}
+.post__registration summary .text {
+	color: #2558db;
+}
+.post__registration > div {
+	background-color: var(--white-300);
+	padding: calc(var(--spacing) / 2) var(--spacing) var(--spacing) calc(var(--spacing) * 2);
+	align-items: baseline;
+	margin-block-end: 5px;
+}
+.post__registration .social {
+	column-gap: 4rem;
+	display: flex;
+}
+.post__registration button span {
+	color: var(--primary-300);
+}
+.post__registration[open] summary {
+	background-image: url("/img/chevron-down.svg");
+}
+
+.activate > * {
+	margin-block-end: 10px;
+}
+
 .main {
 	padding-inline: var(--spacing);
 }
@@ -1342,7 +1394,7 @@ select {
 footer {
 	padding: calc(var(--spacing) / 1.5);
 	text-align: center;
-	font-size: 1rem;
+	font-size: 14px;
 	color: var(--gray-300);
 	letter-spacing: -0.0125em;
 }
@@ -1374,7 +1426,6 @@ footer {
 	}
 }
 .empty h2 {
-	font-weight: 600;
 	font-size: min(5vmin, 1.5rem);
 	letter-spacing: -0.0385em;
 	margin-top: 1rem;
@@ -1445,6 +1496,11 @@ add border and padding to a section
 	box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08), 0px 8px 8px -4px rgba(152, 152, 152, 0.08);
 	padding: var(--spacing);
 }
+@media (min-width: 60em) {
+	.tasks nav {
+		width: 400px;
+	}
+}
 
 .mt-10 {
 	margin-block-start: 10px;
@@ -1485,7 +1541,6 @@ add border and padding to a section
 	gap: 15px;
 }
 .view-task__info-item:nth-child(2) h4 {
-	font-weight: 600;
 	font-size: clamp(16px, 2vw, 1.5rem);
 	letter-spacing: -0.0385em;
 	color: var(--gray-100);
@@ -1519,4 +1574,35 @@ add border and padding to a section
 .view-task__info-item .svg-mini {
 	width: min(2.5rem, 8vw);
 	height: auto;
+}
+
+.profile header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.profile header button {
+	padding: 8px 16px;
+}
+@media (min-width: 60em) {
+	.profile header button {
+		padding-block: 16px;
+		padding-inline: 32px;
+	}
+}
+.profile h1 {
+	font-size: clamp(2rem, 5vw, 32px);
+	letter-spacing: -0.03em;
+	color: var(--dark);
+}
+.profile span {
+	font-size: 14px;
+	display: block;
+	color: var(--gray-100);
+	font-weight: 400;
+}
+.profile [data-tab-label] {
+	--tab-spacing: 0.5rem;
+	flex-basis: 350px;
+	flex-grow: 0;
 }

@@ -14,4 +14,11 @@
 		border: 1px solid var(--primary-300);
 		width: var(--width);
 	}
+
+	&__border {
+		@extend .button;
+		background-color: var(--white-100);
+		color: var(--primary-100);
+		border: 1px solid var(--primary-100);
+	}
 }
