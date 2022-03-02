@@ -730,8 +730,8 @@ html {
 	background-color: var(--primary-100);
 	color: var(--white-100);
 	border-radius: var(--radius);
-	padding-block: 12px;
-	padding-inline: 16px;
+	padding-block: 16px;
+	padding-inline: 32px;
 }
 .button__light {
 	background-color: var(--primary-400);
@@ -1271,6 +1271,53 @@ select {
 	font-size: 1rem;
 	line-height: 1.3;
 }
+.auth {
+	background-color: var(--primary-100);
+	justify-items: center;
+	overflow-y: auto;
+}
+.auth header {
+	padding-block: var(--spacing);
+	width: 100%;
+	text-align: center;
+}
+.auth-form {
+	width: min(90%, 500px);
+}
+.auth-form__wrapper {
+	background-color: var(--white-100);
+	border-radius: var(--radius);
+	padding: var(--spacing) calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+}
+.auth-form h1 {
+	font-size: 1.75rem;
+	font-weight: 600;
+	text-align: center;
+	color: var(--gray-100);
+}
+.auth-form input {
+	padding-inline-start: 40px;
+}
+.auth-form .icon {
+	position: absolute;
+	left: 10px;
+	top: 35px;
+	transform: translateY(3px);
+	z-index: 0;
+}
+.auth-form a {
+	color: var(--primary-100);
+}
+.auth-form button {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.auth-form [aria-disabled=true] {
+	background-color: rgba(0, 94, 47, 0.32);
+	cursor: not-allowed;
+}
+
 .main {
 	padding-inline: var(--spacing);
 }
@@ -1343,6 +1390,7 @@ add border and padding to a section
 .sbp {
 	border: 1px solid var(--white-400);
 	padding: var(--spacing) calc(var(--spacing) / 1.5);
+	height: 100%;
 }
 
 .payments__highlight {
@@ -1402,6 +1450,9 @@ add border and padding to a section
 	margin-block-start: 10px;
 }
 
+.view-task form {
+	max-width: 500px;
+}
 .view-task__info {
 	display: flex;
 	gap: var(--spacing);
@@ -1413,11 +1464,16 @@ add border and padding to a section
 	padding: calc(var(--spacing) / 1.5);
 	border-radius: var(--radius);
 	display: flex;
-	gap: calc(var(--spacing) / 2);
 	align-items: center;
+}
+.view-task__info-item:first-child {
+	gap: var(--spacing);
 }
 .view-task__info-item:first-child svg {
 	width: min(10vw, 60px);
+}
+.view-task__info-item:nth-child(2) {
+	gap: calc(var(--spacing) / 2);
 }
 .view-task__info-item:nth-child(2) > div {
 	background-color: var(--white-200);

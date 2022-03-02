@@ -4,8 +4,8 @@
 	background-color: var(--primary-100);
 	color: var(--white-100);
 	border-radius: var(--radius);
-	padding-block: 12px;
-	padding-inline: 16px;
+	padding-block: 16px;
+	padding-inline: 32px;
 
 	&__light {
 		@extend .button;

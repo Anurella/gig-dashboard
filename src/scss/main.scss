@@ -53,6 +53,61 @@ html {
 	font-size: 1rem;
 	line-height: 1.3;
 }
+.auth {
+	background-color: var(--primary-100);
+	justify-items: center;
+	overflow-y: auto;
+
+	header {
+		padding-block: var(--spacing);
+		width: 100%;
+		text-align: center;
+	}
+
+	&-form {
+		width: min(90%, 500px);
+		&__wrapper {
+			background-color: var(--white-100);
+			border-radius: var(--radius);
+			padding: var(--spacing) calc(var(--spacing) * 1.5)
+				calc(var(--spacing) * 2);
+		}
+
+		h1 {
+			font-size: 1.75rem;
+			font-weight: 600;
+			text-align: center;
+			color: var(--gray-100);
+		}
+
+		input {
+			padding-inline-start: 40px;
+		}
+
+		.icon {
+			position: absolute;
+			left: 10px;
+			top: 35px;
+			transform: translateY(3px);
+			z-index: 0;
+		}
+
+		a {
+			color: var(--primary-100);
+		}
+
+		button {
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+
+		[aria-disabled='true'] {
+			background-color: rgba(0, 94, 47, 0.32);
+			cursor: not-allowed;
+		}
+	}
+}
 
 .main {
 	padding-inline: var(--spacing);
@@ -132,6 +187,7 @@ add border and padding to a section
 .sbp {
 	border: 1px solid var(--white-400);
 	padding: var(--spacing) calc(var(--spacing) / 1.5);
+	height: 100%;
 }
 
 .payments {
@@ -200,6 +256,9 @@ add border and padding to a section
 }
 
 .view-task {
+	form {
+		max-width: 500px;
+	}
 	&__info {
 		display: flex;
 		gap: var(--spacing);
@@ -211,16 +270,17 @@ add border and padding to a section
 			padding: calc(var(--spacing) / 1.5);
 			border-radius: var(--radius);
 			display: flex;
-			gap: calc(var(--spacing) / 2);
 			align-items: center;
 
 			&:first-child {
+				gap: var(--spacing);
 				svg {
 					width: min(10vw, 60px);
 				}
 			}
 
 			&:nth-child(2) {
+				gap: calc(var(--spacing) / 2);
 				> div {
 					background-color: var(--white-200);
 					padding: calc(var(--spacing) / 2);
