@@ -308,7 +308,8 @@ add border and padding to a section
 
 .tasks {
 	[data-tab='tab1']:checked ~ nav ~ [data-tab-panel='tab1'],
-	[data-tab='tab2']:checked ~ nav ~ [data-tab-panel='tab2'] {
+	[data-tab='tab2']:checked ~ nav ~ [data-tab-panel='tab2'],
+	[data-tab='tab3']:checked ~ nav ~ [data-tab-panel='tab3'] {
 		border: var(--tab-border-width) solid var(--tab-border-color);
 		box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08),
 			0px 8px 8px -4px rgba(152, 152, 152, 0.08);
@@ -317,7 +318,7 @@ add border and padding to a section
 
 	nav {
 		@include respond-above('lg') {
-			width: 430px;
+			width: 600px;
 		}
 	}
 }
