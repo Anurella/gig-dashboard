@@ -418,11 +418,18 @@
    * @return  {[type]}        [return description]
    */
 
-  var container = select('.dialog__container');
-  var dialog = new A11yDialog(container);
-  dialog.on('show', function () {
-    // eslint-disable-next-line indent
-    console.log('Hello modal is open');
+  var container = selectAll('.dialog__container');
+  container.forEach(function (e) {
+    var dialog = new A11yDialog(e);
+    dialog.on('show', function () {
+      // eslint-disable-next-line indent
+      console.log('modal is open');
+    });
+  });
+  select('.tag__trigger').addEventListener('click', function () {
+    console.log("I'm clicked");
+    select('.add__tag').setAttribute('aria-hidden', 'false');
+    select('.add__bank').setAttribute('aria-hidden', 'true');
   });
   selectAll('[aria-disabled="true"]').forEach(function (e) {
     e.addEventListener('change', function (e) {

@@ -14,7 +14,7 @@
 	&__menu {
 		@include flex-center-vert;
 		justify-content: space-between;
-		flex-basis: 60%;
+		flex-basis: calc(100% - 50px);
 		// flex-direction: row-reverse;
 
 		@include respond-above('lg') {
@@ -23,6 +23,10 @@
 	}
 
 	&__logo {
+		margin: 0 auto;
+		@include respond-above('lg') {
+			margin: 0;
+		}
 		svg {
 			height: 1.85rem;
 			width: 100%;
@@ -121,6 +125,12 @@
 			text-transform: uppercase;
 			font-weight: inherit;
 			letter-spacing: -0.024em;
+
+			&.active {
+				border-color: var(--primary-300);
+				background-color: var(--primary-400);
+				color: var(--primary-100);
+			}
 		}
 	}
 }

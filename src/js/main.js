@@ -25,14 +25,20 @@ select('.nav').addEventListener('click', (e) => {
  * @return  {[type]}        [return description]
  */
 
-const container = select('.dialog__container');
-const dialog = new A11yDialog(container);
-
-dialog.on('show', function () {
-	// eslint-disable-next-line indent
-	console.log('Hello modal is open');
+const container = selectAll('.dialog__container');
+container.forEach((e) => {
+	const dialog = new A11yDialog(e);
+	dialog.on('show', function () {
+		// eslint-disable-next-line indent
+		console.log('modal is open');
+	});
 });
 
+select('.tag__trigger').addEventListener('click', () => {
+	console.log("I'm clicked");
+	select('.add__tag').setAttribute('aria-hidden', 'false');
+	select('.add__bank').setAttribute('aria-hidden', 'true');
+});
 selectAll('[aria-disabled="true"]').forEach((e) => {
 	e.addEventListener('change', (e) => {
 		e.preventDefault();

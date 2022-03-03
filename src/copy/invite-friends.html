@@ -113,12 +113,12 @@
 								<a href="payments.html" class="menu-list__link"> Payments </a>
 							</li>
 							<li class="menu-list__item">
-								<a href="tickets.html" class="menu-list__link active">
-									Tickets
-								</a>
+								<a href="tickets.html" class="menu-list__link"> Tickets </a>
 							</li>
 							<li class="menu-list__item">
-								<a href="/" class="menu-list__link"> Invite Friends </a>
+								<a href="invite-friends.html" class="menu-list__link active">
+									Invite Friends
+								</a>
 							</li>
 							<li class="menu-list__item">
 								<button class="menu-list__but">Upgrade to Premium</button>
@@ -170,7 +170,7 @@
 									<a href="tickets.html" class=""> Tickets </a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="/" class=""> Invite Friends </a>
+									<a href="invite-friends.html" class=""> Invite Friends </a>
 								</li>
 								<li class="nav__menu-item">
 									<button class="">Upgrade to Premium</button>
@@ -207,52 +207,55 @@
 					</div>
 				</aside>
 				<article class="app-layout__wrapper flow">
-					<h1 class="app-layout__title">Tickets</h1>
-					<section class="tickets sbp">
-						<div class="tickets__table flow" hidden="">
-							<div class="tablegroup__header">
-								<h2>Tickets</h2>
-								<button
-									type="button"
-									class="button"
-									data-a11y-dialog-show="createTickets"
-									aria-label="Open ticket dialog"
-								>
-									Create Ticket
-								</button>
+					<h1 class="app-layout__title"></h1>
+					<section class="invites sbp">
+						<div class="invites__dets">
+							<h2>Invite Friends</h2>
+							<p>
+								You get N50.0 for every friend that registers with your link.
+								You can send an email invite or copy your invite link to them on
+								any platform.
+							</p>
+							<span class="spacer"></span>
+							<div class="dets__gain">
+								<h3><span>N100</span> <span>Referral Benefits</span></h3>
+								<h3><span>0 </span><span>Friends registered</span></h3>
 							</div>
-							<div class="table-wrapper">
-								<table class="tablegroup__table">
-									<thead>
-										<tr>
-											<th>S/N</th>
-											<th>Ticket Id</th>
-											<th>Subject</th>
-											<th>Status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
-											<td>3,900</td>
-											<td>
-												<span class="[ pill ]" data-status="sent"> sent </span>
-											</td>
-										</tr>
-										<tr>
-											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
-											<td>3,900</td>
-											<td>
-												<span class="[ pill ]" data-status="sent"> sent </span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+							<span class="spacer"></span>
+							<div class="dets__link">
+								<form action="">
+									<h4>Send email invites</h4>
+									<div>
+										<input type="text" placeholder="Email addresses" />
+										<button class="button">Send invite</button>
+										<p>Multiple addresses separated by commas.</p>
+									</div>
+								</form>
+								<span class="spacer"></span>
+								<form action="">
+									<h4>Your invite link</h4>
+									<div>
+										<input type="text" value="sidegig.co" />
+										<button class="button">
+											Copy link
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M12.2428 10.3573L11.3002 9.41334L12.2428 8.47067C12.5546 8.16164 12.8022 7.79407 12.9716 7.38907C13.1409 6.98407 13.2285 6.54962 13.2295 6.11065C13.2304 5.67168 13.1447 5.23685 12.9772 4.83111C12.8096 4.42538 12.5636 4.05673 12.2532 3.74633C11.9428 3.43593 11.5741 3.1899 11.1684 3.02236C10.7627 2.85482 10.3278 2.76907 9.88886 2.77003C9.44989 2.77099 9.01544 2.85864 8.61044 3.02796C8.20544 3.19728 7.83787 3.44492 7.52884 3.75667L6.58617 4.70001L5.64284 3.75734L6.58684 2.81467C7.46205 1.93946 8.6491 1.44777 9.88684 1.44777C11.1246 1.44777 12.3116 1.93946 13.1868 2.81467C14.0621 3.68989 14.5537 4.87693 14.5537 6.11467C14.5537 7.35241 14.0621 8.53946 13.1868 9.41467L12.2435 10.3573H12.2428ZM10.3575 12.2427L9.41417 13.1853C8.53896 14.0606 7.35191 14.5522 6.11417 14.5522C4.87643 14.5522 3.68938 14.0606 2.81417 13.1853C1.93896 12.3101 1.44727 11.1231 1.44727 9.88534C1.44727 8.6476 1.93896 7.46056 2.81417 6.58534L3.7575 5.64267L4.70017 6.58667L3.7575 7.52934C3.44575 7.83838 3.19811 8.20594 3.02879 8.61094C2.85947 9.01594 2.77182 9.4504 2.77086 9.88936C2.76989 10.3283 2.85565 10.7632 3.02319 11.1689C3.19073 11.5746 3.43676 11.9433 3.74716 12.2537C4.05756 12.5641 4.42621 12.8101 4.83194 12.9777C5.23768 13.1452 5.67251 13.231 6.11148 13.23C6.55045 13.229 6.9849 13.1414 7.3899 12.9721C7.7949 12.8027 8.16247 12.5551 8.4715 12.2433L9.41417 11.3007L10.3575 12.2433V12.2427ZM9.8855 5.17134L10.8288 6.11467L6.11484 10.828L5.1715 9.88534L9.8855 5.17201V5.17134Z"
+													fill="white"
+												/>
+											</svg>
+										</button>
+									</div>
+								</form>
 							</div>
 						</div>
-						<div class="empty">
+						<!-- <div class="empty">
 							<svg
 								width="80"
 								height="80"
@@ -324,8 +327,11 @@
 									stroke-linejoin="round"
 								/>
 							</svg>
-							<h2>No Ticket has been created yet</h2>
-							<p>Click “create new ticket” if you have any issue.</p>
+							<h2>No friends invited yet</h2>
+							<p>
+								Send an email invite or paste your invite link with your friends
+								and families.
+							</p>
 							<span class="spacer"></span>
 							<button
 								type="button"
@@ -335,6 +341,72 @@
 							>
 								Create Ticket
 							</button>
+						</div> -->
+
+						<div class="invites__list">
+							<h3>Invited</h3>
+							<details class="invites__list-item active">
+								<summary>
+									<img
+										src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=32&q=80"
+										alt=""
+										class=""
+										width="32"
+										height="32"
+									/>
+									<h4>John Caleb</h4>
+									<span class="status"> activated </span>
+								</summary>
+
+								<table>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+								</table>
+							</details>
+							<details class="invites__list-item">
+								<summary>
+									<img
+										src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=32&q=80"
+										alt=""
+										class=""
+										width="32"
+										height="32"
+									/>
+									<h4>John Caleb</h4>
+									<span class="status"> waiting </span>
+								</summary>
+
+								<table>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+									<tr>
+										<td><span>N</span>50</td>
+										<td>Activation Benefit</td>
+										<td>25/01/2022</td>
+									</tr>
+								</table>
+							</details>
 						</div>
 					</section>
 				</article>
@@ -342,141 +414,6 @@
 			<footer>
 				<p>Copyright ©2022. Sidegig. All rights reserved</p>
 			</footer>
-			<!-- 1. The dialog container -->
-			<div
-				id="createTickets"
-				aria-labelledby="ticket-form"
-				aria-hidden="true"
-				aria-describedby="modal-description"
-				class="dialog__container"
-			>
-				<!-- 2. The dialog overlay -->
-				<div data-a11y-dialog-hide class="dialog__overlay"></div>
-				<!-- 3. The actual dialog -->
-				<div role="document" class="dialog__content">
-					<button
-						class="prev__arrow visible"
-						type="button"
-						data-a11y-dialog-hide
-						aria-label="Close dialog"
-					>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
-								fill="#1B1A1A"
-							/>
-						</svg>
-					</button>
-					<!-- 5. The dialog title -->
-					<h1 id="ticket-form" aria-hidden="true">Withdrawal Form</h1>
-					<span id="modal-description" class="visually-hidden"
-						>Create a ticket that support can help with</span
-					>
-					<!-- 6. Dialog content -->
-					<div class="form__wrapper">
-						<form action="" name="" method="POST">
-							<fieldset class="current" name="amount">
-								<h3>New Ticket</h3>
-								<label for="subject" data-field="subject">
-									<span data-label=""> Subject </span>
-									<input
-										type="text"
-										placeholder=""
-										data-input="input"
-										id="subject"
-										required=""
-									/>
-								</label>
-								<label for="category" data-field="category" class="select">
-									<span data-label=""> Category </span>
-									<select name="" id="category">
-										<option value="">Select category</option>
-										<option value="">Category</option>
-										<option value="">Category</option>
-									</select>
-								</label>
-								<label for="message">
-									<span data-label=""> Message </span>
-									<textarea name="message" id="message"></textarea>
-								</label>
-								<label for="file_upload" data-field="file">
-									<span data-label="">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M4 19H20V12H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"
-												fill="#4D4D4D"
-											/>
-										</svg>
-										Click to browse and attach file
-									</span>
-									<input type="file" name="" id="file_upload" />
-									<span class="note">File should be less than 1MB</span>
-								</label>
-								<span class="spacer"></span>
-								<button
-									type="button"
-									class="continue button"
-									aria-disabled="true"
-								>
-									Submit Ticket
-								</button>
-							</fieldset>
-						</form>
-					</div>
-					<div class="success">
-						<h3>
-							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M78.3327 1.66992L39.9993 48.3366L26.666 33.3366"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M66.2796 29.1167C66.6119 29.9237 67.11 30.652 67.7416 31.2544C68.3733 31.8567 69.1244 32.3197 69.9463 32.6134L74.1629 34.1134C75.3797 34.5452 76.4329 35.3434 77.1777 36.398C77.9225 37.4527 78.3224 38.7122 78.3224 40.0034C78.3224 41.2945 77.9225 42.554 77.1777 43.6087C76.4329 44.6634 75.3797 45.4615 74.1629 45.8934L69.9463 47.3934C69.1223 47.686 68.369 48.1484 67.7351 48.7506C67.1011 49.3527 66.6006 50.0813 66.266 50.8891C65.9314 51.6969 65.77 52.566 65.7925 53.4401C65.8149 54.3141 66.0206 55.1738 66.3963 55.9634L68.3329 60C68.8921 61.1663 69.0755 62.4774 68.8577 63.7523C68.64 65.0272 68.0318 66.2031 67.1173 67.1177C66.2027 68.0323 65.0268 68.6404 63.7519 68.8581C62.477 69.0759 61.1659 68.8925 59.9996 68.3334L55.9563 66.4134C55.1667 66.0377 54.3071 65.832 53.433 65.8096C52.5589 65.7871 51.6898 65.9484 50.882 66.2831C50.0742 66.6177 49.3457 67.1182 48.7435 67.7521C48.1413 68.3861 47.6789 69.1394 47.3863 69.9634L45.8863 74.18C45.4544 75.3968 44.6563 76.45 43.6016 77.1948C42.5469 77.9396 41.2874 78.3395 39.9963 78.3395C38.7051 78.3395 37.4456 77.9396 36.391 77.1948C35.3363 76.45 34.5382 75.3968 34.1063 74.18L32.6063 69.9634C32.3136 69.1394 31.8512 68.3861 31.2491 67.7521C30.6469 67.1182 29.9183 66.6177 29.1105 66.2831C28.3027 65.9484 27.4336 65.7871 26.5596 65.8096C25.6855 65.832 24.8258 66.0377 24.0363 66.4134L19.9996 68.3334C18.8333 68.8925 17.5223 69.0759 16.2473 68.8581C14.9724 68.6404 13.7965 68.0323 12.8819 67.1177C11.9674 66.2031 11.3592 65.0272 11.1415 63.7523C10.9237 62.4774 11.1071 61.1663 11.6663 60L13.5863 55.9567C13.9619 55.1671 14.1676 54.3075 14.1901 53.4334C14.2125 52.5593 14.0512 51.6903 13.7166 50.8824C13.3819 50.0746 12.8815 49.3461 12.2475 48.7439C11.6135 48.1417 10.8602 47.6793 10.0363 47.3867L5.81961 45.8867C4.60282 45.4548 3.54965 44.6567 2.80484 43.602C2.06004 42.5473 1.66016 41.2878 1.66016 39.9967C1.66016 38.7055 2.06004 37.4461 2.80484 36.3914C3.54965 35.3367 4.60282 34.5386 5.81961 34.1067L10.0363 32.6067C10.8596 32.3142 11.6125 31.8523 12.2462 31.2508C12.8799 30.6492 13.3804 29.9214 13.7153 29.1144C14.0501 28.3073 14.212 27.439 14.1903 26.5655C14.1687 25.6921 13.964 24.8328 13.5896 24.0434L11.6663 20C11.1071 18.8338 10.9237 17.5227 11.1415 16.2477C11.3592 14.9728 11.9674 13.7969 12.8819 12.8823C13.7965 11.9678 14.9724 11.3597 16.2473 11.1419C17.5223 10.9242 18.8333 11.1075 19.9996 11.6667L24.0429 13.5867C24.8319 13.9619 25.6908 14.1675 26.5642 14.19C27.4376 14.2126 28.306 14.0518 29.1133 13.7178C29.9206 13.3839 30.649 12.8844 31.2512 12.2514C31.8534 11.6185 32.3162 10.8663 32.6096 10.0434L34.1096 5.82669C34.5415 4.6099 35.3396 3.55673 36.3943 2.81192C37.449 2.06712 38.7084 1.66724 39.9996 1.66724C41.2908 1.66724 42.5502 2.06712 43.6049 2.81192C44.6596 3.55673 45.4577 4.6099 45.8896 5.82669L47.3896 10.0434C47.6833 10.8653 48.1462 11.6164 48.7486 12.248C49.3509 12.8796 50.0792 13.3777 50.8863 13.71"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							All good! <br />Ticket has been created successfully
-						</h3>
-						<p>
-							Your ticket is being attended to, and a response would be sent to
-							you very soon. Thank you for your patience.
-						</p>
-
-						<button
-							type="button"
-							data-a11y-dialog-hide
-							aria-label="Close dialog"
-							class="button"
-						>
-							Back to Tickets
-						</button>
-					</div>
-				</div>
-			</div>
 		</div>
 		<script src="js/main.js"></script>
 		<script></script>

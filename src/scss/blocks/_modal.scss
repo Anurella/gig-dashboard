@@ -32,6 +32,7 @@
 		width: min(600px, 95%);
 		position: relative;
 		padding: var(--spacing);
+		padding-bottom: calc(var(--spacing) * 2);
 		min-height: 400px;
 
 		h1 {
