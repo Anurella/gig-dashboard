@@ -40,5 +40,15 @@
 			color: var(--primary-100);
 			text-align: center;
 		}
+
+		.info {
+			max-width: 400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		button {
+			width: 100%;
+		}
 	}
 }

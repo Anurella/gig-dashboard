@@ -363,6 +363,9 @@ h6 {
 	border-radius: 50%;
 	opacity: 0;
 	transition: opacity 0.2s ease;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .menu-list__link.active {
 	color: var(--primary-100);
@@ -613,6 +616,8 @@ h6 {
 	font-size: 2.5rem;
 	text-transform: uppercase;
 	letter-spacing: -0.05em;
+	display: block;
+	margin: 0 auto;
 }
 .sidebar__profile h2 {
 	color: var(--white-100);
@@ -628,13 +633,56 @@ h6 {
 	letter-spacing: -0.015em;
 	font-weight: 600;
 }
-.sidebar__profile a {
+.sidebar__profile [role=button] {
 	padding: calc(var(--spacing) / 2) var(--spacing);
 	border: 1px solid rgba(246, 255, 243, 0.32);
 	color: var(--primary-400);
 	border-radius: var(--radius);
 	line-height: 1.2;
 	font-size: 0.875rem;
+	display: inline-block;
+}
+
+.profile-popover__trigger {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 3px solid var(--primary-200);
+	transform: translate(100%, -90%);
+}
+.profile-popover__trigger:hover ~ ul {
+	opacity: 1;
+	visibility: visible;
+	display: block;
+}
+.profile-popover__menu {
+	background-color: var(--white-100);
+	box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+	border-radius: var(--radius);
+	width: 150px;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	top: 87px;
+	left: 40%;
+	transform: translateX(-50%);
+}
+.profile-popover__menu:hover {
+	opacity: 1;
+	visibility: visible;
+	display: block;
+}
+.profile-popover__menu li {
+	padding: calc(var(--spacing) / 2);
+	text-align: left;
+}
+.profile-popover__menu li > * {
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	color: var(--dark);
 }
 
 .pill {
@@ -1137,6 +1185,14 @@ h6 {
 	font-size: 1.75rem;
 	color: var(--primary-100);
 	text-align: center;
+}
+.dialog__content .info {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+.dialog__content button {
+	width: 100%;
 }
 
 input,

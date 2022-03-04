@@ -107,6 +107,9 @@
 				border-radius: 50%;
 				opacity: 0;
 				transition: opacity 0.2s ease;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 			&.active {
 				color: var(--primary-100);

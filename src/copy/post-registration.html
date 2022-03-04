@@ -119,7 +119,13 @@
 								<a href="/" class="menu-list__link"> Invite Friends </a>
 							</li>
 							<li class="menu-list__item">
-								<button class="menu-list__but">Upgrade to Premium</button>
+								<button
+									class="menu-list__but"
+									data-a11y-dialog-show="upgradePremium"
+									aria-label="Open upgrade premium dialog"
+								>
+									Upgrade to Premium
+								</button>
 							</li>
 						</ul>
 					</div>
@@ -148,7 +154,7 @@
 							<div class="nav__profile">
 								<img
 									src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-									alt="Woman holding her collar"
+									alt="W"
 									width="50"
 									height="50"
 								/>
@@ -185,7 +191,7 @@
 						<div class="sidebar__profile">
 							<img
 								src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-								alt="Woman holding her collar"
+								alt="W"
 								width="80"
 								height="80"
 							/>
@@ -248,13 +254,9 @@
 						</div>
 						<div class="social">
 							<p>Link your social account</p>
-							<a
-							href="profile.html"
-								class="actions__view"
-								role="button"
-							>
+							<a href="profile.html" class="actions__view" role="button">
 								Update here
-							</button>
+							</a>
 						</div>
 					</details>
 				</article>
@@ -299,7 +301,31 @@
 				</div>
 			</div>
 
-			
+			<!-- upgrade to premium -->
+			<div
+				id="upgradePremium"
+				aria-labelledby="upgrade-premium"
+				aria-hidden="true"
+				aria-describedby="modal-description"
+				class="dialog__container"
+			>
+				<!-- 2. The dialog overlay -->
+				<div data-a11y-dialog-hide class="dialog__overlay"></div>
+				<!-- 3. The actual dialog -->
+				<div role="document" class="dialog__content">
+					<!-- 5. The dialog title -->
+					<div class="flow info">
+						<h1 id="upgrade-premium" aria-hidden="">Upgrade to Premium</h1>
+						<!-- 6. Dialog content -->
+						<p>
+							To upgrade to premium, you would be charged N 2,500 from your
+							wallet, and would need to have over 2,000 followers on the social
+							media account you want to use.
+						</p>
+						<button class="button">Start Upgrade</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="js/main.js"></script>
 	</body>
