@@ -1400,11 +1400,19 @@ select {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	row-gap: 2rem;
+}
+.auth.reg {
+	justify-content: flex-start;
+	padding-block-start: 4rem;
 }
 .auth header {
-	padding-block: var(--spacing);
 	width: 100%;
 	text-align: center;
+}
+.auth header svg {
+	height: 2rem;
+	vertical-align: middle;
 }
 .auth-form {
 	width: min(90%, 500px);

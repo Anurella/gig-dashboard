@@ -59,12 +59,22 @@ html {
 	background-color: var(--primary-100);
 	overflow-y: auto;
 	@include flex-center-column;
-	// grid-template-rows: auto;
+	row-gap: 2rem;
+
+	&.reg {
+		justify-content: flex-start;
+		padding-block-start: 4rem;
+	}
 
 	header {
-		padding-block: var(--spacing);
+		// padding-block: var(--spacing);
 		width: 100%;
 		text-align: center;
+
+		svg {
+			height: 2rem;
+			vertical-align: middle;
+		}
 	}
 
 	&-form {
