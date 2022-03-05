@@ -21,6 +21,7 @@
 
 			h4 {
 				font-size: min(7.5vw, 40px);
+				color: var(--dark);
 
 				@include respond-above('lg') {
 					font-weight: 700;

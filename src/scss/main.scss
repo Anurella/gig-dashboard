@@ -57,8 +57,9 @@ html {
 }
 .auth {
 	background-color: var(--primary-100);
-	justify-items: center;
 	overflow-y: auto;
+	@include flex-center-column;
+	// grid-template-rows: auto;
 
 	header {
 		padding-block: var(--spacing);

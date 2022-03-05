@@ -43,7 +43,7 @@
 		max-width: 100%;
 
 		@include respond-above('lg') {
-			// table-layout: fixed;
+			table-layout: fixed;
 		}
 
 		th {

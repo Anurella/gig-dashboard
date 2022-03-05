@@ -13,8 +13,11 @@
 		@include flex-column;
 		row-gap: 9rem;
 		background-color: var(--primary-200);
+		padding: calc(var(--spacing) * 1.5) calc(var(--spacing) / 1.5)
+			calc(var(--spacing) / 1.5);
 		padding-inline: calc(var(--spacing) / 1.5);
 		padding-block: calc(var(--spacing) * 1.5) calc(var(--spacing) / 1.5);
+		// block-size: 100%;
 	}
 
 	&__refer {
