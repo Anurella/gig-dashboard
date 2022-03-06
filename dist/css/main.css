@@ -1198,8 +1198,13 @@ h6 {
 	margin: 0 auto;
 	text-align: center;
 }
-.dialog__content button {
+.dialog__content .button, .dialog__content .button__light, .dialog__content .button__border,
+.dialog__content [role=button] {
 	width: 100%;
+	display: block;
+}
+.dialog__content [role=button] {
+	text-align: center;
 }
 
 input,
@@ -1411,7 +1416,7 @@ select {
 	text-align: center;
 }
 .auth header svg {
-	height: 2rem;
+	height: 36px;
 	vertical-align: middle;
 }
 .auth-form {
@@ -1433,9 +1438,10 @@ select {
 .auth-form .icon {
 	position: absolute;
 	left: 10px;
-	top: 35px;
+	top: 30px;
 	transform: translateY(3px);
 	z-index: 0;
+	display: flex;
 }
 .auth-form a {
 	color: var(--primary-100);
@@ -1477,22 +1483,20 @@ select {
 .post__registration > div {
 	background-color: var(--white-300);
 	padding: calc(var(--spacing) / 2) var(--spacing) var(--spacing) calc(var(--spacing) * 2);
-	align-items: baseline;
-	margin-block-end: 5px;
-}
-.post__registration .social {
 	column-gap: 4rem;
 	display: flex;
+	align-items: center;
+	margin-block-end: 5px;
 }
-.post__registration button span {
-	color: var(--primary-300);
+.post__registration > div p {
+	flex-basis: 200px;
+}
+.post__registration .actions__view {
+	white-space: nowrap;
+	text-transform: uppercase;
 }
 .post__registration[open] summary {
 	background-image: url("/img/chevron-down.svg");
-}
-
-.activate > * {
-	margin-block-end: 10px;
 }
 
 .main {
@@ -1731,7 +1735,11 @@ add border and padding to a section
 .profile [data-tab-label] {
 	--tab-spacing: 0.5rem;
 	flex-basis: 350px;
-	flex-grow: 0;
+}
+@media (min-width: 60em) {
+	.profile [data-tab-label] {
+		flex-grow: 0;
+	}
 }
 .profile fieldset {
 	border-top: 1px solid var(--white-500);

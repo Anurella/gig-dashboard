@@ -72,7 +72,7 @@ html {
 		text-align: center;
 
 		svg {
-			height: 2rem;
+			height: 36px;
 			vertical-align: middle;
 		}
 	}
@@ -100,9 +100,10 @@ html {
 		.icon {
 			position: absolute;
 			left: 10px;
-			top: 35px;
+			top: 30px;
 			transform: translateY(3px);
 			z-index: 0;
+			display: flex;
 		}
 
 		a {
@@ -155,19 +156,23 @@ html {
 
 			padding: calc(var(--spacing) / 2) var(--spacing) var(--spacing)
 				calc(var(--spacing) * 2);
-			align-items: baseline;
-			margin-block-end: 5px;
-		}
-
-		.social {
+			// align-items: baseline;
 			column-gap: 4rem;
 			display: flex;
+			align-items: center;
+			margin-block-end: 5px;
+
+			p {
+				flex-basis: 200px;
+			}
+		}
+
+		.actions__view {
+			white-space: nowrap;
+			text-transform: uppercase;
 		}
 
 		button {
-			span {
-				color: var(--primary-300);
-			}
 		}
 
 		&[open] {
@@ -178,11 +183,11 @@ html {
 	}
 }
 
-.activate {
-	> * {
-		margin-block-end: 10px;
-	}
-}
+// .activate {
+// 	> * {
+// 		margin-block-end: 10px;
+// 	}
+// }
 
 .main {
 	padding-inline: var(--spacing);
@@ -447,7 +452,9 @@ add border and padding to a section
 		--tab-spacing: 0.5rem;
 
 		flex-basis: 350px;
-		flex-grow: 0;
+		@include respond-above('lg') {
+			flex-grow: 0;
+		}
 	}
 
 	fieldset {

@@ -47,8 +47,14 @@
 			text-align: center;
 		}
 
-		button {
+		.button,
+		[role='button'] {
 			width: 100%;
+			display: block;
+		}
+
+		[role='button'] {
+			text-align: center;
 		}
 	}
 }

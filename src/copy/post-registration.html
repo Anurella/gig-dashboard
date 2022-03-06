@@ -235,21 +235,15 @@
 							</p>
 						</summary>
 						<div class="activate">
-							<h2>Activate your account</h2>
-							<p class="modal-description">
-								You will need to activate your account with a one-time payment
-								of N500 before you can perform any task on the website.
-							</p>
-							<button class="button">
-								Pay with Card <span>(Instant activation)</span>
-							</button>
+							<p>Activate your account</p>
+
 							<button
-								class="button"
+								class="actions__view"
 								type="button"
 								data-a11y-dialog-show="activateAccount"
 								aria-label="Open activation dialog"
 							>
-								Pay manually <span>(Activation may take up to 24hrs)</span>
+								Start here
 							</button>
 						</div>
 						<div class="social">
@@ -279,25 +273,66 @@
 					style="--flow-space: 1rem"
 				>
 					<!-- 5. The dialog title -->
-					<h1 id="activate-account" aria-hidden="">Activate Account</h1>
+					<h1 id="activate-account" aria-hidden="true">Activate Account</h1>
 					<!-- 6. Dialog content -->
-					<ul role="list">
-						<li>
-							<span><b>Bank Name:</b></span
-							><span> Access</span>
-						</li>
-						<li>
-							<span><b>Account Number:</b></span
-							><span> 303030</span>
-						</li>
-					</ul>
-					<form action="">
-						<label for="name">
-							<span data-labe=""> Provide Account Name </span>
-							<input type="text" />
-						</label>
-						<button class="button">Submit</button>
-					</form>
+
+					<div class="form__wrapper">
+						<h3>Activate Account</h3>
+						<p>
+							You will need to activate your account with a one-time payment of
+							N500 before you can perform any task on the website.
+						</p>
+						<span class="spacer"></span>
+						<a role="button" class="button">
+							Pay with Card
+							<span style="color: var(--primary-300)"
+								>(Instant activation)</span
+							>
+						</a>
+						<button class="button mt-10" type="button">
+							Pay manually
+							<span style="color: var(--primary-300)"
+								>(Activation may take up to 24hrs)</span
+							>
+						</button>
+						<span class="spacer"></span>
+						<p>
+							I have paid, but i haven’t been activated?<a
+								href="https://sidegig.co/contact/"
+							>
+								<b>Contact us</b></a
+							>
+						</p>
+						<span class="spacer">
+							<div>
+								<a href="https://sidegig.co/privacy-policy/"
+									>Read about how Sidegig works</a
+								>
+								<a href="https://sidegig.co/terms-and-conditions/"
+									>Read out Terms of Use</a
+								>
+							</div>
+						</span>
+					</div>
+					<div class="bank__details" aria-hidden="true">
+						<ul role="list">
+							<li>
+								<span><b>Bank Name:</b></span
+								><span> Access</span>
+							</li>
+							<li>
+								<span><b>Account Number:</b></span
+								><span> 303030</span>
+							</li>
+						</ul>
+						<form action="">
+							<label for="name">
+								<span data-labe=""> Provide Account Name </span>
+								<input type="text" />
+							</label>
+							<button class="button">Submit</button>
+						</form>
+					</div>
 				</div>
 			</div>
 
