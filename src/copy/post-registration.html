@@ -276,9 +276,9 @@
 					<h1 id="activate-account" aria-hidden="true">Activate Account</h1>
 					<!-- 6. Dialog content -->
 
-					<div class="form__wrapper">
+					<div class="form__wrapper activate__details" aria-hidden="false">
 						<h3>Activate Account</h3>
-						<p>
+						<p style="font-size: 1.25rem; color: var(--gray-200)">
 							You will need to activate your account with a one-time payment of
 							N500 before you can perform any task on the website.
 						</p>
@@ -289,32 +289,29 @@
 								>(Instant activation)</span
 							>
 						</a>
-						<button class="button mt-10" type="button">
+						<button class="button mt-10 bank-details-trigger" type="button">
 							Pay manually
-							<span style="color: var(--primary-300)"
-								>(Activation may take up to 24hrs)</span
-							>
+							<span style="color: var(--primary-300)">
+								(Activation may take up to 24hrs)
+							</span>
 						</button>
 						<span class="spacer"></span>
-						<p>
-							I have paid, but i haven’t been activated?<a
-								href="https://sidegig.co/contact/"
-							>
-								<b>Contact us</b></a
-							>
+						<p class="query">
+							I have paid, but i haven’t been activated?
+							<a href="https://sidegig.co/contact/"> <b>Contact us</b></a>
 						</p>
-						<span class="spacer">
-							<div>
-								<a href="https://sidegig.co/privacy-policy/"
-									>Read about how Sidegig works</a
-								>
-								<a href="https://sidegig.co/terms-and-conditions/"
-									>Read out Terms of Use</a
-								>
-							</div>
-						</span>
+						<span class="spacer"> </span>
+						<div class="links">
+							<a href="https://sidegig.co/privacy-policy/">
+								Read about how Sidegig works
+							</a>
+							<a href="https://sidegig.co/terms-and-conditions/">
+								Read out Terms of Use
+							</a>
+						</div>
 					</div>
-					<div class="bank__details" aria-hidden="true">
+					<div class="form__wrapper bank__details" aria-hidden="true">
+						<h3>Manual Payment</h3>
 						<ul role="list">
 							<li>
 								<span><b>Bank Name:</b></span
@@ -325,6 +322,7 @@
 								><span> 303030</span>
 							</li>
 						</ul>
+						<span class="spacer"></span>
 						<form action="">
 							<label for="name">
 								<span data-labe=""> Provide Account Name </span>
@@ -362,6 +360,19 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			document
+				.querySelector('.bank-details-trigger')
+				.addEventListener('click', () => {
+					console.log("I'm clicked");
+					document
+						.querySelector('.bank__details')
+						.setAttribute('aria-hidden', 'false');
+					document
+						.querySelector('.activate__details')
+						.setAttribute('aria-hidden', 'true');
+				});
+		</script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

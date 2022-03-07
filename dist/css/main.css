@@ -1206,6 +1206,20 @@ h6 {
 .dialog__content [role=button] {
 	text-align: center;
 }
+.dialog__content .query {
+	font-size: 14px;
+}
+.dialog__content .query a {
+	color: var(--primary-100);
+}
+.dialog__content .links {
+	display: flex;
+	justify-content: space-around;
+}
+.dialog__content .links a {
+	font-size: 12px;
+	color: var(--gray-300);
+}
 
 input,
 select,

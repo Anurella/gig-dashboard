@@ -56,5 +56,21 @@
 		[role='button'] {
 			text-align: center;
 		}
+
+		.query {
+			font-size: 14px;
+			a {
+				color: var(--primary-100);
+			}
+		}
+
+		.links {
+			display: flex;
+			justify-content: space-around;
+			a {
+				font-size: 12px;
+				color: var(--gray-300);
+			}
+		}
 	}
 }
