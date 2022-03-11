@@ -1,37 +1,41 @@
 .notification {
-    &__trigger {
-        @include flex-center-vert;
+	&__trigger {
+		@include flex-center-vert;
 
-        svg {
-            width: 24px;
-            height: auto;
-            vertical-align: middle;
-        }
+		svg {
+			width: 24px;
+			height: auto;
+			vertical-align: middle;
 
-        circle {
-            visibility: visible;
-            opacity: 1;
-        }
+			@media (prefers-color-scheme: dark) {
+				path {
+					fill: var(--primary-400);
+				}
+			}
+		}
 
-        .text {
-            margin-left: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 1.5;
-            letter-spacing: -0.024em;
-        }
+		circle {
+			visibility: visible;
+			opacity: 1;
+		}
 
-        &:where([data-message-value="0"]){
+		.text {
+			margin-left: 5px;
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 1.5;
+			letter-spacing: -0.024em;
+		}
 
-            circle {
-                visibility: hidden;
-                opacity:1;
-            }
+		&:where([data-message-value='0']) {
+			circle {
+				visibility: hidden;
+				opacity: 1;
+			}
 
-            .text {
-                color: var(--gray-100);
-            }
-        }
-    }
+			.text {
+				color: var(--gray-100);
+			}
+		}
+	}
 }
-

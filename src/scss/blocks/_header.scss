@@ -31,6 +31,12 @@
 			height: 1.85rem;
 			// width: 100%;
 			vertical-align: middle;
+
+			@media (prefers-color-scheme: dark) {
+				path:nth-last-child(n + 3) {
+					fill: white;
+				}
+			}
 		}
 	}
 
@@ -39,7 +45,7 @@
 
 	@include respond-above('md') {
 		box-shadow: initial;
-		border-bottom: 2px solid rgba(241, 241, 241, 1);
+		border-bottom: 2px solid var(--white-200);
 	}
 }
 
@@ -54,6 +60,12 @@
 			height: auto;
 			vertical-align: middle;
 			pointer-events: none;
+
+			@media (prefers-color-scheme: dark) {
+				path {
+					fill: var(--primary-400);
+				}
+			}
 		}
 
 		@include respond-above('lg') {
@@ -122,7 +134,7 @@
 		}
 
 		&__but {
-			border: 1px solid #d4d4d4;
+			border: 1px solid var(--gray-500);
 			color: var(--gray-400);
 			border-radius: calc(var(--radius) * 14);
 			padding: calc(var(--spacing) / 2.5) calc(var(--spacing) * 0.75);

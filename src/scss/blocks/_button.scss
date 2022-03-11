@@ -8,6 +8,9 @@
 	@include respond-above('lg') {
 		padding: 16px 40px;
 	}
+	// @media (prefers-color-scheme: dark) {
+	// 	background-color: var(--primary-300);
+	// }
 	width: var(--width);
 
 	&__light {

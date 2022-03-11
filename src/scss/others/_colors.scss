@@ -1,33 +1,50 @@
-$gray-100:hsla(0,0%,30%,1);
-$gray-200:hsla(0,0%,43%,1);
-$gray-300:hsla(0,0%,58%,1);
-$gray-400:hsla(0,0%,72%,1);
-$primary-100: hsla(150,100%,18%,1);
-$primary-200: hsla(150,57%,10%,1); 
-$primary-300: hsla(141,100%,43%,1);
-$primary-400: hsla(105, 100%, 98%,1);
-$white-100: hsla(0,0%,100%,1);
-$white-200: hsla(0,0%,98%,1);
-$white-300: hsla(0,0%,94%,1);
-$white-400: hsla(0,0%,92%,1); 
-$white-500: hsla(0, 0%, 91%,1);
-$dark:hsl(0, 2%, 10%);
-
+$hue: 150;
+$gray-100: hsla(0, 0%, 30%, 1);
+$gray-200: hsla(0, 0%, 43%, 1);
+$gray-300: hsla(0, 0%, 58%, 1);
+$gray-400: hsla(0, 0%, 72%, 1);
+$gray-500: hsla(0, 0%, 83%, 1);
+$primary-100: hsla($hue, 100%, 18%, 1);
+$primary-200: hsla($hue, 57%, 10%, 1);
+$primary-300: hsla(141, 100%, 43%, 1);
+$primary-400: hsla(105, 100%, 98%, 1);
+$white-100: hsla(0, 0%, 100%, 1);
+$white-200: hsla(0, 0%, 98%, 1);
+$white-300: hsla(0, 0%, 94%, 1);
+$white-400: hsla(0, 0%, 92%, 1);
+$white-500: hsla(0, 0%, 91%, 1);
+$dark: hsl(0, 2%, 10%);
 
 :root {
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --primary-100: #{$primary-100};
-    --primary-200: #{$primary-200};
-    --primary-300: #{$primary-300};
-    --primary-400: #{$primary-400};
-    --white-100: #{$white-100};
-    --white-200: #{$white-200};
-    --white-300: #{$white-300};
-    --white-400: #{$white-400};
-    --white-500: #{$white-500};
-    --dark: #{$dark};
-    
+	--gray-100: #{$gray-100};
+	--gray-200: #{$gray-200};
+	--gray-300: #{$gray-300};
+	--gray-400: #{$gray-400};
+	--gray-500: #{$gray-500};
+	--primary-100: #{$primary-100};
+	--primary-200: #{$primary-200};
+	--primary-300: #{$primary-300};
+	--primary-400: #{$primary-400};
+	--white-100: #{$white-100};
+	--white-200: #{$white-200};
+	--white-300: #{$white-300};
+	--white-400: #{$white-400};
+	--white-500: #{$white-500};
+	--dark: #{$dark};
+	--body-bg: #{$white-100};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: hsla(150, 10%, 10%);
+		--dark: hsla(#{$hue}, 20%, 99%);
+		--white-100: #{$dark};
+		--white-400: hsla(#{$hue}, 3%, 25%);
+		--white-300: hsla(#{$hue}, 5%, 20%);
+		--gray-300: #{$white-500};
+		--gray-200: #{$white-400};
+		--primary-100: #{$primary-300};
+		--primary-200: #{$primary-100};
+		--primary-300: #{$primary-200};
+	}
 }
