@@ -8,6 +8,7 @@ $primary-100: hsla($hue, 100%, 18%, 1);
 $primary-200: hsla($hue, 57%, 10%, 1);
 $primary-300: hsla(141, 100%, 43%, 1);
 $primary-400: hsla(105, 100%, 98%, 1);
+$surface-100: hsla($hue, 3%, 25%, 1);
 $white-100: hsla(0, 0%, 100%, 1);
 $white-200: hsla(0, 0%, 98%, 1);
 $white-300: hsla(0, 0%, 94%, 1);
@@ -32,6 +33,7 @@ $dark: hsl(0, 2%, 10%);
 	--white-500: #{$white-500};
 	--dark: #{$dark};
 	--body-bg: #{$white-100};
+	--surface-100: #{$surface-100};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,3 +50,5 @@ $dark: hsl(0, 2%, 10%);
 		--primary-300: #{$primary-200};
 	}
 }
+
+// hsl(150, 5%, 20%)

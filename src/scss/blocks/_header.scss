@@ -46,6 +46,10 @@
 	@include respond-above('md') {
 		box-shadow: initial;
 		border-bottom: 2px solid var(--white-200);
+
+		@media (prefers-color-scheme: dark) {
+			border-color: hsl(150, 10%, 15%);
+		}
 	}
 }
 
@@ -96,7 +100,7 @@
 		}
 
 		&__link {
-			color: var(--gray-300);
+			color: var(--gray-200);
 			letter-spacing: -0.024em;
 			transition: color 0.2s;
 			font-weight: 500;
@@ -120,9 +124,9 @@
 				border-radius: 50%;
 				opacity: 0;
 				transition: opacity 0.2s ease;
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+				// position: absolute;
+				// left: 50%;
+				// transform: translateX(-50%);
 			}
 			&.active {
 				color: var(--primary-100);
@@ -141,6 +145,7 @@
 			text-transform: uppercase;
 			font-weight: inherit;
 			letter-spacing: -0.024em;
+			min-width: 230px;
 
 			&.active {
 				border-color: var(--primary-300);

@@ -466,6 +466,10 @@ add border and padding to a section
 		border-top: 1px solid var(--white-500);
 		padding-block-start: calc(var(--spacing) / 2);
 
+		@media (prefers-color-scheme: dark) {
+			border-color: var(--surface-100);
+		}
+
 		label {
 			display: grid;
 			align-items: center;
@@ -478,6 +482,10 @@ add border and padding to a section
 
 		[data-label] {
 			color: var(--gray-100);
+
+			@media (prefers-color-scheme: dark) {
+				color: hsl(150, 5%, 65%);
+			}
 		}
 	}
 

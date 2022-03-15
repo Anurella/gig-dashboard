@@ -199,9 +199,16 @@
 		position: absolute;
 		left: 0;
 		width: 50px;
+
 		&.visible {
 			opacity: 1;
 			visibility: visible;
+
+			path {
+				@media (prefers-color-scheme: dark) {
+					fill: #fff;
+				}
+			}
 		}
 	}
 }
