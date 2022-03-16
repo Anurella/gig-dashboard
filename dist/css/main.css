@@ -132,10 +132,12 @@ button {
 		--body-bg: hsla(150, 10%, 10%);
 		--dark: hsla(150, 20%, 99%);
 		--white-100: #1a1919;
-		--white-400: hsla(150, 3%, 25%);
+		--white-200: hsla(150, 10%, 15%);
 		--white-300: hsla(150, 5%, 20%);
+		--white-400: hsla(150, 3%, 25%);
 		--gray-300: #e8e8e8;
 		--gray-200: #ebebeb;
+		--gray-100: #d4d4d4;
 		--primary-100: #00db4d;
 		--primary-200: #005c2e;
 		--primary-300: #0b281a;
@@ -506,7 +508,7 @@ h6 {
 	--tab-background-color: var(--white-100);
 	--tab-panel-background: var(--white-300);
 	--tab-radius: 4px;
-	--tab-border-color: #eaeaea;
+	--tab-border-color: var(--white-400);
 	--tab-border-width: 1px;
 	--tab-spacing: 0.7rem 1.2rem;
 	--tab-active-shadow: 0px 2px 4px -2px rgba(255, 255, 255, 0.08),
@@ -652,6 +654,9 @@ h6 {
 	}
 	.sidebar__refer h3 {
 		color: var(--primary-300);
+	}
+	.sidebar__refer p {
+		color: var(--white-100);
 	}
 }
 .sidebar__profile {
@@ -959,7 +964,7 @@ h6 {
 	font-weight: 1rem;
 }
 .tablegroup__table tr {
-	border-bottom: 1px solid #fafafa;
+	border-bottom: 1px solid var(--white-200);
 }
 .tablegroup__table tr:last-child {
 	border: 0;
@@ -1525,6 +1530,11 @@ select {
 	flex-direction: column;
 	row-gap: 2rem;
 }
+@media (prefers-color-scheme: dark) {
+	.auth {
+		background-color: #1f1e1e;
+	}
+}
 .auth.reg {
 	justify-content: flex-start;
 	padding-block-start: 4rem;
@@ -1549,6 +1559,7 @@ select {
 	font-size: 1.75rem;
 	text-align: center;
 	color: var(--gray-100);
+	color: #cccccc;
 }
 .auth-form input {
 	padding-inline-start: 40px;
@@ -1570,7 +1581,7 @@ select {
 	font-weight: 600;
 }
 .auth-form [aria-disabled=true] {
-	background-color: rgba(0, 94, 47, 0.32);
+	opacity: 0.5;
 	cursor: not-allowed;
 }
 
@@ -1744,6 +1755,13 @@ add border and padding to a section
 	border: var(--tab-border-width) solid var(--tab-border-color);
 	box-shadow: 0px 4px 6px -4px rgba(131, 134, 133, 0.08), 0px 8px 8px -4px rgba(152, 152, 152, 0.08);
 	padding: var(--spacing);
+}
+@media (prefers-color-scheme: dark) {
+	.tasks [data-tab=tab1]:checked ~ nav ~ [data-tab-panel=tab1],
+.tasks [data-tab=tab2]:checked ~ nav ~ [data-tab-panel=tab2],
+.tasks [data-tab=tab3]:checked ~ nav ~ [data-tab-panel=tab3] {
+		box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 2, 0, 0.08);
+	}
 }
 @media (min-width: 60em) {
 	.tasks nav {

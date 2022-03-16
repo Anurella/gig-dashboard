@@ -42,9 +42,12 @@
 
 		@media (prefers-color-scheme: dark) {
 			background-color: hsl(150, 15%, 85%);
-
 			h3 {
 				color: var(--primary-300);
+			}
+
+			p {
+				color: var(--white-100);
 			}
 		}
 	}
