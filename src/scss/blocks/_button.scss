@@ -17,6 +17,11 @@
 		@extend .button;
 		background-color: var(--primary-400);
 		color: var(--dark);
+
+		@media (prefers-color-scheme: dark) {
+			background-color: hsl(150, 35%, 75%);
+			color: var(--white-100);
+		}
 		border: 1px solid var(--primary-300);
 		width: var(--width);
 	}

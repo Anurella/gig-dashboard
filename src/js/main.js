@@ -34,11 +34,6 @@ container.forEach((e) => {
 	});
 });
 
-select('.tag__trigger').addEventListener('click', () => {
-	console.log("I'm clicked");
-	select('.add__tag').setAttribute('aria-hidden', 'false');
-	select('.add__bank').setAttribute('aria-hidden', 'true');
-});
 selectAll('[aria-disabled="true"]').forEach((e) => {
 	e.addEventListener('change', (e) => {
 		e.preventDefault();

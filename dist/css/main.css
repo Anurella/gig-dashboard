@@ -33,10 +33,6 @@ a {
 	text-decoration: none;
 }
 
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
 *,
 *:before,
 *:after {
@@ -884,6 +880,12 @@ h6 {
 	border: 1px solid var(--primary-300);
 	width: var(--width);
 }
+@media (prefers-color-scheme: dark) {
+	.button__light {
+		background-color: #a9d6bf;
+		color: var(--white-100);
+	}
+}
 .button__border {
 	background-color: var(--white-100);
 	color: var(--primary-100);
@@ -1140,6 +1142,9 @@ h6 {
 	text-align: center;
 	margin-bottom: 1rem;
 }
+.form__wrapper .account__name {
+	text-align: left;
+}
 .form__wrapper input {
 	background-color: transparent;
 }
@@ -1195,7 +1200,7 @@ h6 {
 }
 
 .balance__details {
-	background-color: #f0f3fa;
+	background-color: var(--white-300);
 	margin-block-start: 10px;
 	font-size: 12px;
 	text-align: center;
@@ -1204,6 +1209,11 @@ h6 {
 }
 .balance__details span {
 	color: #2458db;
+}
+@media (prefers-color-scheme: dark) {
+	.balance__details span {
+		color: #abc1f7;
+	}
 }
 
 .summary__details li {
@@ -1264,6 +1274,11 @@ h6 {
 	left: 0;
 	bottom: 0;
 	right: 0;
+}
+@media (prefers-color-scheme: dark) {
+	.dialog__overlay {
+		background-color: rgba(235, 235, 235, 0.5);
+	}
 }
 .dialog__content {
 	background-color: var(--white-100);
@@ -1453,6 +1468,7 @@ form label {
 }
 .account__name {
 	grid-column: 1/span 9;
+	text-align: left;
 }
 .account__bank {
 	grid-column: 10;

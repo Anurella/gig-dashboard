@@ -89,9 +89,10 @@
 			text-align: center;
 			margin-bottom: 1rem;
 		}
-		form {
-		}
 
+		.account__name {
+			text-align: left;
+		}
 		input {
 			background-color: transparent;
 		}
@@ -156,7 +157,7 @@
 
 .balance {
 	&__details {
-		background-color: hsl(220, 47%, 96%);
+		background-color: var(--white-300);
 		margin-block-start: 10px;
 		font-size: 12px;
 		text-align: center;
@@ -165,6 +166,10 @@
 
 		span {
 			color: hsl(223, 72%, 50%);
+
+			@media (prefers-color-scheme: dark) {
+				color: hsl(223, 82%, 82%);
+			}
 		}
 	}
 }

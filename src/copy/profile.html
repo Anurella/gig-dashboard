@@ -688,6 +688,16 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
-		<script></script>
+		<script>
+			document.querySelector('.tag__trigger').addEventListener('click', () => {
+				console.log("I'm clicked");
+				document
+					.querySelector('.add__tag')
+					.setAttribute('aria-hidden', 'false');
+				document
+					.querySelector('.add__bank')
+					.setAttribute('aria-hidden', 'true');
+			});
+		</script>
 	</body>
 </html>

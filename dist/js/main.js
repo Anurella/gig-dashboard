@@ -426,11 +426,6 @@
       console.log('modal is open');
     });
   });
-  select('.tag__trigger').addEventListener('click', function () {
-    console.log("I'm clicked");
-    select('.add__tag').setAttribute('aria-hidden', 'false');
-    select('.add__bank').setAttribute('aria-hidden', 'true');
-  });
   selectAll('[aria-disabled="true"]').forEach(function (e) {
     e.addEventListener('change', function (e) {
       e.preventDefault();
