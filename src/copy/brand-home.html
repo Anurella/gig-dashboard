@@ -29,7 +29,7 @@
 	</head>
 
 	<body>
-		<div class="wrapper">
+		<div class="wrapper brand">
 			<a href="#main-content" class="visually-hidden">Skip to Content</a>
 			<header class="header">
 				<div class="header__container">
@@ -104,24 +104,16 @@
 						</a>
 						<ul role="navigation" class="menu-list">
 							<li class="menu-list__item">
-								<a href="/" class="menu-list__link"> Dashboard</a>
+								<a href="/" class="menu-list__link active"> Dashboard</a>
 							</li>
 							<li class="menu-list__item">
-								<a href="task.html" class="menu-list__link"> Tasks </a>
+								<a href="task.html" class="menu-list__link"> Offers </a>
 							</li>
 							<li class="menu-list__item">
-								<a href="payments.html" class="menu-list__link"> Payments </a>
+								<a href="payments.html" class="menu-list__link"> Wallet </a>
 							</li>
 							<li class="menu-list__item">
-								<a href="tickets.html" class="menu-list__link active">
-									Tickets
-								</a>
-							</li>
-							<li class="menu-list__item">
-								<a href="/" class="menu-list__link"> Invite Friends </a>
-							</li>
-							<li class="menu-list__item">
-								<button class="menu-list__but">Upgrade to Premium</button>
+								<a href="tickets.html" class="menu-list__link"> Tickets </a>
 							</li>
 						</ul>
 					</div>
@@ -150,7 +142,7 @@
 							<div class="nav__profile">
 								<img
 									src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-									alt="W"
+									alt="w"
 									width="50"
 									height="50"
 								/>
@@ -161,19 +153,13 @@
 									<a href="/" class=""> Dashboard</a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="task.html" class=""> Tasks </a>
+									<a href="task.html" class=""> Offers </a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="payments.html" class=""> Payments </a>
+									<a href="payments.html" class=""> Wallet </a>
 								</li>
 								<li class="nav__menu-item">
 									<a href="tickets.html" class=""> Tickets </a>
-								</li>
-								<li class="nav__menu-item">
-									<a href="/" class=""> Invite Friends </a>
-								</li>
-								<li class="nav__menu-item">
-									<button class="">Upgrade to Premium</button>
 								</li>
 							</ul>
 						</div>
@@ -185,252 +171,301 @@
 				<aside class="sidebar">
 					<div class="sidebar__wrapper">
 						<div class="sidebar__profile">
-							<img
-								src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-								alt="W"
-								width="80"
-								height="80"
-							/>
-							<h2>Bbay Girl</h2>
-							<p>#babygirl</p>
+							<div class="profile-popover">
+								<img
+									src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+									alt="w"
+									width="80"
+									height="80"
+								/>
+								<button class="profile-popover__trigger">
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle
+											cx="8.99897"
+											cy="8.99995"
+											r="8.99995"
+											fill="white"
+										/>
+										<path
+											d="M5.49804 8C4.94804 8 4.49805 8.45 4.49805 8.99999C4.49805 9.54999 4.94804 9.99999 5.49804 9.99999C6.04804 9.99999 6.49804 9.54999 6.49804 8.99999C6.49804 8.45 6.04804 8 5.49804 8ZM12.498 8C11.948 8 11.498 8.45 11.498 8.99999C11.498 9.54999 11.948 9.99999 12.498 9.99999C13.048 9.99999 13.498 9.54999 13.498 8.99999C13.498 8.45 13.048 8 12.498 8ZM8.99802 8C8.44803 8 7.99803 8.45 7.99803 8.99999C7.99803 9.54999 8.44803 9.99999 8.99802 9.99999C9.54802 9.99999 9.99802 9.54999 9.99802 8.99999C9.99802 8.45 9.54802 8 8.99802 8Z"
+											fill="#005E2F"
+										/>
+									</svg>
+								</button>
+								<ul role="list" class="profile-popover__menu">
+									<li><a href="profile.html">My Profile</a></li>
+									<li><button>Log Out</button></li>
+								</ul>
+							</div>
+							<h2>Baby Girl</h2>
 							<span class="spacer"></span>
-							<a role="button" href="">Go to Profile</a>
-						</div>
-						<div class="sidebar__refer flow">
-							<h3>Refer and Earn</h3>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								Molestias ab voluptates est ratione delectus, dolor
-								exercitationem.
-							</p>
+							<a role="button" href="profile.html">Go to Profile</a>
 						</div>
 					</div>
 				</aside>
 				<article class="app-layout__wrapper flow">
-					<h1 class="app-layout__title">Tickets</h1>
-					<section class="tickets sbp">
-						<div class="tickets__table flow" hidden="">
-							<div class="tablegroup__header">
-								<h2>Tickets</h2>
-								<button
-									type="button"
-									class="button"
-									data-a11y-dialog-show="createTickets"
-									aria-label="Open ticket dialog"
-								>
-									Create Ticket
-								</button>
+					<h1 class="app-layout__title">Dashboard</h1>
+					<section class="highlight scroll-snap-x">
+						<figure class="highlight__item">
+							<div class="highlight__item-title">
+								<h4>23</h4>
 							</div>
-							<div class="table-wrapper">
-								<table class="tablegroup__table">
-									<thead>
-										<tr>
-											<th>S/N</th>
-											<th>Ticket Id</th>
-											<th>Subject</th>
-											<th>Status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
-											<td>3,900</td>
-											<td>
-												<span class="[ pill ]" data-status="sent"> sent </span>
-											</td>
-										</tr>
-										<tr>
-											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
-											<td>3,900</td>
-											<td>
-												<span class="[ pill ]" data-status="sent"> sent </span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+							<figcaption>
+								<span> Active Campaigns </span>
+							</figcaption>
+						</figure>
+						<figure class="highlight__item">
+							<div class="highlight__item-title">
+								<h4>2340</h4>
 							</div>
-						</div>
-						<div class="empty">
-							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M53.333 18.3333C53.333 17.3443 53.6263 16.3776 54.1757 15.5554C54.7251 14.7332 55.506 14.0923 56.4196 13.7139C57.3332 13.3354 58.3386 13.2364 59.3085 13.4293C60.2784 13.6223 61.1693 14.0985 61.8685 14.7977C62.5678 15.497 63.044 16.3879 63.2369 17.3578C63.4299 18.3277 63.3308 19.333 62.9524 20.2467C62.574 21.1603 61.9331 21.9412 61.1109 22.4906C60.2886 23.04 59.3219 23.3333 58.333 23.3333"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M58.3333 28.3333C58.4982 28.3333 58.6593 28.3821 58.7963 28.4737C58.9334 28.5653 59.0402 28.6954 59.1032 28.8477C59.1663 29 59.1828 29.1675 59.1507 29.3292C59.1185 29.4908 59.0391 29.6393 58.9226 29.7558C58.806 29.8724 58.6576 29.9518 58.4959 29.9839C58.3343 30.0161 58.1667 29.9996 58.0144 29.9365C57.8622 29.8734 57.732 29.7666 57.6404 29.6296C57.5489 29.4925 57.5 29.3314 57.5 29.1666C57.5 28.9456 57.5878 28.7336 57.7441 28.5773C57.9004 28.421 58.1123 28.3333 58.3333 28.3333Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M58.11 1.66675C55.4776 1.67556 52.8732 2.20797 50.4486 3.23297C48.0239 4.25798 45.8274 5.7551 43.9869 7.63717C42.1464 9.51924 40.6987 11.7486 39.7281 14.1956C38.7575 16.6425 38.2834 19.2581 38.3333 21.8901C38.1834 25.612 39.0856 29.3009 40.9367 32.5334L35 45.0001L47.47 39.0601C50.1283 40.708 53.1327 41.7166 56.2469 42.0064C59.3611 42.2963 62.5001 41.8595 65.4169 40.7305C68.3336 39.6014 70.9486 37.811 73.056 35.4999C75.1634 33.1889 76.7058 30.4203 77.5618 27.4121C78.4178 24.4038 78.564 21.238 77.9889 18.1636C77.4139 15.0893 76.1332 12.1904 74.2478 9.6949C72.3624 7.19944 69.9236 5.17555 67.1233 3.78248C64.323 2.38942 61.2376 1.66518 58.11 1.66675V1.66675Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M55 48.3367V78.3367"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M1.66699 78.3334V18.3334C1.66699 16.5653 2.36937 14.8696 3.61961 13.6194C4.86986 12.3691 6.56555 11.6667 8.33366 11.6667H33.3337"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M31.667 25.0034H1.66699"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M26.667 63.3367C30.8091 63.3367 34.167 59.9788 34.167 55.8367C34.167 51.6945 30.8091 48.3367 26.667 48.3367C22.5249 48.3367 19.167 51.6945 19.167 55.8367C19.167 59.9788 22.5249 63.3367 26.667 63.3367Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M41.667 78.3333C40.817 75.0001 38.8811 72.045 36.1649 69.9345C33.4486 67.8239 30.1068 66.6782 26.667 66.6782C23.2272 66.6782 19.8853 67.8239 17.1691 69.9345C14.4529 72.045 12.5169 75.0001 11.667 78.3333"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M23.333 18.3367H31.6663"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							<h2>No Ticket has been created yet</h2>
-							<p>Click “create new ticket” if you have any issue.</p>
-							<span class="spacer"></span>
+							<figcaption>
+								<span> Balance </span>
+							</figcaption>
+						</figure>
+						<figure class="highlight__item">
+							<div class="highlight__item-title">
+								<h4>400</h4>
+							</div>
+							<figcaption>
+								<span> Total Campaigns </span>
+							</figcaption>
+						</figure>
+					</section>
+
+					<section class="tablegroup tablegroup-collapse flow">
+						<div class="tablegroup__header">
+							<h2>Available Campaigns</h2>
 							<button
 								type="button"
 								class="button"
-								data-a11y-dialog-show="createTickets"
-								aria-label="Open ticket dialog"
+								data-a11y-dialog-show="campaign"
+								aria-label="Open withdrawals dialog"
 							>
-								Create Ticket
+								New Campaign
 							</button>
 						</div>
+						<table class="tablegroup__table">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Date</th>
+									<th>Platform</th>
+
+									<th>Campaign</th>
+
+									<th>Submissions</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2339</td>
+									<td><span>12/08/2021</span></td>
+									<td>Instagram</td>
+									<td>
+										<span>Purple Rain </span>
+									</td>
+									<td>
+										<span>10 </span>
+									</td>
+									<td>
+										<span class="[ pill ]" data-status="reviewing"
+											>reviewing</span
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>2339</td>
+									<td><span>12/08/2021</span></td>
+									<td>Instagram</td>
+									<td>
+										<span>Purple Rain </span>
+									</td>
+									<td>
+										<span>10 </span>
+									</td>
+									<td>
+										<span class="[ pill ]" data-status="reviewing"
+											>reviewing</span
+										>
+									</td>
+								</tr>
+								<tr>
+									<td>2339</td>
+									<td><span>12/08/2021</span></td>
+									<td>Instagram</td>
+									<td>
+										<span>Purple Rain </span>
+									</td>
+									<td>
+										<span>10 </span>
+									</td>
+									<td>
+										<span class="[ pill ]" data-status="reviewing"
+											>reviewing</span
+										>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 				</article>
 			</main>
-			<footer>
-				<p>Copyright ©2022. Sidegig. All rights reserved</p>
-			</footer>
+			<footer><p>Copyright ©2022. Sidegig. All rights reserved</p></footer>
 			<!-- 1. The dialog container -->
 			<div
-				id="createTickets"
-				aria-labelledby="ticket-form"
+				id="campaign"
+				aria-labelledby="campaign-form"
 				aria-hidden="true"
 				aria-describedby="modal-description"
 				class="dialog__container"
 			>
-				<!-- 2. The dialog overlay -->
 				<div data-a11y-dialog-hide class="dialog__overlay"></div>
 				<!-- 3. The actual dialog -->
 				<div role="document" class="dialog__content">
-					<button
-						class="prev__arrow visible"
-						type="button"
-						data-a11y-dialog-hide
-						aria-label="Close dialog"
-					>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
-								fill="#1B1A1A"
-							/>
-						</svg>
-					</button>
+					<!-- 4. The close button -->
+					<!-- <button
+      type="button"
+      data-a11y-dialog-hide
+      aria-label="Close dialog"
+    >
+      &times;
+    </button> -->
 					<!-- 5. The dialog title -->
-					<h1 id="ticket-form" aria-hidden="true">Withdrawal Form</h1>
-					<span id="modal-description" class="visually-hidden"
-						>Create a ticket that support can help with</span
-					>
+					<h1 id="campaign-form" aria-hidden="true">Campaign</h1>
+					<span id="modal-description" class="visually-hidden">
+						Form to help brands create campaigns
+					</span>
 					<!-- 6. Dialog content -->
-					<div class="form__wrapper">
+					<div class="form__wrapper flow">
+						<div class="controls">
+							<button class="prev__arrow">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
+										fill="#1B1A1A"
+									/>
+								</svg>
+							</button>
+							<ul class="progress">
+								<li class="progress__item active"></li>
+								<!---->
+								<li class="progress__item"></li>
+							</ul>
+						</div>
 						<form action="" name="" method="POST">
-							<fieldset class="current" name="subject">
-								<h3>New Ticket</h3>
-								<label for="subject" data-field="subject">
-									<span data-label=""> Subject </span>
+							<fieldset class="current" name="amount">
+								<h3>Campaign</h3>
+								<label for="amount" data-field="name">
+									<span data-label="name"> Name </span>
 									<input
 										type="text"
-										placeholder=""
+										placeholder="Your name"
 										data-input="input"
-										id="subject"
+										id="name"
 										required=""
 									/>
 								</label>
-								<label for="category" data-field="category" class="select">
-									<span data-label=""> Category </span>
-									<select name="" id="category">
-										<option value="">Select category</option>
-										<option value="">Category</option>
-										<option value="">Category</option>
-									</select>
-								</label>
-								<label for="message">
-									<span data-label=""> Message </span>
-									<textarea name="message" id="message"></textarea>
-								</label>
-								<label for="file_upload" data-field="file">
-									<span data-label="">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M4 19H20V12H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"
-												fill="#4D4D4D"
-											/>
-										</svg>
-										Click to browse and attach file
-									</span>
-									<input type="file" name="" id="file_upload" />
-									<span class="note">File should be less than 1MB</span>
-								</label>
+								<label for=""></label>
 								<span class="spacer"></span>
 								<button
 									type="button"
 									class="continue button"
 									aria-disabled="true"
 								>
-									Submit Ticket
+									Continue
+								</button>
+							</fieldset>
+							<fieldset name="account">
+								<h3>Bank Account</h3>
+								<label
+									for="account-1"
+									data-field="account"
+									class="account__item"
+								>
+									<input
+										type="radio"
+										name="account"
+										value=""
+										id="account-1"
+										data-input="radio"
+									/>
+
+									<div>
+										<span class="tick"></span>
+										<h5 class="account__number">000000000</h5>
+										<p class="account__bank">Access</p>
+										<p class="account__name">George Gabriel</p>
+									</div>
+								</label>
+								<label for="account-2" class="account__item">
+									<input
+										type="radio"
+										name="account"
+										value=""
+										id="account-2"
+										data-input="radio"
+									/>
+
+									<div>
+										<span class="tick"></span>
+										<h5 class="account__number">000000000</h5>
+										<p class="account__bank">Access</p>
+										<p class="account__name">George Gabriel</p>
+									</div>
+								</label>
+								<label for="account-3" class="account__item">
+									<input
+										type="radio"
+										name="account"
+										value=""
+										id="account-3"
+										data-input="radio"
+									/>
+									<div>
+										<span class="tick"></span>
+										<h5 class="account__number">000000000</h5>
+										<p class="account__bank">Access</p>
+										<p class="account__name">George Gabriel</p>
+									</div>
+								</label>
+								<span class="spacer"></span>
+								<button type="button" class="next button" aria-disabled="true">
+									Select
+								</button>
+							</fieldset>
+							<fieldset name="summary">
+								<h3>Summary</h3>
+								<ul class="summary__details">
+									<li>
+										<span> Amount to withdraw </span><span> N 00.0 </span>
+									</li>
+									<li>
+										<span>Receiving bank</span><span><b> Access Bank </b></span>
+									</li>
+									<li>
+										<span>Account Number</span><span><b>0000000000</b></span>
+									</li>
+									<li>
+										<span> George Okoro </span>
+										<span> <b>Bademo</b> </span>
+									</li>
+								</ul>
+								<span class="spacer"></span>
+								<button type="submit" class="button">
+									Complete Withdrawal
 								</button>
 							</fieldset>
 						</form>
@@ -459,12 +494,8 @@
 									stroke-linejoin="round"
 								/>
 							</svg>
-							All good! <br />Ticket has been created successfully
+							All good! <br />The transaction was successful
 						</h3>
-						<p>
-							Your ticket is being attended to, and a response would be sent to
-							you very soon. Thank you for your patience.
-						</p>
 
 						<button
 							type="button"
@@ -472,13 +503,17 @@
 							aria-label="Close dialog"
 							class="button"
 						>
-							Back to Tickets
+							Back to Payments
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<script src="js/main.js"></script>
-		<script></script>
+		<script src="js/multiform.js"></script>
+		<script>
+			const multiForm = new MultiForm(document.querySelector('.form__wrapper'));
+		</script>
 	</body>
 </html>

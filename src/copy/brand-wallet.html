@@ -29,7 +29,7 @@
 	</head>
 
 	<body>
-		<div class="wrapper">
+		<div class="wrapper brand">
 			<a href="#main-content" class="visually-hidden">Skip to Content</a>
 			<header class="header">
 				<div class="header__container">
@@ -107,21 +107,15 @@
 								<a href="/" class="menu-list__link"> Dashboard</a>
 							</li>
 							<li class="menu-list__item">
-								<a href="task.html" class="menu-list__link"> Tasks </a>
+								<a href="task.html" class="menu-list__link"> Offers </a>
 							</li>
 							<li class="menu-list__item">
-								<a href="payments.html" class="menu-list__link"> Payments </a>
-							</li>
-							<li class="menu-list__item">
-								<a href="tickets.html" class="menu-list__link active">
-									Tickets
+								<a href="payments.html" class="menu-list__link active">
+									Wallet
 								</a>
 							</li>
 							<li class="menu-list__item">
-								<a href="/" class="menu-list__link"> Invite Friends </a>
-							</li>
-							<li class="menu-list__item">
-								<button class="menu-list__but">Upgrade to Premium</button>
+								<a href="tickets.html" class="menu-list__link"> Tickets </a>
 							</li>
 						</ul>
 					</div>
@@ -150,7 +144,7 @@
 							<div class="nav__profile">
 								<img
 									src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-									alt="W"
+									alt="w"
 									width="50"
 									height="50"
 								/>
@@ -161,19 +155,13 @@
 									<a href="/" class=""> Dashboard</a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="task.html" class=""> Tasks </a>
+									<a href="task.html" class=""> Offers </a>
 								</li>
 								<li class="nav__menu-item">
-									<a href="payments.html" class=""> Payments </a>
+									<a href="payments.html" class=""> Wallet </a>
 								</li>
 								<li class="nav__menu-item">
 									<a href="tickets.html" class=""> Tickets </a>
-								</li>
-								<li class="nav__menu-item">
-									<a href="/" class=""> Invite Friends </a>
-								</li>
-								<li class="nav__menu-item">
-									<button class="">Upgrade to Premium</button>
 								</li>
 							</ul>
 						</div>
@@ -185,56 +173,110 @@
 				<aside class="sidebar">
 					<div class="sidebar__wrapper">
 						<div class="sidebar__profile">
-							<img
-								src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-								alt="W"
-								width="80"
-								height="80"
-							/>
-							<h2>Bbay Girl</h2>
-							<p>#babygirl</p>
+							<div class="profile-popover">
+								<img
+									src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+									alt="w"
+									width="80"
+									height="80"
+								/>
+								<button class="profile-popover__trigger">
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 18 18"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle
+											cx="8.99897"
+											cy="8.99995"
+											r="8.99995"
+											fill="white"
+										/>
+										<path
+											d="M5.49804 8C4.94804 8 4.49805 8.45 4.49805 8.99999C4.49805 9.54999 4.94804 9.99999 5.49804 9.99999C6.04804 9.99999 6.49804 9.54999 6.49804 8.99999C6.49804 8.45 6.04804 8 5.49804 8ZM12.498 8C11.948 8 11.498 8.45 11.498 8.99999C11.498 9.54999 11.948 9.99999 12.498 9.99999C13.048 9.99999 13.498 9.54999 13.498 8.99999C13.498 8.45 13.048 8 12.498 8ZM8.99802 8C8.44803 8 7.99803 8.45 7.99803 8.99999C7.99803 9.54999 8.44803 9.99999 8.99802 9.99999C9.54802 9.99999 9.99802 9.54999 9.99802 8.99999C9.99802 8.45 9.54802 8 8.99802 8Z"
+											fill="#005E2F"
+										/>
+									</svg>
+								</button>
+								<ul role="list" class="profile-popover__menu">
+									<li><a href="profile.html">My Profile</a></li>
+									<li><button>Log Out</button></li>
+								</ul>
+							</div>
+							<h2>Baby Girl</h2>
 							<span class="spacer"></span>
-							<a role="button" href="">Go to Profile</a>
-						</div>
-						<div class="sidebar__refer flow">
-							<h3>Refer and Earn</h3>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-								Molestias ab voluptates est ratione delectus, dolor
-								exercitationem.
-							</p>
+							<a role="button" href="profile.html">Go to Profile</a>
 						</div>
 					</div>
 				</aside>
 				<article class="app-layout__wrapper flow">
-					<h1 class="app-layout__title">Tickets</h1>
-					<section class="tickets sbp">
-						<div class="tickets__table flow" hidden="">
+					<h1 class="app-layout__title">Payments</h1>
+					<section class="payments sbp">
+						<div class="payments__highlight">
+							<figure>
+								<figcaption>Balance</figcaption>
+								<h4>234,030</h4>
+							</figure>
+							<figure>
+								<figcaption>Total Expenses</figcaption>
+								<h4>234</h4>
+							</figure>
+							<figure>
+								<figcaption>Last Payment</figcaption>
+								<h4>234,03030</h4>
+							</figure>
+						</div>
+						<div class="payments__table flow">
 							<div class="tablegroup__header">
-								<h2>Tickets</h2>
-								<button
-									type="button"
-									class="button"
-									data-a11y-dialog-show="createTickets"
-									aria-label="Open ticket dialog"
-								>
-									Create Ticket
-								</button>
+								<h2>Transaction History</h2>
+								<details class="wallet__fund-options">
+									<summary
+										aria-haspopup="menu"
+										role="button"
+										class="button__summary"
+									>
+										<span>Fund Wallet</span><span class="dropdown-caret"></span>
+									</summary>
+									<div role="menu" class="fund-options">
+										<ul class="fund-options__list" role="list">
+											<li>
+												<button
+													class=""
+													type="button"
+													data-a11y-dialog-show="bankTransfer"
+													aria-label="Open bank transfer dialog"
+												>
+													Transfer
+												</button>
+											</li>
+											<li>
+												<a href="" class="[ inline ] [ text-center ]">BTC</a>
+											</li>
+											<li>
+												<a href="" class="[ inline ] [ text-center ]"> Card </a>
+											</li>
+										</ul>
+									</div>
+								</details>
 							</div>
 							<div class="table-wrapper">
 								<table class="tablegroup__table">
 									<thead>
 										<tr>
 											<th>S/N</th>
-											<th>Ticket Id</th>
-											<th>Subject</th>
+											<th>Date</th>
+											<th>Method</th>
+											<th>Amount</th>
 											<th>Status</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
+											<td>20/12/20</td>
+											<td>Transfer</td>
 											<td>3,900</td>
 											<td>
 												<span class="[ pill ]" data-status="sent"> sent </span>
@@ -242,7 +284,8 @@
 										</tr>
 										<tr>
 											<td>001</td>
-											<td>RD8GAJ9BAJ–091–JK67H</td>
+											<td>20/12/20</td>
+											<td>Transfer</td>
 											<td>3,900</td>
 											<td>
 												<span class="[ pill ]" data-status="sent"> sent </span>
@@ -252,90 +295,6 @@
 								</table>
 							</div>
 						</div>
-						<div class="empty">
-							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M53.333 18.3333C53.333 17.3443 53.6263 16.3776 54.1757 15.5554C54.7251 14.7332 55.506 14.0923 56.4196 13.7139C57.3332 13.3354 58.3386 13.2364 59.3085 13.4293C60.2784 13.6223 61.1693 14.0985 61.8685 14.7977C62.5678 15.497 63.044 16.3879 63.2369 17.3578C63.4299 18.3277 63.3308 19.333 62.9524 20.2467C62.574 21.1603 61.9331 21.9412 61.1109 22.4906C60.2886 23.04 59.3219 23.3333 58.333 23.3333"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M58.3333 28.3333C58.4982 28.3333 58.6593 28.3821 58.7963 28.4737C58.9334 28.5653 59.0402 28.6954 59.1032 28.8477C59.1663 29 59.1828 29.1675 59.1507 29.3292C59.1185 29.4908 59.0391 29.6393 58.9226 29.7558C58.806 29.8724 58.6576 29.9518 58.4959 29.9839C58.3343 30.0161 58.1667 29.9996 58.0144 29.9365C57.8622 29.8734 57.732 29.7666 57.6404 29.6296C57.5489 29.4925 57.5 29.3314 57.5 29.1666C57.5 28.9456 57.5878 28.7336 57.7441 28.5773C57.9004 28.421 58.1123 28.3333 58.3333 28.3333Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M58.11 1.66675C55.4776 1.67556 52.8732 2.20797 50.4486 3.23297C48.0239 4.25798 45.8274 5.7551 43.9869 7.63717C42.1464 9.51924 40.6987 11.7486 39.7281 14.1956C38.7575 16.6425 38.2834 19.2581 38.3333 21.8901C38.1834 25.612 39.0856 29.3009 40.9367 32.5334L35 45.0001L47.47 39.0601C50.1283 40.708 53.1327 41.7166 56.2469 42.0064C59.3611 42.2963 62.5001 41.8595 65.4169 40.7305C68.3336 39.6014 70.9486 37.811 73.056 35.4999C75.1634 33.1889 76.7058 30.4203 77.5618 27.4121C78.4178 24.4038 78.564 21.238 77.9889 18.1636C77.4139 15.0893 76.1332 12.1904 74.2478 9.6949C72.3624 7.19944 69.9236 5.17555 67.1233 3.78248C64.323 2.38942 61.2376 1.66518 58.11 1.66675V1.66675Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M55 48.3367V78.3367"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M1.66699 78.3334V18.3334C1.66699 16.5653 2.36937 14.8696 3.61961 13.6194C4.86986 12.3691 6.56555 11.6667 8.33366 11.6667H33.3337"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M31.667 25.0034H1.66699"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M26.667 63.3367C30.8091 63.3367 34.167 59.9788 34.167 55.8367C34.167 51.6945 30.8091 48.3367 26.667 48.3367C22.5249 48.3367 19.167 51.6945 19.167 55.8367C19.167 59.9788 22.5249 63.3367 26.667 63.3367Z"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M41.667 78.3333C40.817 75.0001 38.8811 72.045 36.1649 69.9345C33.4486 67.8239 30.1068 66.6782 26.667 66.6782C23.2272 66.6782 19.8853 67.8239 17.1691 69.9345C14.4529 72.045 12.5169 75.0001 11.667 78.3333"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M23.333 18.3367H31.6663"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							<h2>No Ticket has been created yet</h2>
-							<p>Click “create new ticket” if you have any issue.</p>
-							<span class="spacer"></span>
-							<button
-								type="button"
-								class="button"
-								data-a11y-dialog-show="createTickets"
-								aria-label="Open ticket dialog"
-							>
-								Create Ticket
-							</button>
-						</div>
 					</section>
 				</article>
 			</main>
@@ -344,8 +303,8 @@
 			</footer>
 			<!-- 1. The dialog container -->
 			<div
-				id="createTickets"
-				aria-labelledby="ticket-form"
+				id="bankTransfer"
+				aria-labelledby="bank-transfer"
 				aria-hidden="true"
 				aria-describedby="modal-description"
 				class="dialog__container"
@@ -374,111 +333,55 @@
 						</svg>
 					</button>
 					<!-- 5. The dialog title -->
-					<h1 id="ticket-form" aria-hidden="true">Withdrawal Form</h1>
+					<h1 id="bank-transfer" aria-hidden="true">Bank Transfer Form</h1>
 					<span id="modal-description" class="visually-hidden"
 						>Create a ticket that support can help with</span
 					>
 					<!-- 6. Dialog content -->
 					<div class="form__wrapper">
 						<form action="" name="" method="POST">
-							<fieldset class="current" name="subject">
-								<h3>New Ticket</h3>
-								<label for="subject" data-field="subject">
-									<span data-label=""> Subject </span>
+							<fieldset class="current" name="account-details">
+								<h3>Account Details</h3>
+								<label for="account-name" data-field="account-name">
+									<span data-label=""> Account Name </span>
 									<input
 										type="text"
 										placeholder=""
 										data-input="input"
-										id="subject"
+										id="account-name"
 										required=""
 									/>
 								</label>
-								<label for="category" data-field="category" class="select">
-									<span data-label=""> Category </span>
-									<select name="" id="category">
-										<option value="">Select category</option>
-										<option value="">Category</option>
-										<option value="">Category</option>
-									</select>
+								<label for="amount-paid" data-field="amount-paid">
+									<span data-label=""> Amount </span>
+									<input
+										type="number"
+										placeholder=""
+										data-input="input"
+										id="amount-paid"
+										required=""
+									/>
 								</label>
-								<label for="message">
-									<span data-label=""> Message </span>
-									<textarea name="message" id="message"></textarea>
-								</label>
-								<label for="file_upload" data-field="file">
-									<span data-label="">
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M4 19H20V12H22V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V12H4V19ZM13 9V16H11V9H6L12 3L18 9H13Z"
-												fill="#4D4D4D"
-											/>
-										</svg>
-										Click to browse and attach file
-									</span>
-									<input type="file" name="" id="file_upload" />
-									<span class="note">File should be less than 1MB</span>
-								</label>
-								<span class="spacer"></span>
-								<button
-									type="button"
-									class="continue button"
-									aria-disabled="true"
-								>
-									Submit Ticket
-								</button>
 							</fieldset>
+							<button type="" class="button">Submit</button>
 						</form>
-					</div>
-					<div class="success">
-						<h3>
-							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M78.3327 1.66992L39.9993 48.3366L26.666 33.3366"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-								<path
-									d="M66.2796 29.1167C66.6119 29.9237 67.11 30.652 67.7416 31.2544C68.3733 31.8567 69.1244 32.3197 69.9463 32.6134L74.1629 34.1134C75.3797 34.5452 76.4329 35.3434 77.1777 36.398C77.9225 37.4527 78.3224 38.7122 78.3224 40.0034C78.3224 41.2945 77.9225 42.554 77.1777 43.6087C76.4329 44.6634 75.3797 45.4615 74.1629 45.8934L69.9463 47.3934C69.1223 47.686 68.369 48.1484 67.7351 48.7506C67.1011 49.3527 66.6006 50.0813 66.266 50.8891C65.9314 51.6969 65.77 52.566 65.7925 53.4401C65.8149 54.3141 66.0206 55.1738 66.3963 55.9634L68.3329 60C68.8921 61.1663 69.0755 62.4774 68.8577 63.7523C68.64 65.0272 68.0318 66.2031 67.1173 67.1177C66.2027 68.0323 65.0268 68.6404 63.7519 68.8581C62.477 69.0759 61.1659 68.8925 59.9996 68.3334L55.9563 66.4134C55.1667 66.0377 54.3071 65.832 53.433 65.8096C52.5589 65.7871 51.6898 65.9484 50.882 66.2831C50.0742 66.6177 49.3457 67.1182 48.7435 67.7521C48.1413 68.3861 47.6789 69.1394 47.3863 69.9634L45.8863 74.18C45.4544 75.3968 44.6563 76.45 43.6016 77.1948C42.5469 77.9396 41.2874 78.3395 39.9963 78.3395C38.7051 78.3395 37.4456 77.9396 36.391 77.1948C35.3363 76.45 34.5382 75.3968 34.1063 74.18L32.6063 69.9634C32.3136 69.1394 31.8512 68.3861 31.2491 67.7521C30.6469 67.1182 29.9183 66.6177 29.1105 66.2831C28.3027 65.9484 27.4336 65.7871 26.5596 65.8096C25.6855 65.832 24.8258 66.0377 24.0363 66.4134L19.9996 68.3334C18.8333 68.8925 17.5223 69.0759 16.2473 68.8581C14.9724 68.6404 13.7965 68.0323 12.8819 67.1177C11.9674 66.2031 11.3592 65.0272 11.1415 63.7523C10.9237 62.4774 11.1071 61.1663 11.6663 60L13.5863 55.9567C13.9619 55.1671 14.1676 54.3075 14.1901 53.4334C14.2125 52.5593 14.0512 51.6903 13.7166 50.8824C13.3819 50.0746 12.8815 49.3461 12.2475 48.7439C11.6135 48.1417 10.8602 47.6793 10.0363 47.3867L5.81961 45.8867C4.60282 45.4548 3.54965 44.6567 2.80484 43.602C2.06004 42.5473 1.66016 41.2878 1.66016 39.9967C1.66016 38.7055 2.06004 37.4461 2.80484 36.3914C3.54965 35.3367 4.60282 34.5386 5.81961 34.1067L10.0363 32.6067C10.8596 32.3142 11.6125 31.8523 12.2462 31.2508C12.8799 30.6492 13.3804 29.9214 13.7153 29.1144C14.0501 28.3073 14.212 27.439 14.1903 26.5655C14.1687 25.6921 13.964 24.8328 13.5896 24.0434L11.6663 20C11.1071 18.8338 10.9237 17.5227 11.1415 16.2477C11.3592 14.9728 11.9674 13.7969 12.8819 12.8823C13.7965 11.9678 14.9724 11.3597 16.2473 11.1419C17.5223 10.9242 18.8333 11.1075 19.9996 11.6667L24.0429 13.5867C24.8319 13.9619 25.6908 14.1675 26.5642 14.19C27.4376 14.2126 28.306 14.0518 29.1133 13.7178C29.9206 13.3839 30.649 12.8844 31.2512 12.2514C31.8534 11.6185 32.3162 10.8663 32.6096 10.0434L34.1096 5.82669C34.5415 4.6099 35.3396 3.55673 36.3943 2.81192C37.449 2.06712 38.7084 1.66724 39.9996 1.66724C41.2908 1.66724 42.5502 2.06712 43.6049 2.81192C44.6596 3.55673 45.4577 4.6099 45.8896 5.82669L47.3896 10.0434C47.6833 10.8653 48.1462 11.6164 48.7486 12.248C49.3509 12.8796 50.0792 13.3777 50.8863 13.71"
-									stroke="#F58256"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-							All good! <br />Ticket has been created successfully
-						</h3>
-						<p>
-							Your ticket is being attended to, and a response would be sent to
-							you very soon. Thank you for your patience.
-						</p>
-
-						<button
-							type="button"
-							data-a11y-dialog-hide
-							aria-label="Close dialog"
-							class="button"
-						>
-							Back to Tickets
-						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script src="js/main.js"></script>
-		<script></script>
+		<script>
+			window.onclick = function (e) {
+				if (!e.target.closest('summary')) {
+					var detailsIsOpen = document
+						.querySelector('.wallet__fund-options')
+						.hasAttribute('open');
+					console.log('Hello What are you doing ?');
+					document
+						.querySelector('.wallet__fund-options')
+						.removeAttribute('open');
+				}
+			};
+		</script>
 	</body>
 </html>

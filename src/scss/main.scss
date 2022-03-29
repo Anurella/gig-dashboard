@@ -28,6 +28,7 @@
 
 html {
 	overflow-x: hidden;
+	font-variant-numeric: tabular-nums;
 }
 
 body {
@@ -711,5 +712,52 @@ add border and padding to a section
 				}
 			}
 		}
+	}
+}
+
+.dropdown-caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	content: '';
+	border-style: solid;
+	border-width: 4px 4px 0;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+}
+
+.fund-options {
+	position: absolute;
+	top: auto;
+	right: 0;
+	bottom: auto;
+	left: auto;
+	z-index: 2;
+
+	&__list {
+		padding: 10px;
+		margin-block-start: 10px;
+		inline-size: 150px;
+		border: 1px solid var(--white-300);
+		background-color: var(--white-100);
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		a {
+			color: var(--dark);
+		}
+	}
+}
+
+// brands
+
+.brand {
+	.menu-list {
+		flex: 1;
+		justify-content: center;
+		gap: 5rem;
 	}
 }
