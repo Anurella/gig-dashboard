@@ -53,7 +53,7 @@ form {
 
 [data-label] {
 	color: var(--dark);
-	font-size: calc(0.85rem + 0.5px);
+	font-size: 12px;
 	display: block;
 	margin-block-end: 5px;
 	text-transform: uppercase;
@@ -67,17 +67,6 @@ form {
 
 [data-field='file'] {
 	text-align: center;
-	// input {
-	// 	opacity: 0;
-	// 	clip-path: inset(100%);
-	// }
-	// [data-label] {
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	left: 50%;
-	// 	top: 12px;
-	// 	transform: translateX(-50%);
-	// }
 }
 
 .select {
@@ -190,6 +179,39 @@ form {
 	width: 50px;
 }
 
+.pass {
+	position: absolute;
+	right: 0;
+	height: 45px;
+	bottom: 0;
+	width: 50px;
+	display: inline-flex;
+
+	justify-content: center;
+
+	align-items: center;
+	border-left: 1px solid var(--white-500);
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+
+	svg {
+		width: 15px;
+		height: 15px;
+	}
+	&__hide {
+		display: none;
+	}
+
+	&.show {
+		.pass__hide {
+			display: block;
+		}
+
+		.pass__show {
+			display: none;
+		}
+	}
+}
 @keyframes shaking {
 	10%,
 	90% {

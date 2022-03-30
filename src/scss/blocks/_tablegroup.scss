@@ -111,12 +111,12 @@
 	}
 
 	&-collapse {
-		:nth-child(2n):where(td) {
+		:nth-child(2n):where(th, td) {
 			display: none;
 		}
 
 		@include respond-above('md') {
-			:nth-child(2n):where(td) {
+			:nth-child(2n):where(th, td) {
 				display: block;
 			}
 		}
