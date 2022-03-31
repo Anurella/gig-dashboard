@@ -17,7 +17,7 @@
 			calc(var(--spacing) / 1.5);
 		padding-inline: calc(var(--spacing) / 1.5);
 		padding-block: calc(var(--spacing) * 1.5) calc(var(--spacing) / 1.5);
-		block-size: 100%;
+		// block-size: 100%;
 	}
 
 	&__refer {
@@ -41,14 +41,14 @@
 		}
 
 		@media (prefers-color-scheme: dark) {
-			background-color: hsl(150, 15%, 85%);
-			h3 {
-				color: var(--primary-300);
-			}
+			// background-color: hsl(150, 15%, 85%);
+			// h3 {
+			// 	color: var(--primary-300);
+			// }
 
-			p {
-				color: var(--white-100);
-			}
+			// p {
+			// 	color: var(--white-100);
+			// }
 		}
 	}
 
@@ -80,7 +80,7 @@
 			letter-spacing: -0.0235em;
 
 			@media (prefers-color-scheme: dark) {
-				color: var(--gray-200);
+				// color: var(--gray-200);
 			}
 		}
 
@@ -93,7 +93,7 @@
 
 			@media (prefers-color-scheme: dark) {
 				// color: var(--primary-400);
-				color: hsl(150, 15%, 75%);
+				// color: hsl(150, 15%, 75%);
 			}
 		}
 

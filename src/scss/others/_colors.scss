@@ -38,18 +38,35 @@ $dark: hsl(0, 2%, 10%);
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--body-bg: hsla(150, 10%, 10%);
-		--dark: hsla(#{$hue}, 20%, 99%);
-		--white-100: #{$dark};
-		--white-200: hsla(#{$hue}, 10%, 15%);
-		--white-300: hsla(#{$hue}, 5%, 20%);
-		--white-400: hsla(#{$hue}, 3%, 25%);
-		--gray-300: #{$white-500};
-		--gray-200: #{$white-400};
-		--gray-100: #{$gray-500};
-		--primary-100: #{$primary-300};
-		--primary-200: #{$primary-100};
-		--primary-300: #{$primary-200};
+		// --body-bg: hsla(150, 10%, 10%);
+		// --dark: hsla(#{$hue}, 20%, 99%);
+		// --white-100: #{$dark};
+		// --white-200: hsla(#{$hue}, 10%, 15%);
+		// --white-300: hsla(#{$hue}, 5%, 20%);
+		// --white-400: hsla(#{$hue}, 3%, 25%);
+		// --gray-300: #{$white-500};
+		// --gray-200: #{$white-400};
+		// --gray-100: #{$gray-500};
+		// --primary-100: #{$primary-300};
+		// --primary-200: #{$primary-100};
+		// --primary-300: #{$primary-200};
+		--gray-100: #{$gray-100};
+		--gray-200: #{$gray-200};
+		--gray-300: #{$gray-300};
+		--gray-400: #{$gray-400};
+		--gray-500: #{$gray-500};
+		--primary-100: #{$primary-100};
+		--primary-200: #{$primary-200};
+		--primary-300: #{$primary-300};
+		--primary-400: #{$primary-400};
+		--white-100: #{$white-100};
+		--white-200: #{$white-200};
+		--white-300: #{$white-300};
+		--white-400: #{$white-400};
+		--white-500: #{$white-500};
+		--dark: #{$dark};
+		--body-bg: #{$white-100};
+		--surface-100: #{$surface-100};
 	}
 }
 

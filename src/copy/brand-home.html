@@ -76,16 +76,16 @@
 					</a>
 					<ul role="navigation" class="menu-list">
 						<li class="menu-list__item">
-							<a href="/" class="menu-list__link active"> Dashboard</a>
+							<a href="brand-home.html" class="menu-list__link active"> Dashboard</a>
 						</li>
 						<li class="menu-list__item">
-							<a href="task.html" class="menu-list__link"> Campaigns </a>
+							<a href="brand-campaigns.html" class="menu-list__link"> Campaigns </a>
 						</li>
 						<li class="menu-list__item">
-							<a href="payments.html" class="menu-list__link"> Wallet </a>
+							<a href="brand-wallet.html" class="menu-list__link"> Wallet </a>
 						</li>
 						<li class="menu-list__item">
-							<a href="tickets.html" class="menu-list__link"> Tickets </a>
+							<a href="brand-ticket.html" class="menu-list__link"> Tickets </a>
 						</li>
 					</ul>
 				</div>
@@ -114,13 +114,13 @@
 								<a href="brand-home.html" class=""> Dashboard</a>
 							</li>
 							<li class="nav__menu-item">
-								<a href="task.html" class=""> Campaigns </a>
+								<a href="brand-campaigns.html" class=""> Campaigns </a>
 							</li>
 							<li class="nav__menu-item">
 								<a href="brand-wallet.html" class=""> Wallet </a>
 							</li>
 							<li class="nav__menu-item">
-								<a href="tickets.html" class=""> Tickets </a>
+								<a href="brand-ticket.html" class=""> Tickets </a>
 							</li>
 						</ul>
 					</div>
@@ -292,8 +292,8 @@
 						</ul>
 					</div>
 					<form action="" name="" method="POST">
-						<fieldset class="current" name="amount">
-							<h3>Campaign</h3>
+						<h3> New Campaign</h3>
+						<fieldset class="current" name="about-campaign">
 							<label for="name" data-field="name">
 								<span data-label="name"> Name </span>
 								<input type="text" placeholder="Campaign name" data-input="input" id="name"
@@ -310,36 +310,34 @@
 							</label>
 							<label for="num-creators" data-field="num-creators">
 								<span data-label="num-creators"> Number of Creators </span>
-								<input type="number" placeholder="Campaign name" data-input="input" id="num-creators"
-									required="" />
+								<input type="number" placeholder="Minimum of 100" data-input="input" id="num-creators"
+									required="" min="100" />
 							</label>
 							<span class="spacer"></span>
 							<button type="button" class="continue button" aria-disabled="true">
 								Continue
 							</button>
 						</fieldset>
-						<fieldset name="account">
+						<fieldset name="detail-campaign">
 							<label for="followers-range" data-field="" class="select">
-								<span data-label="followers-range"> Type </span>
+								<span data-label="followers-range"> Category </span>
 								<select name="" id="followers-range">
-									<option value="50000">10,000 - 50,000</option>
-									<option value="100000">60,000 - 100,000</option>
-									<option value="150000">110,000 - 150,000</option>
-									<option value="200000">160,000 - 200,000</option>
+									<option value="">Music</option>
+									<option value="">Dance</option>
+
 								</select>
 							</label>
-							<label for="campaign-type" data-field="" class="select">
-								<span data-label="campaign-type"> Type </span>
-								<select name="" id="campaign-type">
-									<option value="feed" selected="">Feed</option>
-									<option value="story">Story</option>
-									<option value="bio">Bio</option>
-									<option value="fsb">Feed + Story + Bio</option>
-									<option value="fs">Feed + Story Post</option>
-									<option value="fb">Feed + Bio</option>
-									<option value="sb">Story + Bio</option>
-								</select>
+							<label for="post-link" data-field="post-link">
+								<span data-label="name"> Provide link to post </span>
+								<input type="url" placeholder="Post Link" data-input="input" id="post-link"
+									required="" />
 							</label>
+							<label for="description" data-field="description">
+								<span data-label="">What will you like our freelancers to do? </span>
+								<textarea name="description" id="description" data-textarea=""
+									spellcheck="false"></textarea>
+							</label>
+
 							<span class="spacer"></span>
 							<button type="button" class="next button" aria-disabled="true">
 								Select
@@ -349,22 +347,15 @@
 							<h3>Summary</h3>
 							<ul class="summary__details">
 								<li>
-									<span> Amount to withdraw </span><span> N 00.0 </span>
+									<span> Number of Creators </span><span> 200 </span>
 								</li>
 								<li>
-									<span>Receiving bank</span><span><b> Access Bank </b></span>
-								</li>
-								<li>
-									<span>Account Number</span><span><b>0000000000</b></span>
-								</li>
-								<li>
-									<span> George Okoro </span>
-									<span> <b>Bademo</b> </span>
+									<span>Amount</span><span><b> 10000 </b></span>
 								</li>
 							</ul>
 							<span class="spacer"></span>
 							<button type="submit" class="button">
-								Complete Withdrawal
+								Complete Process
 							</button>
 						</fieldset>
 					</form>
@@ -382,7 +373,7 @@
 					</h3>
 
 					<button type="button" data-a11y-dialog-hide aria-label="Close dialog" class="button">
-						Back to Payments
+						Back to Home
 					</button>
 				</div>
 			</div>

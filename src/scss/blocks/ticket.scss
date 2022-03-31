@@ -1,0 +1,47 @@
+.splitter {
+	@include respond-above('lg') {
+		.ticket__reply {
+			min-width: 300px;
+			margin-left: 0;
+			align-self: flex-start;
+			position: sticky;
+			top: 20px;
+		}
+	}
+}
+
+.ticket {
+	&__reply {
+		@include respond-above('lg') {
+			padding: var(--spacing) calc(var(--spacing) / 1.5);
+		}
+	}
+
+	&__details {
+		@include respond-above('lg') {
+			padding: var(--spacing) calc(var(--spacing) / 1.5);
+			border-right: 1px solid var(--gray-400);
+		}
+	}
+
+	&__close {
+		@include flex-center-vert;
+		justify-content: space-between;
+	}
+
+	&__meta {
+		span {
+			margin-inline-end: calc(var(--spacing) / 3);
+			&:last-child() {
+				margin-inline-end: 0;
+			}
+		}
+	}
+	&__content {
+	}
+}
+
+.replied {
+	border-top: 1px solid var(--gray-400);
+	padding-top: 15px;
+}

@@ -33,9 +33,9 @@
 			vertical-align: middle;
 
 			@media (prefers-color-scheme: dark) {
-				path:nth-last-child(n + 3) {
-					fill: white;
-				}
+				// path:nth-last-child(n + 3) {
+				// 	fill: white;
+				// }
 			}
 		}
 	}
@@ -48,7 +48,7 @@
 		border-bottom: 2px solid var(--white-200);
 
 		@media (prefers-color-scheme: dark) {
-			border-color: hsl(150, 10%, 15%);
+			// border-color: hsl(150, 10%, 15%);
 		}
 	}
 }
@@ -66,9 +66,9 @@
 			pointer-events: none;
 
 			@media (prefers-color-scheme: dark) {
-				path {
-					fill: var(--primary-400);
-				}
+				// path {
+				// 	fill: var(--primary-400);
+				// }
 			}
 		}
 

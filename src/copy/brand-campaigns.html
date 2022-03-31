@@ -483,7 +483,68 @@
                             </p>
                         </div>
                     </section>
-                    <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab3"></section>
+                    <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab3">
+                        <form action="" name="" method="POST">
+                            <h3> New Campaign</h3>
+                            <fieldset class="current" name="about-campaign">
+                                <label for="name" data-field="name">
+                                    <span data-label="name"> Name </span>
+                                    <input type="text" placeholder="Campaign name" data-input="input" id="name"
+                                        required="" />
+                                </label>
+                                <label for="platform" data-field="" class="select">
+                                    <span data-label="platform"> Platform </span>
+                                    <select name="" id="platform">
+                                        <option value="">Instagram</option>
+                                        <option value="">Tiktok</option>
+                                        <option value="">Facebook</option>
+                                        <option value="">Twitter</option>
+                                    </select>
+                                </label>
+                                <label for="num-creators" data-field="num-creators">
+                                    <span data-label="num-creators"> Number of Creators </span>
+                                    <input type="number" placeholder="Minimum of 100" data-input="input"
+                                        id="num-creators" required="" min="100" />
+                                </label>
+
+                            </fieldset>
+                            <fieldset name="detail-campaign">
+                                <label for="followers-range" data-field="" class="select">
+                                    <span data-label="followers-range"> Category </span>
+                                    <select name="" id="followers-range">
+                                        <option value="">Music</option>
+                                        <option value="">Dance</option>
+
+                                    </select>
+                                </label>
+                                <label for="post-link" data-field="post-link">
+                                    <span data-label="name"> Provide link to post </span>
+                                    <input type="url" placeholder="Post Link" data-input="input" id="post-link"
+                                        required="" />
+                                </label>
+                                <label for="description" data-field="description">
+                                    <span data-label="">What will you like our freelancers to do? </span>
+                                    <textarea name="description" id="description" data-textarea=""
+                                        spellcheck="false"></textarea>
+                                </label>
+                            </fieldset>
+                            <fieldset name="summary">
+                                <h3>Summary</h3>
+                                <ul class="summary__details">
+                                    <li>
+                                        <span> Number of Creators </span><span> 200 </span>
+                                    </li>
+                                    <li>
+                                        <span>Amount</span><span><b> 10000 </b></span>
+                                    </li>
+                                </ul>
+                                <span class="spacer"></span>
+                                <button type="submit" class="button">
+                                    Complete Process
+                                </button>
+                            </fieldset>
+                        </form>
+                    </section>
                 </div>
             </article>
         </main>

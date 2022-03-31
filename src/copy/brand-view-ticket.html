@@ -76,16 +76,16 @@
                     </a>
                     <ul role="navigation" class="menu-list">
                         <li class="menu-list__item">
-                            <a href="/" class="menu-list__link active"> Dashboard</a>
+                            <a href="brand-home.html" class="menu-list__link active"> Dashboard</a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="task.html" class="menu-list__link"> Campaigns </a>
+                            <a href="brand-campaigns.html" class="menu-list__link"> Campaigns </a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="payments.html" class="menu-list__link"> Wallet </a>
+                            <a href="brand-wallet.html" class="menu-list__link"> Wallet </a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="tickets.html" class="menu-list__link"> Tickets </a>
+                            <a href="brand-ticket.html" class="menu-list__link"> Tickets </a>
                         </li>
                     </ul>
                 </div>
@@ -114,13 +114,13 @@
                                 <a href="brand-home.html" class=""> Dashboard</a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="task.html" class=""> Campaigns </a>
+                                <a href="brand-campaigns.html" class=""> Campaigns </a>
                             </li>
                             <li class="nav__menu-item">
                                 <a href="brand-wallet.html" class=""> Wallet </a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="tickets.html" class=""> Tickets </a>
+                                <a href="brand-ticket.html" class=""> Tickets </a>
                             </li>
                         </ul>
                     </div>
@@ -157,73 +157,74 @@
             </aside>
             <article class="app-layout__wrapper flow" data-tabs>
                 <h1 class="app-layout__title">View Task</h1>
-                <section class="sbp view-task flow">
-                    <button class="prev__arrow visible" type="button" aria-label="Return to Tickets table">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
-                                fill="#1B1A1A" />
-                        </svg>
-                    </button>
-                    <div class="flow splitter">
-                        <div class="flow ticket__details">
-                            <div class="">
-                                <span class="ticket_id">212342 </span>
-                                <button class="button__border [ ml-10 ]">Close Ticket</button>
+                <section class="flow splitter" style="--flow-space:15px">
+
+                    <div class="flow ticket__details">
+                        <button class="prev__arrow visible" type="button" aria-label="Return to Tickets table">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.828 11H20V13H7.828L13.192 18.364L11.778 19.778L4 12L11.778 4.22205L13.192 5.63605L7.828 11Z"
+                                    fill="#1B1A1A" />
+                            </svg>
+                        </button>
+                        <div class="ticket__close">
+                            <span class="ticket_id">212342 </span>
+                            <button class="button__light ">Close Ticket</button>
+                        </div>
+                        <div class="[ ticket__meta ]">
+                            <span class="[ ticket__meta-item ]">Zachery </span><span class="[ ticket__meta-item ]">1
+                                month ago </span><span class="[ ticket__meta-item ] [ pill ]"
+                                data-status="completed">Open </span>
+                        </div>
+                        <h2 class="[ ticket__subject ]">Testing</h2>
+                        <div class="[ ticket__content ] [ flow ]">
+                            <div class="question">
+                                fhdh heehehe hddhhdd hhdhdd hdhdhhd hdhddhd Lorem ipsum, dolor sit amet consectetur
+                                adipisi cing elit. Nesciunt, dignissimos. Accusantium optio consequatur, sit
+                                possimus dolorem imped it? Aspernatur, odio ex nam ipsa eaque, voluptatem deserunt
+                                at optio quam dolor aliquid.
                             </div>
-                            <div class="[ ticket__meta ]">
-                                <span class="[ ticket__meta__item ]">Zachery </span><span
-                                    class="[ ticket__meta__item ]">1 month ago </span><span
-                                    class="[ ticket__meta__item ] [ pill ]" data-status="completed">Open </span>
-                            </div>
-                            <h2 class="[ ticket__subject ]">Testing</h2>
-                            <div class="[ ticket__content ] [ flow ]">
-                                <div class="question">
-                                    fhdh heehehe hddhhdd hhdhdd hdhdhhd hdhddhd Lorem ipsum, dolor sit amet consectetur
-                                    adipisi cing elit. Nesciunt, dignissimos. Accusantium optio consequatur, sit
-                                    possimus dolorem imped it? Aspernatur, odio ex nam ipsa eaque, voluptatem deserunt
-                                    at optio quam dolor aliquid.
-                                </div>
-                                <div class="actions [ inline ]">
-                                    <button class="[ btn__text ]">View Attachments</button>
-                                </div>
-                            </div>
-                            <div class="[ flow ]">
-                                <div class="replied [ flow ] [ ml-10 ]">
-                                    <div class="[ ticket__meta ]">
-                                        <span class="[ ticket__meta__item ]">Lots </span><span
-                                            class="[ ticket__meta__item ]">1 month ago </span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima
-                                        quaerat quia esse dignissimos nostrum libero similique architecto omnis
-                                        doloribus. Facere pariatur neque beatae vel numquam doloremque voluptates atque
-                                        eius.</p>
-                                </div>
-                                <div class="replied [ flow ] [ ml-10 ]">
-                                    <div class="[ ticket__meta ]">
-                                        <span class="[ ticket__meta__item ]">potsts </span><span
-                                            class="[ ticket__meta__item ]">3 month ago </span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima
-                                        quaerat quia esse dignissimos nostrum libero similique architecto omnis
-                                        doloribus. Facere pariatur neque beatae vel numquam doloremque voluptates atque
-                                        eius.</p>
-                                </div>
+                            <div class="actions [ inline ]">
+                                <button class="[ button__text ]">View Attachments</button>
                             </div>
                         </div>
-                        <div class="ticket__reply [ flow ]">
-                            <h4 class="reply">Reply Ticket</h4>
-                            <form class="reply__form [ form ]">
-                                <div class="[ grid ] flow">
-                                    <label for="reply" data-field="">
-                                        <span data-label="">Message </span>
-                                        <textarea name="reply" id="reply" placeholder="Type your reply here"></textarea>
-                                    </label>
-                                    <button class="[ btn ] [ btn-primary ]">Send Reply</button>
+                        <div class="[ flow ]">
+                            <div class="replied [ flow ] [ ml-10 ]">
+                                <div class="[ ticket__meta ]">
+                                    <span class="[ ticket__meta__item ]">Lots </span><span
+                                        class="[ ticket__meta__item ]">1 month ago </span>
                                 </div>
-                            </form>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima
+                                    quaerat quia esse dignissimos nostrum libero similique architecto omnis
+                                    doloribus. Facere pariatur neque beatae vel numquam doloremque voluptates atque
+                                    eius.</p>
+                            </div>
+                            <div class="replied [ flow ] [ ml-10 ]">
+                                <div class="[ ticket__meta ]">
+                                    <span class="[ ticket__meta__item ]">potsts </span><span
+                                        class="[ ticket__meta__item ]">3 month ago </span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima
+                                    quaerat quia esse dignissimos nostrum libero similique architecto omnis
+                                    doloribus. Facere pariatur neque beatae vel numquam doloremque voluptates atque
+                                    eius.</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="ticket__reply [ flow ]">
+                        <h4 class="reply">Reply Ticket</h4>
+                        <form class="reply__form [ form ]">
+                            <div class="[ grid ] flow">
+                                <label for="reply" data-field="">
+                                    <span data-label=""></span>
+                                    <textarea name="reply" id="reply" placeholder="Type your reply here"></textarea>
+                                </label>
+                                <button class="[ button ]">Send Reply</button>
+                            </div>
+                        </form>
+                    </div>
+
 
 
                 </section>

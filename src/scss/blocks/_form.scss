@@ -20,13 +20,13 @@ textarea {
 	}
 
 	@media (prefers-color-scheme: dark) {
-		border-color: var(--surface-100);
-		background-color: #1d1d1d;
+		// border-color: var(--surface-100);
+		// background-color: #1d1d1d;
 
-		&:focus {
-			border-color: var(--primary-100);
-			background-color: var(--white-400);
-		}
+		// &:focus {
+		// 	border-color: var(--primary-100);
+		// 	background-color: var(--white-400);
+		// }
 	}
 }
 
