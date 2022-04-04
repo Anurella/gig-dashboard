@@ -1,0 +1,41 @@
+.alert {
+	position: absolute;
+	max-width: 400px;
+	padding: calc(var(--spacing) / 2);
+	right: calc(var(--spacing) / 2);
+	top: calc(var(--spacing) / 2);
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	z-index: 3;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+
+	&.show {
+		opacity: 1;
+	}
+
+	.close {
+		color: inherit;
+		font-size: 14px;
+		width: 30px;
+		height: 30px;
+		margin-left: 10px;
+	}
+	&-error {
+		background-color: hsl(15, 100%, 40%);
+		color: hsl(15, 100%, 95%);
+	}
+	&-info {
+		background-color: hsl(20, 100%, 70%);
+		color: hsl(0, 100%, 12.94%);
+	}
+	&-success {
+		background-color: hsl(100, 100%, 30%);
+		color: hsl(120, 100%, 6.67%);
+	}
+	&-warning {
+		background-color: hsl(48, 100%, 50%);
+		color: hsl(17, 100%, 12%);
+	}
+}

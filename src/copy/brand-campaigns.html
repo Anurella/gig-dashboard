@@ -79,15 +79,15 @@
                             <a href="brand-home.html" class="menu-list__link"> Dashboard</a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="task.html" class="menu-list__link"> Campaigns </a>
+                            <a href="brand-campaigns.html" class="menu-list__link active"> Campaigns </a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="brand-wallet.html" class="menu-list__link active">
+                            <a href="brand-wallet.html" class="menu-list__link">
                                 Wallet
                             </a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="tickets.html" class="menu-list__link"> Tickets </a>
+                            <a href="brand-ticket.html" class="menu-list__link"> Tickets </a>
                         </li>
                     </ul>
                 </div>
@@ -116,13 +116,13 @@
                                 <a href="/" class=""> Dashboard</a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="task.html" class=""> Campaigns </a>
+                                <a href="brand-campaigns.html" class=""> Campaigns </a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="payments.html" class=""> Wallet </a>
+                                <a href="brand-wallet.html" class=""> Wallet </a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="tickets.html" class=""> Tickets </a>
+                                <a href="brand-ticket.html" class=""> Tickets </a>
                             </li>
                         </ul>
                     </div>
@@ -198,8 +198,7 @@
                                         </td>
                                         <td>
                                             <div class="actions">
-                                                <a role="button" href="" class="actions__view">View
-                                                    <span>Task</span></a>
+                                                <a role="button" href="" class="actions__view">View</a>
                                                 <button>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +235,7 @@
                                         <td>
                                             <div class="actions">
                                                 <a role="button" href="" class="actions__view">View
-                                                    <span>Task</span></a>
+                                                </a>
                                                 <button>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -272,8 +271,7 @@
                                         </td>
                                         <td>
                                             <div class="actions">
-                                                <a role="button" href="" class="actions__view">View
-                                                    <span>Task</span></a>
+                                                <a role="button" href="" class="actions__view">View</a>
                                                 <button>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -309,8 +307,7 @@
                                         </td>
                                         <td>
                                             <div class="actions">
-                                                <a role="button" href="" class="actions__view">View
-                                                    <span>Task</span></a>
+                                                <a role="button" href="" class="actions__view">View</a>
                                                 <button>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -476,17 +473,13 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
-                            <h2>No Task has been completed</h2>
-                            <p>
-                                Click “available tasks” to select a task and follow
-                                instructions to start earning
-                            </p>
+                            <h2>No Campaign has been completed</h2>
                         </div>
                     </section>
                     <section data-tab-panel="tab3" role="tabpanel" aria-labelledby="tab3">
-                        <form action="" name="" method="POST">
+                        <form action="" name="" method="POST" class="campaign-form">
                             <h3> New Campaign</h3>
-                            <fieldset class="current" name="about-campaign">
+                            <fieldset class="" name="about-campaign">
                                 <label for="name" data-field="name">
                                     <span data-label="name"> Name </span>
                                     <input type="text" placeholder="Campaign name" data-input="input" id="name"
@@ -506,9 +499,6 @@
                                     <input type="number" placeholder="Minimum of 100" data-input="input"
                                         id="num-creators" required="" min="100" />
                                 </label>
-
-                            </fieldset>
-                            <fieldset name="detail-campaign">
                                 <label for="followers-range" data-field="" class="select">
                                     <span data-label="followers-range"> Category </span>
                                     <select name="" id="followers-range">
@@ -528,8 +518,8 @@
                                         spellcheck="false"></textarea>
                                 </label>
                             </fieldset>
+                            <h3>Summary</h3>
                             <fieldset name="summary">
-                                <h3>Summary</h3>
                                 <ul class="summary__details">
                                     <li>
                                         <span> Number of Creators </span><span> 200 </span>
@@ -551,11 +541,17 @@
         <footer>
             <p>Copyright ©2022. Sidegig. All rights reserved</p>
         </footer>
-
+        <div class="alert alert-warning">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odit impedit sequi quis beatae ipsum
+            </p>
+            <button class="close" onclick="closeAlert()"> X </button>
+        </div>
     </div>
     <script src="js/main.js"></script>
     <script>
-
+        function closeAlert() {
+            document.querySelector('.alert').classList.remove('show');
+        }
     </script>
 </body>
 
