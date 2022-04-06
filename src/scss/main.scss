@@ -556,6 +556,22 @@ add border and padding to a section
 		> div {
 			margin-bottom: 10px;
 		}
+
+		[data-social-type='premium'] {
+			@media (max-width: 34em) {
+				input {
+					width: 72%;
+				}
+
+				.verification {
+					right: 30%;
+				}
+
+				.prem {
+					transform: translateX(0);
+				}
+			}
+		}
 	}
 
 	.verification {
