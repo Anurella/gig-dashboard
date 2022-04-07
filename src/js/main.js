@@ -26,11 +26,13 @@ select('.nav').addEventListener('click', (e) => {
  */
 
 const container = selectAll('.dialog__container');
+// const html = document.documentElement;
 container.forEach((e) => {
 	const dialog = new A11yDialog(e);
 	dialog.on('show', function () {
 		// eslint-disable-next-line indent
 		console.log('modal is open');
+		// html.style.overflowY = 'hidden';
 	});
 });
 

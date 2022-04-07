@@ -39,6 +39,10 @@
 		padding: var(--spacing);
 		padding-bottom: calc(var(--spacing) * 2);
 		min-height: 400px;
+		height: 100%;
+		max-height: 85vh;
+		overscroll-behavior: contain;
+		// overflow-y: auto;
 
 		h1 {
 			font-size: 1.75rem;

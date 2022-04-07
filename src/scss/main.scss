@@ -74,8 +74,9 @@ body {
 	row-gap: 2rem;
 
 	&.reg {
-		justify-content: flex-start;
+		// justify-content: flex-start;
 		padding-block-start: 4rem;
+		block-size: auto;
 	}
 
 	header {
